@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "ProjectPRN222.APIcontroler.StoreApiController",
+    "Method": "AddStore",
+    "RelativePath": "api/StoreApi/AddProduct",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "ProjectPRN222.DTO.StoreDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectPRN222.APIcontroler.StoreApiController",
+    "Method": "GetAllStorelist",
+    "RelativePath": "api/StoreApi/GetAllStorelist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectPRN222.APIcontroler.StoreApiController",
+    "Method": "GetProductByUser",
+    "RelativePath": "api/StoreApi/GetProductByUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProjectPRN222.APIcontroler.StoreApiController",
+    "Method": "GetUserByStore",
+    "RelativePath": "api/StoreApi/GetUserByStore",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,466 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\VisualStudio\\ProjectPRN222\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\storelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\storelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\storelist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\storelist.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\storedetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\storedetail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\storedetail.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\storedetail.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\storedetail.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\storedetail.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\dto\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\dto\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\services\\storeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\services\\storeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\apicontroler\\storeapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\apicontroler\\storeapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\models\\store.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\projectprn222.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\projectprn222.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\wwwroot\\lib\\css\\store.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\wwwroot\\lib\\css\\store.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\storelist.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\storelist.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\wwwroot\\lib\\js\\store.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\wwwroot\\lib\\js\\store.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\wwwroot\\lib\\js\\store.js||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\wwwroot\\lib\\js\\store.js||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|c:\\visualstudio\\projectprn222\\projectprn222\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{68E36E09-6661-4134-B88E-6EB7F2B45F79}|ProjectPRN222\\ProjectPRN222.csproj|solutionrelative:projectprn222\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 20,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:114700942:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StoreDTO.cs",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\DTO\\StoreDTO.cs",
+              "RelativeDocumentMoniker": "ProjectPRN222\\DTO\\StoreDTO.cs",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\DTO\\StoreDTO.cs",
+              "RelativeToolTip": "ProjectPRN222\\DTO\\StoreDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAYwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T04:51:49.725Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StoreApiController.cs",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\APIcontroler\\StoreApiController.cs",
+              "RelativeDocumentMoniker": "ProjectPRN222\\APIcontroler\\StoreApiController.cs",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\APIcontroler\\StoreApiController.cs",
+              "RelativeToolTip": "ProjectPRN222\\APIcontroler\\StoreApiController.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAkwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T04:10:30.82Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StoreDetail.razor.css",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreDetail.razor.css",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\StoreDetail.razor.css",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreDetail.razor.css",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\StoreDetail.razor.css",
+              "ViewState": "AgIAAI8BAAAAAAAAAAAowKABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-11T04:03:47.75Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StoreDetail.razor.cs",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreDetail.razor.cs",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\StoreDetail.razor.cs",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreDetail.razor.cs",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\StoreDetail.razor.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAswDYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T04:02:37.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "StoreList.razor.css",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreList.razor.css",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\StoreList.razor.css",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreList.razor.css",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\StoreList.razor.css",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAswKABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-11T03:59:58.803Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StoreList.razor.cs",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreList.razor.cs",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\StoreList.razor.cs",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreList.razor.cs*",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\StoreList.razor.cs*",
+              "ViewState": "AgIAADkAAAAAAAAAAIA5wA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T03:56:47.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Program.cs",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Program.cs",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Program.cs",
+              "RelativeToolTip": "ProjectPRN222\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T17:07:17.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StoreDetail.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreDetail.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\StoreDetail.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreDetail.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\StoreDetail.razor",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAGQAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T17:05:26.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Store.cs",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Models\\Store.cs",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Models\\Store.cs",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Models\\Store.cs",
+              "RelativeToolTip": "ProjectPRN222\\Models\\Store.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAABkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:50:27.623Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StoreService.cs",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Services\\StoreService.cs",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Services\\StoreService.cs",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Services\\StoreService.cs",
+              "RelativeToolTip": "ProjectPRN222\\Services\\StoreService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAawDAAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-09T16:49:10.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Routes.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Routes.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T10:03:35.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\_Imports.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\_Imports.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T10:03:29.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "store.js",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "RelativeDocumentMoniker": "ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "RelativeToolTip": "ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-09T08:47:07.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "store.js",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "RelativeDocumentMoniker": "ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "RelativeToolTip": "ProjectPRN222\\wwwroot\\lib\\js\\store.js",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-10-09T08:45:36.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "store.css",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\wwwroot\\lib\\css\\store.css",
+              "RelativeDocumentMoniker": "ProjectPRN222\\wwwroot\\lib\\css\\store.css",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\wwwroot\\lib\\css\\store.css",
+              "RelativeToolTip": "ProjectPRN222\\wwwroot\\lib\\css\\store.css",
+              "ViewState": "AgIAAIgBAAAAAAAAAAAswKABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-09T08:45:24.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\appsettings.json",
+              "RelativeDocumentMoniker": "ProjectPRN222\\appsettings.json",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\appsettings.json",
+              "RelativeToolTip": "ProjectPRN222\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-09T07:42:52.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Error.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\Error.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T07:15:20.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Weather.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Weather.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\Weather.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Weather.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\Weather.razor",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T07:15:14.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StoreList.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreList.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\StoreList.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\StoreList.razor*",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\StoreList.razor*",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAAAFcAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T07:14:53.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-09T06:59:00.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Counter.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Counter.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\Counter.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Counter.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\Counter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-09T06:58:55.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MainLayout.razor.css",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Layout\\MainLayout.razor.css",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Layout\\MainLayout.razor.css",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-10-04T04:23:13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-04T04:21:54.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAABIAAAAAAAAAAIBJwBUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-04T04:21:00.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\App.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\App.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\App.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-04T04:20:37.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "ProjectPRN222\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "ProjectPRN222\\Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-04T04:20:28.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProjectPRN222.csproj",
+              "DocumentMoniker": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj",
+              "RelativeDocumentMoniker": "ProjectPRN222\\ProjectPRN222.csproj",
+              "ToolTip": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj",
+              "RelativeToolTip": "ProjectPRN222\\ProjectPRN222.csproj",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAowBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-04T04:18:39.896Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

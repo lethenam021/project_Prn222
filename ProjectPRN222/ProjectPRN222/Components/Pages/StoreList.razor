@@ -1,0 +1,147 @@
+﻿@page "/store"
+@inject ProjectPRN222.Services.StoreService Svc
+@inject NavigationManager Nav
+@using System
+@using System.Linq
+@using System.Collections.Generic
+@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Components.Forms
+@using ProjectPRN222.Models
+@using ProjectPRN222.Services
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<h3>Quản lý hồ sơ cửa hàng</h3>
+
+<div class="toolbar" style="display:flex; gap:8px; align-items:center; margin-bottom:12px">
+    <input class="input" placeholder="Tìm theo tên, mô tả, sellerId, id..."
+           @bind="q" @bind:event="oninput" style="min-width:260px" disabled="@isLoading" />
+    <select @bind="sortBy" disabled="@isLoading">
+        <option value="storeName">Tên cửa hàng</option>
+        <option value="sellerId">SellerId</option>
+        <option value="id">ID</option>
+    </select>
+    <select @bind="sortDir" disabled="@isLoading">
+        <option value="asc">↑</option>
+        <option value="desc">↓</option>
+    </select>
+    <select @bind="pageSize" disabled="@isLoading">
+        <option value="10">10 / trang</option>
+        <option value="20">20 / trang</option>
+        <option value="50">50 / trang</option>
+    </select>
+
+    <button class="btn" @onclick="Reload" disabled="@isLoading" title="Tải lại dữ liệu">
+        @if (isLoading)
+        {
+            <span class="spinner inline" aria-hidden="true"></span> <span>Đang tải…</span>
+        }
+        else
+        {
+            <span>🔄</span>
+        }
+    </button>
+
+<button class="btn primary" @onclick="() => OpenEdit(null)" type="button" disabled="@isLoading">
+    <i class="bi bi-plus-circle me-1"></i>
+</button>
+</div>
+
+<div class="table-wrap" style="position:relative">
+    @* Overlay loading phủ lên bảng khi đang gọi service *@
+    @if (isLoading)
+    {
+        <div class="loading-overlay">
+            <div class="spinner"></div>
+            <div style="margin-top:8px">Đang tải dữ liệu...</div>
+        </div>
+    }
+
+    <table class="table" aria-busy="@isLoading">
+        <thead>
+            <tr>
+                <th style="width:60px">ID</th>
+                <th style="width:100px">SellerId</th>
+                <th>Tên cửa hàng</th>
+                <th>Mô tả</th>
+                <th style="width:140px">Banner</th>
+                <th style="width:160px">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in PageOf(FilterAndSort(Svc.Stores)))
+            {
+                <tr>
+                    <td>@s.id</td>
+                    <td><span class="pill">@s.sellerId</span></td>
+                    <td><strong>@s.storeName</strong></td>
+                    <td>@s.description</td>
+                    <td>
+                        @if (!string.IsNullOrWhiteSpace(s.bannerImageURL))
+                        {
+                            <img src="@s.bannerImageURL" alt="banner" style="width:120px;height:60px;object-fit:cover;border:1px solid #eee" />
+                        }
+                    </td>
+                    <td>
+                      <div style="display:flex; gap:6px">
+    <button class="btn btn-outline-primary" type="button" title="Xem" @onclick="@(() => Go(s.id))" disabled="@isLoading">
+        <i class="bi bi-eye"></i>
+    </button>
+    <button class="btn btn-outline-warning" title="Sửa" @onclick="() => OpenEdit(s)" >
+        <i class="bi bi-pencil-square"></i>
+    </button>
+    <button class="btn btn-outline-danger" title="Xóa" @onclick="() => ConfirmDelete(s.id)" disabled="@isLoading">
+        <i class="bi bi-trash"></i>
+    </button>
+</div>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="pager" style="display:flex; justify-content:space-between; margin-top:8px">
+    <div class="group">
+    <button class="btn" @onclick="Prev" disabled="@(page <= 1 || isLoading)">«</button>
+    <button class="btn" @onclick="Next" disabled="@(page >= TotalPages || isLoading)">»</button>
+</div>
+    @* <div class="group" style="color:var(--muted)">Trang @page/@TotalPages — Tổng @TotalItems</div> *@
+</div>
+
+@if (showEdit)
+{
+    <EditForm Model="editModel" OnValidSubmit="Save">
+        <DataAnnotationsValidator />
+        <div class="card" style="margin-top:12px; opacity:@(isLoading ? 0.7 : 1)">
+            <div class="card-head"><strong>@(editModel.id == 0 ? "Thêm cửa hàng" : "Sửa cửa hàng")</strong></div>
+            <div class="card-body" style="display:grid; gap:8px; max-width:640px">
+                <div class="field">
+                    <label>SellerId</label>
+                    <InputNumber @bind-Value="editModel.sellerId" class="input" disabled="@isLoading" />
+                </div>
+                <div class="field">
+                    <label>Tên cửa hàng</label>
+                    <InputText @bind-Value="editModel.storeName" class="input" disabled="@isLoading" />
+                    <ValidationMessage For="() => editModel.storeName" />
+                </div>
+                <div class="field">
+                    <label>Mô tả</label>
+                    <InputTextArea @bind-Value="editModel.description" class="input" disabled="@isLoading" />
+                </div>
+                <div class="field">
+                    <label>BannerImageURL</label>
+                    <InputText @bind-Value="editModel.bannerImageURL" class="input" disabled="@isLoading" />
+                </div>
+            </div>
+            <div class="card-foot" style="display:flex; gap:8px; padding:8px">
+                <button class="btn" type="button" @onclick="() => showEdit=false" disabled="@isLoading">Hủy</button>
+                <button class="btn primary" type="submit" disabled="@isLoading">
+                    @if (isLoading) { <span class="spinner inline"></span> } Lưu
+                </button>
+            </div>
+        </div>
+    </EditForm>
+}
+
+
+

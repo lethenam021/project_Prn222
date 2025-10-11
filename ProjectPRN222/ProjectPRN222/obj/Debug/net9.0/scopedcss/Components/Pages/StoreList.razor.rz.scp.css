@@ -1,0 +1,416 @@
+
+:root[b-1dra38ywmf] {
+    --bg: #ffffff;
+    --fg: #111111;
+    --muted: #6b7280;
+    --line: #e5e7eb;
+    --soft: #f7f7f8;
+    --primary: #0a66c2;
+    --danger: #c62828;
+    --ok: #166534;
+}
+
+*[b-1dra38ywmf] {
+    box-sizing: border-box
+}
+
+html[b-1dra38ywmf], body[b-1dra38ywmf] {
+    height: 100%
+}
+
+body[b-1dra38ywmf] {
+    margin: 0;
+    font: 14px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg)
+}
+
+.wrap[b-1dra38ywmf] {
+    max-width: 1200px;
+    margin: 28px auto;
+    padding: 0 20px
+}
+
+.table-wrap[b-1dra38ywmf] {
+    position: relative;
+}
+
+.loading-overlay[b-1dra38ywmf] {
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.spinner[b-1dra38ywmf] {
+    width: 32px;
+    height: 32px;
+    border: 4px solid #ccc;
+    border-top-color: #333;
+    border-radius: 50%;
+    animation: spin-b-1dra38ywmf 0.8s linear infinite;
+}
+
+    .spinner.inline[b-1dra38ywmf] {
+        width: 16px;
+        height: 16px;
+        border-width: 2px;
+        vertical-align: middle;
+    }
+
+@keyframes spin-b-1dra38ywmf {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+header[b-1dra38ywmf] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px
+}
+
+h1[b-1dra38ywmf] {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .2px
+}
+
+.actions[b-1dra38ywmf] {
+    display: flex;
+    gap: 8px
+}
+
+.btn[b-1dra38ywmf] {
+    appearance: none;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--fg);
+    width: 36px;
+    height: 36px;
+    display: inline-grid;
+    place-items: center;
+    cursor: pointer
+}
+
+    .btn:hover[b-1dra38ywmf] {
+        background: #f1f5f9
+    }
+
+    .btn:focus[b-1dra38ywmf] {
+        outline: 2px solid #94a3b8;
+        outline-offset: 1px
+    }
+
+    .btn.primary[b-1dra38ywmf] {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary)
+    }
+
+        .btn.primary:hover[b-1dra38ywmf] {
+            filter: brightness(0.95)
+        }
+
+    .btn.danger[b-1dra38ywmf] {
+        background: var(--danger);
+        color: #fff;
+        border-color: var(--danger)
+    }
+
+.toolbar[b-1dra38ywmf] {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    border: 1px solid var(--line);
+    background: var(--soft)
+}
+
+.input[b-1dra38ywmf], select[b-1dra38ywmf] {
+    height: 36px;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    background: #fff;
+    min-width: 200px
+}
+
+    .input:focus[b-1dra38ywmf], select:focus[b-1dra38ywmf] {
+        outline: 2px solid #94a3b8;
+        outline-offset: 1px
+    }
+
+.table-wrap[b-1dra38ywmf] {
+    border: 1px solid var(--line);
+    border-top: none
+}
+
+.table[b-1dra38ywmf] {
+    width: 100%;
+    border-collapse: collapse
+}
+
+    .table thead th[b-1dra38ywmf] {
+        position: sticky;
+        top: 0;
+        background: #fafafa;
+        border-bottom: 1px solid var(--line);
+        font-weight: 600;
+        text-align: left;
+        padding: 10px
+    }
+
+    .table td[b-1dra38ywmf] {
+        border-top: 1px solid var(--line);
+        padding: 10px;
+        vertical-align: middle
+    }
+
+    .table tbody tr:nth-child(odd) td[b-1dra38ywmf] {
+        background: #fcfcfd
+    }
+
+    .table tbody tr:hover td[b-1dra38ywmf] {
+        background: #f5f7fb
+    }
+
+.banner[b-1dra38ywmf] {
+    width: 120px;
+    height: 60px;
+    object-fit: cover;
+    border: 1px solid var(--line)
+}
+
+.pager[b-1dra38ywmf] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-top: none;
+    background: #fff
+}
+
+    .pager .group[b-1dra38ywmf] {
+        display: flex;
+        gap: 8px;
+        align-items: center
+    }
+
+/* Dialog (vuông, rõ ràng) */
+dialog[b-1dra38ywmf] {
+    border: 1px solid var(--line);
+    padding: 0;
+    width: min(560px, 96vw)
+}
+
+    dialog[b-1dra38ywmf]::backdrop {
+        background: rgba(0,0,0,.35)
+    }
+
+.modal-head[b-1dra38ywmf] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--line);
+    background: #fff
+}
+
+.modal-body[b-1dra38ywmf] {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    background: #fff
+}
+
+.modal-actions[b-1dra38ywmf] {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 10px;
+    border-top: 1px solid var(--line);
+    background: #fff
+}
+
+.field[b-1dra38ywmf] {
+    display: grid;
+    gap: 6px
+}
+
+    .field label[b-1dra38ywmf] {
+        font-size: 12px;
+        color: var(--muted)
+    }
+
+    .field input[b-1dra38ywmf], .field textarea[b-1dra38ywmf] {
+        border: 1px solid var(--line);
+        padding: 8px
+    }
+
+    .field textarea[b-1dra38ywmf] {
+        min-height: 80px;
+        resize: vertical
+    }
+
+/* Icon SVG mặc định cho nút */
+.i[b-1dra38ywmf] {
+    width: 16px;
+    height: 16px;
+    display: block
+}
+
+.pill[b-1dra38ywmf] {
+    padding: 2px 6px;
+    font-size: 12px;
+    background: #eef2f7;
+    border: 1px solid var(--line)
+}
+
+/* ===== Chi tiết cửa hàng ===== */
+.grid[b-1dra38ywmf] {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 16px
+}
+
+.card[b-1dra38ywmf] {
+    border: 1px solid var(--line);
+    background: #fff
+}
+
+.card-head[b-1dra38ywmf] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid var(--line)
+}
+
+.card-body[b-1dra38ywmf] {
+    padding: 10px
+}
+
+/* Ẩn/hiện theo route */
+#listView[hidden][b-1dra38ywmf], #detailView[hidden][b-1dra38ywmf] {
+    display: none
+}
+
+@media (max-width: 960px) {
+    .grid[b-1dra38ywmf] {
+        grid-template-columns: 1fr
+    }
+}
+
+.preview[b-1dra38ywmf] {
+    position: relative; /* để định vị nút X bên trong */
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: .75rem;
+    border: 1px dashed #cbd5e1;
+    border-radius: 12px;
+}
+
+    .preview img[b-1dra38ywmf] {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+
+    /* Nút X */
+    .preview .preview-close[b-1dra38ywmf] {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 9999px;
+        background: rgba(0,0,0,.5);
+        color: #fff;
+        cursor: pointer;
+    }
+
+        .preview .preview-close:hover[b-1dra38ywmf] {
+            background: rgba(0,0,0,.65);
+        }
+
+        .preview .preview-close:focus-visible[b-1dra38ywmf] {
+            outline: 2px solid #0ea5e9;
+            outline-offset: 2px;
+        }
+
+/* (Giữ media query hiện có của bạn) */
+@media (max-width:640px) {
+    .uploader[b-1dra38ywmf] {
+        grid-template-columns: 1fr;
+    }
+
+    .divider[b-1dra38ywmf] {
+        text-align: center;
+    }
+
+        .divider[b-1dra38ywmf]::before, .divider[b-1dra38ywmf]::after {
+            display: none;
+        }
+}
+
+/* overlay phủ bảng */
+.loading-overlay[b-1dra38ywmf] {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+    z-index: 2;
+    border-radius: 8px;
+}
+
+/* spinner chung */
+.spinner[b-1dra38ywmf] {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4a90e2;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin-b-1dra38ywmf .8s linear infinite;
+}
+
+    .spinner.inline[b-1dra38ywmf] {
+        width: 16px;
+        height: 16px;
+        border-width: 2px;
+        margin-right: 6px;
+        vertical-align: -2px;
+    }
+
+@keyframes spin-b-1dra38ywmf {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn i[b-1dra38ywmf] {
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
+.btn:hover i[b-1dra38ywmf] {
+    transform: scale(1.15);
+    transition: 0.15s;
+}
