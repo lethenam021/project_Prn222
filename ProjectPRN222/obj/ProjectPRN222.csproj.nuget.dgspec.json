@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj": {}
+    "D:\\FPT\\PRN222\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj": {}
   },
   "projects": {
-    "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj": {
+    "D:\\FPT\\PRN222\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj",
+        "projectUniqueName": "D:\\FPT\\PRN222\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj",
         "projectName": "ProjectPRN222",
-        "projectPath": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\obj\\",
+        "projectPath": "D:\\FPT\\PRN222\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT\\PRN222\\project_Prn222\\ProjectPRN222\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +50,16 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Blazorise.Icons.FontAwesome": {
+              "target": "Package",
+              "version": "[1.8.4, )"
+            },
+            "Blazorise.Tailwind": {
+              "target": "Package",
+              "version": "[1.8.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
