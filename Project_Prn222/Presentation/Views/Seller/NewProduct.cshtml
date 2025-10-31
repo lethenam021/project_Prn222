@@ -1,0 +1,578 @@
+﻿
+<style>
+
+    :root {
+        --bg: #f9fafb; /* nền trắng nhạt */
+        --panel: #ffffff; /* panel chính trắng */
+        --panel-2: #f3f4f6; /* panel phụ xám nhạt */
+        --text: #1a1a1a; /* chữ chính đen */
+        --muted: #6b7280; /* chữ phụ xám */
+        --accent: #2563eb; /* xanh dương chủ đạo */
+        --accent-2: #60a5fa; /* xanh sáng hơn cho gradient */
+        --danger: #dc2626; /* đỏ */
+        --success: #16a34a; /* xanh lá */
+        --warn: #f59e0b; /* vàng cảnh báo */
+    }
+
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: linear-gradient(180deg, var(--bg), #0a0d12 30%, var(--bg) 100%);
+        color: var(--text);
+    }
+
+    .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .appbar {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(6px);
+        background: rgba(10, 14, 20, 0.7);
+    }
+
+    .appbar-inner {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 14px 24px;
+    }
+
+    .logo {
+        width: 28px;
+        height: 28px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    }
+
+    .app-title {
+        font-size: 18px;
+        letter-spacing: 0.4px;
+        color: var(--text);
+    }
+
+    .header {
+        padding: 36px 0 8px;
+    }
+
+        .header h1 {
+            margin: 0 0 8px;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .header p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+    .panel {
+        background: radial-gradient(1200px 500px at 20% -20%, rgba(77,163,255,0.08), transparent 40%), radial-gradient(900px 400px at 100% -10%, rgba(123,220,255,0.06), transparent 50%), var(--panel);
+        padding: 24px;
+    }
+
+    .section-title {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0 0 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .grid {
+        display: grid;
+        gap: 18px;
+    }
+
+        .grid.cols-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid.cols-3 {
+            grid-template-columns: 1.2fr 1fr 1fr;
+        }
+
+    media (max-width: 860px) {
+        .grid.cols-2, .grid.cols-3
+
+    {
+        grid-template-columns: 1fr;
+    }
+
+    }
+
+    .field {
+        display: grid;
+        gap: 8px;
+    }
+
+    .label {
+        font-size: 13px;
+        color: var(--muted);
+    }
+
+    /* Inputs without borders */
+    .input, .textarea, .select {
+        width: 100%;
+        background: linear-gradient(180deg, var(--panel-2), #0c121a);
+        color: var(--text);
+        padding: 12px 14px;
+        outline: none;
+        border: none; /* no borders */
+        border-radius: 0; /* no border radius */
+    }
+
+    .textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+        .input::placeholder, .textarea::placeholder {
+            color: #7e8ea3;
+        }
+
+        /* Accessible focus state (outline, not border) */
+        .input:focus, .textarea:focus, .select:focus, .btn:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+    .hint {
+        font-size: 12px;
+        color: var(--muted);
+    }
+
+    /* Buttons */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: linear-gradient(180deg, var(--accent), #2c7ed8);
+        color: #05121f;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        padding: 12px 18px;
+        text-decoration: none;
+        border: none;
+        border-radius: 0;
+        cursor: pointer; /* still no borders */
+    }
+
+        .btn.secondary {
+            background: linear-gradient(180deg, #182232, #141c29);
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .btn.danger {
+            background: linear-gradient(180deg, var(--danger), #d94f4f);
+            color: #1a0c0c;
+        }
+
+        .btn:disabled {
+            opacity: .6;
+            cursor: not-allowed;
+        }
+
+    .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    /* File input styling */
+    .file {
+        position: relative;
+    }
+
+        .file input[type="file"] {
+            width: 100%;
+            padding: 12px 14px;
+            background: linear-gradient(180deg, var(--panel-2), #0c121a);
+            color: var(--muted);
+        }
+
+    .helper-card {
+        background: linear-gradient(180deg, #0e1520, #0c121a);
+        padding: 16px;
+    }
+
+        .helper-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+    hr.sep {
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255,255,255,0.06), transparent);
+        border: none;
+        margin: 28px 0;
+    }
+
+    .footer-note {
+        font-size: 12px;
+        color: var(--muted);
+        text-align: center;
+        padding: 24px 0 48px;
+    }
+
+    /* ============================
+       Store List (Cards / List mode) – no borders, no radius
+       ============================ */
+    .toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .search {
+        flex: 1;
+    }
+
+    .view-toggle {
+        display: inline-flex;
+        gap: 8px;
+    }
+
+        .view-toggle .btn {
+            padding: 10px 14px;
+        }
+
+    .stores {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    media (max-width: 960px) {
+        .stores
+
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    }
+
+    media (max-width: 640px) {
+        .stores
+
+    {
+        grid-template-columns: 1fr;
+    }
+
+    }
+
+    .card-store {
+        background: linear-gradient(180deg, #0f1622, #0c121a);
+        display: grid;
+        grid-template-rows: 140px auto;
+        min-height: 260px;
+    }
+
+        .card-store .banner {
+            height: 140px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-store .body {
+            padding: 14px 16px;
+            display: grid;
+            gap: 10px;
+        }
+
+        .card-store .title {
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .card-store .meta {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .card-store .desc {
+            font-size: 13px;
+            color: #cbd6e4;
+            line-height: 1.5;
+            max-height: 3.6em;
+            overflow: hidden;
+        }
+
+        .card-store .actions {
+            margin-top: 6px;
+            display: flex;
+            gap: 10px;
+        }
+
+    /* List mode */
+    .stores.list-mode {
+        grid-template-columns: 1fr;
+    }
+
+    .row-store {
+        display: grid;
+        grid-template-columns: 160px 1fr auto;
+        gap: 16px;
+        align-items: center;
+        background: linear-gradient(180deg, #0f1622, #0c121a);
+    }
+
+        .row-store .banner {
+            height: 100px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .row-store .body {
+            padding: 12px 0;
+            display: grid;
+            gap: 6px;
+        }
+
+        .row-store .title {
+            font-weight: 700;
+        }
+
+        .row-store .meta {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .row-store .desc {
+            font-size: 13px;
+            color: #cbd6e4;
+            line-height: 1.5;
+            max-height: 3.6em;
+            overflow: hidden;
+        }
+
+        .row-store .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+    hr.tight {
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255,255,255,0.05), transparent);
+        border: none;
+        margin: 12px 0;
+    }
+
+    /* Icon-only buttons */
+    .icon-btn {
+        background: linear-gradient(180deg, #1a2434, #141c29);
+        color: var(--text);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+    }
+
+        .icon-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .icon-btn.edit {
+            background: linear-gradient(180deg, var(--accent), #2c7ed8);
+            color: #05121f;
+        }
+
+        .icon-btn.delete {
+            background: linear-gradient(180deg, var(--danger), #d94f4f);
+            color: #190c0c;
+        }
+
+        .icon-btn:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+    /* Modal (no borders, no radius) */
+    .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        display: none;
+    }
+
+    .modal {
+        position: fixed;
+        inset: 0;
+        display: none;
+        place-items: center;
+    }
+
+        .modal.active, .modal-backdrop.active {
+            display: grid;
+        }
+
+    .modal-panel {
+        width: min(720px, 92vw);
+        background: linear-gradient(180deg, #101827, #0b1019);
+        padding: 20px;
+    }
+
+    .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+
+    .modal-title {
+        font-weight: 700;
+        letter-spacing: 0.3px;
+    }
+
+    .modal-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .modal-body {
+        display: grid;
+        gap: 14px;
+    }
+
+    /* Compact row for header buttons */
+    .icon-row {
+        display: inline-flex;
+        gap: 8px;
+    }
+</style>
+@await Html.PartialAsync("_navbar")
+<!-- ============================
+     File: product-new.html
+     ============================ -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đăng bán sản phẩm • CloneEbay</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="appbar">
+        <div class="appbar-inner container">
+            <div class="logo" aria-hidden="true"></div>
+            <div class="app-title">CloneEbay • New Product</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="header">
+            <h1>Đăng bán sản phẩm</h1>
+            <p>Tạo listing mới. Dữ liệu tương ứng bảng <code>Product</code>.</p>
+        </section>
+
+        <form class="panel" action="/api/products" method="post" enctype="multipart/form-data">
+            <h2 class="section-title">Thông tin cơ bản</h2>
+            <div class="grid cols-2">
+                <div class="field">
+                    <label class="label" for="title">Tiêu đề</label>
+                    <input class="input" type="text" id="title" name="title" placeholder="VD: Tai nghe Bluetooth ANC" maxlength="160" required />
+                    <div class="hint">Ánh xạ tới <code>Product.title</code></div>
+                </div>
+                <div class="field">
+                    <label class="label" for="price">Giá (VND)</label>
+                    <input class="input" type="number" step="0.01" min="0" id="price" name="price" placeholder="Nhập giá" required />
+                    <div class="hint">Ánh xạ tới <code>Product.price</code></div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="field">
+                    <label class="label" for="descriptionP">Mô tả sản phẩm</label>
+                    <textarea class="textarea" id="descriptionP" name="description" placeholder="Mô tả chi tiết thông số, chất liệu, bảo hành…" maxlength="5000" required></textarea>
+                    <div class="hint">Ánh xạ tới <code>Product.description</code></div>
+                </div>
+            </div>
+
+            <hr class="sep" />
+
+            <h2 class="section-title">Phân loại & quyền sở hữu</h2>
+            <div class="grid cols-3">
+                <div class="field">
+                    <label class="label" for="categoryId">Category ID</label>
+                    <input class="input" type="number" id="categoryId" name="categoryId" placeholder="Nhập categoryId" required />
+                    <div class="hint">Ánh xạ tới <code>Product.categoryId</code></div>
+                </div>
+                <div class="field">
+                    <label class="label" for="sellerIdP">Seller ID</label>
+                    <input class="input" type="number" id="sellerIdP" name="sellerId" placeholder="Nhập sellerId" required />
+                    <div class="hint">Ánh xạ tới <code>Product.sellerId</code></div>
+                </div>
+                <div class="field">
+                    <label class="label" for="isAuction">Bán đấu giá?</label>
+                    <select class="select" id="isAuction" name="isAuction" required>
+                        <option value="false" selected>Không</option>
+                        <option value="true">Có</option>
+                    </select>
+                    <div class="hint">Ánh xạ tới <code>Product.isAuction</code></div>
+                </div>
+            </div>
+
+            <div class="grid cols-2">
+                <div class="field">
+                    <label class="label" for="auctionEndTime">Thời điểm kết thúc đấu giá</label>
+                    <input class="input" type="datetime-local" id="auctionEndTime" name="auctionEndTime" />
+                    <div class="hint">Bắt buộc nếu chọn đấu giá. Ánh xạ tới <code>Product.auctionEndTime</code></div>
+                </div>
+            </div>
+
+            <hr class="sep" />
+
+            <h2 class="section-title">Hình ảnh sản phẩm</h2>
+            <div class="grid cols-2">
+                <div class="field file">
+                    <label class="label" for="images">Tải ảnh (có thể chọn nhiều)</label>
+                    <input class="input" type="file" id="images" name="images" accept="image/*" multiple />
+                    <div class="hint">Ánh xạ tới <code>Product.images</code> (lưu ý cấu trúc lưu trữ của bạn: mảng URL, JSON, bảng phụ …)</div>
+                </div>
+                <div class="field">
+                    <label class="label" for="coverUrl">Ảnh bìa (URL tùy chọn)</label>
+                    <input class="input" type="url" id="coverUrl" name="coverUrl" placeholder="https://cdn.yourdomain.com/products/cover.jpg" />
+                    <div class="hint">Nếu dùng URL sẵn có từ CDN</div>
+                </div>
+            </div>
+
+            <div class="actions" style="margin-top: 18px;">
+                <button class="btn" type="submit">Đăng sản phẩm</button>
+                <button class="btn secondary" type="reset">Làm lại</button>
+                <a class="btn danger" href="/dashboard/products">Hủy</a>
+            </div>
+
+            <hr class="sep" />
+            <div class="helper-card">
+                <p>Gợi ý: Ảnh tối ưu 1200×1200px, nén &lt; 300KB/ảnh, đặt tên file không dấu, không khoảng trắng.</p>
+            </div>
+        </form>
+
+        <p class="footer-note">© 2025 CloneEbay – Product module</p>
+    </main>
+</body>
+</html>

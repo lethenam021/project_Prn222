@@ -1,0 +1,269 @@
+﻿<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quản lý Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="app">
+        <!-- SIDEBAR riêng cho store.html -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="ri-store-2-line"></i> <span>Store Admin</span>
+            </div>
+            <nav class="nav">
+                <a class="active" href="store.html"><i class="ri-store-3-line"></i> Store <span class="badge" id="store-count">0</span></a>
+                <a href="product.html"><i class="ri-shopping-bag-3-line"></i> Product</a>
+                <a href="#"><i class="ri-settings-3-line"></i> Cài đặt</a>
+            </nav>
+        </aside>
+
+        <main>
+            <div class="topbar">
+                <div class="row">
+                    <div class="search">
+                        <i class="ri-search-line"></i>
+                        <input id="q" type="text" placeholder="Tìm store theo tên, mô tả...">
+                    </div>
+                    <button class="btn secondary" id="btn-refresh"><i class="ri-refresh-line"></i>Tải lại</button>
+                </div>
+                <div class="row">
+                    <a class="btn ghost" href="product.html"><i class="ri-arrow-right-line"></i>Product</a>
+                    <button class="btn" id="btn-add-store"><i class="ri-add-line"></i> Thêm store</button>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <div class="row">
+                    <button class="btn secondary" id="mode-grid"><i class="ri-layout-grid-line"></i> Card</button>
+                    <button class="btn secondary" id="mode-list"><i class="ri-list-unordered"></i> List</button>
+                </div>
+                <div class="row right">
+                    <select id="sortBy">
+                        <option value="storeName-asc">Tên A→Z</option>
+                        <option value="storeName-desc">Tên Z→A</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="kpis">
+                    <div class="kpi">
+                        <div class="muted">Tổng store</div>
+                        <div id="kpi-total" style="font-size:28px; font-weight:700;"></div>
+                    </div>
+                    <div class="kpi">
+                        <div class="muted">Có banner</div>
+                        <div id="kpi-banner" style="font-size:28px; font-weight:700;"></div>
+                    </div>
+                    <div class="kpi">
+                        <div class="muted">Không có banner</div>
+                        <div id="kpi-no-banner" style="font-size:28px; font-weight:700;"></div>
+                    </div>
+                    <div class="kpi">
+                        <div class="muted">Seller duy nhất</div>
+                        <div id="kpi-sellers" style="font-size:28px; font-weight:700;"></div>
+                    </div>
+                </div>
+
+                <div id="store-grid" class="grid"></div>
+                <table id="store-table" class="table hidden">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Tên</th>
+                            <th>Mô tả</th>
+                            <th>Seller</th>
+                            <th>Banner</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="footer">© 2025 Store Admin</div>
+        </main>
+    </div>
+
+    <!-- Dialog thêm/sửa store -->
+    <div class="dialog-backdrop" id="dlg-backdrop"></div>
+    <div class="dialog" id="dlg-store">
+        <div class="row" style="justify-content: space-between;">
+            <strong id="dlg-title">Thêm store</strong>
+            <button class="btn ghost" id="dlg-close"><i class="ri-close-line"></i>Đóng</button>
+        </div>
+        <div class="form-grid" style="margin-top:12px;">
+            <div class="form-row"><label>Tên store</label><input id="f-storeName" type="text"></div>
+            <div class="form-row"><label>Seller ID</label><input id="f-sellerId" type="number"></div>
+            <div class="form-row" style="grid-column:1/-1;"><label>Mô tả</label><textarea id="f-description" rows="3"></textarea></div>
+            <div class="form-row" style="grid-column:1/-1;"><label>Banner URL</label><input id="f-banner" type="text"></div>
+        </div>
+        <div class="row" style="margin-top:12px; justify-content:flex-end;">
+            <button class="btn secondary" id="dlg-cancel">Hủy</button>
+            <button class="btn success" id="dlg-save"><i class="ri-save-3-line"></i>Lưu</button>
+        </div>
+    </div>
+
+    <script>
+        // "Database" cứng cho Store
+        let stores = [
+          { id: 1, sellerId: 10, storeName: "Gadget Hub", description: "Đồ điện tử & phụ kiện", bannerImageURL: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" },
+          { id: 2, sellerId: 11, storeName: "HomeStyle", description: "Đồ gia dụng tối giản", bannerImageURL: "" },
+          { id: 3, sellerId: 12, storeName: "BookNest", description: "Sách & văn phòng phẩm", bannerImageURL: "https://images.unsplash.com/photo-1514846160150-2cfb154f83d6?q=80&w=1200&auto=format&fit=crop" },
+          { id: 4, sellerId: 10, storeName: "Fashion Lane", description: "Thời trang công sở", bannerImageURL: "" },
+        ];
+
+        // State
+        let viewMode = "grid"; // or list
+        let editingId = null;
+
+        // Elements
+        const gridEl = document.getElementById("store-grid");
+        const tableEl = document.getElementById("store-table");
+        const tbodyEl = tableEl.querySelector("tbody");
+        const qEl = document.getElementById("q");
+        const sortEl = document.getElementById("sortBy");
+        const countEl = document.getElementById("store-count");
+
+        // KPI
+        function renderKPI() {
+          const total = stores.length;
+          const withBanner = stores.filter(s => s.bannerImageURL).length;
+          const sellers = new Set(stores.map(s => s.sellerId)).size;
+          document.getElementById("kpi-total").textContent = total;
+          document.getElementById("kpi-banner").textContent = withBanner;
+          document.getElementById("kpi-no-banner").textContent = total - withBanner;
+          document.getElementById("kpi-sellers").textContent = sellers;
+          countEl.textContent = total;
+        }
+
+        function applyFilterSort(data) {
+          const q = qEl.value.trim().toLowerCase();
+          let out = data.filter(s =>
+            s.storeName.toLowerCase().includes(q) ||
+            s.description.toLowerCase().includes(q)
+          );
+          const [field, dir] = sortEl.value.split("-");
+          out.sort((a,b) => a[field].localeCompare(b[field]) * (dir === "asc" ? 1 : -1));
+          return out;
+        }
+
+        function render() {
+          renderKPI();
+          const data = applyFilterSort(stores);
+          gridEl.innerHTML = "";
+          tbodyEl.innerHTML = "";
+
+          if (viewMode === "grid") {
+            gridEl.classList.remove("hidden");
+            tableEl.classList.add("hidden");
+            gridEl.style.gridTemplateColumns = "repeat(12, 1fr)";
+            data.forEach(s => {
+              const card = document.createElement("div");
+              card.className = "card";
+              card.style.gridColumn = "span 3";
+              card.innerHTML = `
+                <div class="cover" style="background-image:url('${s.bannerImageURL || 'https://placehold.co/1200x400?text=No+Banner'}')"></div>
+                <div class="row" style="justify-content: space-between;">
+                  <div>
+                    <div style="font-weight:700">${s.storeName}</div>
+                    <div class="muted">Seller #${s.sellerId}</div>
+                  </div>
+                  <div class="row">
+                    <button class="btn ghost" data-edit="${s.id}"><i class="ri-edit-2-line"></i></button>
+                    <button class="btn ghost" data-del="${s.id}"><i class="ri-delete-bin-6-line"></i></button>
+                  </div>
+                </div>
+                <div class="muted" style="margin-top:8px">${s.description || ""}</div>
+              `;
+              gridEl.appendChild(card);
+            });
+          } else {
+            gridEl.classList.add("hidden");
+            tableEl.classList.remove("hidden");
+            data.forEach((s, idx) => {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `
+                <td>${idx+1}</td>
+                <td>${s.storeName}</td>
+                <td class="muted">${s.description || ""}</td>
+                <td>#${s.sellerId}</td>
+                <td>${s.bannerImageURL ? '<i class="ri-image-line"></i>' : '-'}</td>
+                <td class="row" style="justify-content:flex-end;">
+                  <button class="btn ghost" data-edit="${s.id}"><i class="ri-edit-2-line"></i>Sửa</button>
+                  <button class="btn ghost" data-del="${s.id}"><i class="ri-delete-bin-6-line"></i>Xóa</button>
+                </td>
+              `;
+              tbodyEl.appendChild(tr);
+            });
+          }
+        }
+
+        document.getElementById("mode-grid").onclick = () => { viewMode = "grid"; render(); };
+        document.getElementById("mode-list").onclick = () => { viewMode = "list"; render(); };
+        qEl.oninput = render;
+        sortEl.onchange = render;
+        document.getElementById("btn-refresh").onclick = render;
+
+        // Dialog logic
+        const dlg = document.getElementById("dlg-store");
+        const backdrop = document.getElementById("dlg-backdrop");
+        function openDlg(title, store) {
+          document.getElementById("dlg-title").textContent = title;
+          dlg.classList.add("open"); backdrop.classList.add("open");
+          document.getElementById("f-storeName").value = store?.storeName || "";
+          document.getElementById("f-sellerId").value = store?.sellerId ?? "";
+          document.getElementById("f-description").value = store?.description || "";
+          document.getElementById("f-banner").value = store?.bannerImageURL || "";
+        }
+        function closeDlg(){ dlg.classList.remove("open"); backdrop.classList.remove("open"); editingId = null; }
+
+        document.getElementById("dlg-close").onclick = closeDlg;
+        document.getElementById("dlg-cancel").onclick = closeDlg;
+        document.getElementById("btn-add-store").onclick = () => { editingId = null; openDlg("Thêm store"); };
+
+        document.addEventListener("click", (e) => {
+          const editId = e.target.closest?.("button[data-edit]")?.dataset?.edit;
+          const delId = e.target.closest?.("button[data-del]")?.dataset?.del;
+          if (editId) {
+            const s = stores.find(x => x.id == editId);
+            editingId = s.id;
+            openDlg("Sửa store", s);
+          }
+          if (delId) {
+            const idx = stores.findIndex(x => x.id == delId);
+            if (idx >= 0 && confirm("Xóa store này?")) {
+              stores.splice(idx,1);
+              render();
+            }
+          }
+        });
+
+        document.getElementById("dlg-save").onclick = () => {
+          const payload = {
+            storeName: document.getElementById("f-storeName").value.trim(),
+            sellerId: Number(document.getElementById("f-sellerId").value || 0),
+            description: document.getElementById("f-description").value.trim(),
+            bannerImageURL: document.getElementById("f-banner").value.trim(),
+          };
+          if (!payload.storeName) { alert("Nhập tên store"); return; }
+          if (editingId) {
+            const i = stores.findIndex(s => s.id === editingId);
+            stores[i] = { ...stores[i], ...payload };
+          } else {
+            const id = Math.max(0, ...stores.map(s => s.id)) + 1;
+            stores.push({ id, ...payload });
+          }
+          closeDlg();
+          render();
+        };
+
+        // init
+        render();
+    </script>
+</body>
+</html>

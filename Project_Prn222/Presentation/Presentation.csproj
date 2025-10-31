@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\Mantis-Vue-1.0.0\Mantis-Vue-1.0.0\src\.vscode\settings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Shared\head-css.cshtml" />
+    <None Include="Views\Shared\head-page-meta.cshtml" />
+    <None Include="Views\Shared\_HeadCss.cshtml" />
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\.DS_Store" />
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\.github\workflows\main.yml" />
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\.github\workflows\prod.yml" />
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\dist\.DS_Store" />
+    <None Include="wwwroot\Mantis-Bootstrap-1.0.0\src\.DS_Store" />
+    <None Include="wwwroot\Mantis-Vue-1.0.0\Mantis-Vue-1.0.0\.github\workflows\main.yml" />
+    <None Include="wwwroot\Mantis-Vue-1.0.0\Mantis-Vue-1.0.0\.github\workflows\prod.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
