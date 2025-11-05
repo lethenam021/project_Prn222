@@ -7,14 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogic.Services
-{
-    public class StoreService: IStoreSevice
-    {
+namespace BusinessLogic.Services {
+    public class StoreService : IStoreSevice {
         private readonly IStoreRepo _repo;
 
-        public StoreService(IStoreRepo repo)
-        {
+        public StoreService(IStoreRepo repo) {
             _repo = repo;
         }
 

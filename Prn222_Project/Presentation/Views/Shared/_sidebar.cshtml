@@ -3,7 +3,7 @@
     <!-- Sidebar scroll-->
     <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-            <a href="./index.html" class="text-nowrap logo-img">
+            <a href="./index.html" class="logo-img text-nowrap">
                 <img src="~/Modernize-1.0.0/Modernize-1.0.0/src//assets/images/logos/dark-logo.svg" width="180" alt="" />
             </a>
             <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -74,7 +74,7 @@
                     <span class="hide-menu">AUTH</span>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
+                    <a class="sidebar-link" asp-controller="Auth" asp-action="Login" aria-expanded="false">
                         <span>
                             <i class="ti ti-login"></i>
                         </span>
@@ -82,7 +82,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
+                    <a class="sidebar-link" asp-controller="Auth" asp-action="Register" aria-expanded="false">
                         <span>
                             <i class="ti ti-user-plus"></i>
                         </span>

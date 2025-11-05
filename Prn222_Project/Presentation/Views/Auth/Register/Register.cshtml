@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Sign Up";
+}
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="position-relative radial-gradient min-vh-100 d-flex align-items-center justify-content-center overflow-hidden">
+        <div class="d-flex align-items-center justify-content-center w-100">
+            <div class="row justify-content-center w-100">
+                <div class="col-md-8 col-lg-6 col-xxl-3">
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <a class="logo-img d-block w-100 text-nowrap py-3 text-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay Logo" width="117" height="48">
+                            </a>
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" />
+                                </div>
+                                <div class="mb-4">
+                                    <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="password"/>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="confirm-password" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="confirm-password" />
+                                </div>
+
+                                <div class="mb-4">
+                                    <label for="role" class="form-label">Register as <span class="text-danger">*</span></label>
+                                    <select id="role" class="form-select">
+                                        <option value="" selected disabled>-- Select your role --</option>
+                                        <option value="Buyer">Buyer</option>
+                                        <option value="Seller">Seller</option>
+                                    </select>
+                                </div>
+
+                                <a href="./index.html" class="btn btn-primary w-100 fs-4 rounded-2 mb-4 py-8">Sign Up</a>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <p class="fs-4 fw-bold mb-0">Already have an Account?</p>
+                                    <a class="text-primary fw-bold ms-2" href="./authentication-login.html">Sign In</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

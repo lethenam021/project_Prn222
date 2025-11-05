@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Sign In";
+}
+
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    <div class="position-relative radial-gradient min-vh-100 d-flex align-items-center justify-content-center overflow-hidden">
+        <div class="d-flex align-items-center justify-content-center w-100">
+            <div class="row justify-content-center w-100">
+                <div class="col-md-8 col-lg-6 col-xxl-3">
+                    <div class="card mb-0">
+                        <div class="card-body">
+                            <a class="logo-img d-block w-100 text-nowrap py-3 text-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay Logo" width="117" height="48">
+                            </a>
+
+                            <form id="login-form">
+                                @await Html.PartialAsync("Login/_LoginFormPartial")
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/auth/login.js"></script>
+}
