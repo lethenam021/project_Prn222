@@ -2764,23 +2764,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {},
+    "C:\\Users\\ACER\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\VisualStudio\\Prn222_Project\\BusinessLogic\\BusinessLogic.csproj",
+      "projectUniqueName": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\BusinessLogic.csproj",
       "projectName": "BusinessLogic",
-      "projectPath": "C:\\VisualStudio\\Prn222_Project\\BusinessLogic\\BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\VisualStudio\\Prn222_Project\\BusinessLogic\\obj\\",
+      "projectPath": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+      "outputPath": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2795,8 +2795,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\VisualStudio\\Prn222_Project\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\VisualStudio\\Prn222_Project\\DataAccess\\DataAccess.csproj"
+            "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -2811,7 +2811,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -2832,7 +2832,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
