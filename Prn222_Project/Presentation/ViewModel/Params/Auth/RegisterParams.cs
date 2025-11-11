@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace Presentation.ViewModel.Params.Auth {
-    public class RegisterParams {
+    public class RegisterParams : IValidatableObject {
         [Required(ErrorMessage = "Name is required!")]
         public string? Name { get; set; }
 

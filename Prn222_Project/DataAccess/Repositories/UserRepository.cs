@@ -21,5 +21,11 @@ namespace DataAccess.Repositories {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
             return user!;
         }
+
+        public async Task AddUserAsync(User user) {
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+        }
     }
 }
+ 

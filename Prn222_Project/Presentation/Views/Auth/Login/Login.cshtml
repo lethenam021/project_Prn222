@@ -15,7 +15,7 @@
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/EBay_logo.svg" alt="eBay Logo" width="117" height="48">
                             </a>
 
-                            <form id="login-form">
+                            <form id="login-form" asp-controller="Auth" asp-action="Login">
                                 @await Html.PartialAsync("Login/_LoginFormPartial")
                             </form>
                         </div>

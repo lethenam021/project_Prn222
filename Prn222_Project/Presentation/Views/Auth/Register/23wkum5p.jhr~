@@ -1,0 +1,40 @@
+﻿@model Presentation.ViewModel.Params.Auth.VerifyCodeParams
+
+<div class="modal fade" id="verify-code-modal" tabindex="-1" aria-labelledby="verifyModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="verifyModalLabel">Verify your account</h5>
+            </div>
+
+            <form id="verify-form" asp-controller="Auth" asp-action="VerifyEmailCode">
+                <div class="modal-body">
+
+                    <p>
+                        A 6 digit code has been sent to email:
+                        <br>
+                        <strong id="verify-email-display"></strong>
+                    </p>
+
+                    <input type="hidden" id="verify-email-input" asp-for="Email"/>
+
+                    <div class="mb-3">
+                        <label for="verification-code" class="form-label">Verification code</label>
+                        <input type="text" class="form-control" id="verification-code" name="Code"
+                               maxlength="6" required>
+                    </div>
+
+                    <div class="text-center">
+                        <a href="#" id="resend-code-link">Didn't receive? Resend code</a>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary w-100">Verify</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+

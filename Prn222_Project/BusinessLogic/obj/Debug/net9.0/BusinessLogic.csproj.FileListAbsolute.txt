@@ -16,7 +16,9 @@ C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.deps.json
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.dll
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.dll
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.pdb
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.pdb
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.AssemblyReference.cache
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
@@ -29,5 +31,3 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\Busin
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\refint\BusinessLogic.dll
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.pdb
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.dll
-D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.dll
-D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.pdb

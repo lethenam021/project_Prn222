@@ -230,6 +230,7 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\dist\dom\event-handler.js
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\deferred.js
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\src\alert.js
+D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\js\auth\register.js
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\src\modal.js
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\data\Data.js
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\dist\locales\zh-cn.json
@@ -598,6 +599,7 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\auth\login.js
+wwwroot\js\auth\register.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

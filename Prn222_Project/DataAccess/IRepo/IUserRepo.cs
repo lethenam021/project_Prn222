@@ -9,5 +9,6 @@ namespace DataAccess.IRepo {
     public interface IUserRepo {
         Task<User?> GetUserByEmailAsync(string email);
         Task<User> GetUserByIdAsync(int userId);
+        Task AddUserAsync(User user);
     }
 }

@@ -4,6 +4,11 @@ using BusinessLogic.Validation;
 using DataAccess.IRepo;
 using DataAccess.Models;
 using DataAccess.Repositories;
+using Hangfire;
+using Hangfire.SqlServer;
+using Infrastructure.Configuration;
+using Infrastructure.Interface;
+using Infrastructure.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,11 +23,37 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
     });
 
+builder.Services.AddStackExchangeRedisCache(options => {
+    options.Configuration = "localhost:6379";
+    options.InstanceName = "MyApp_";
+});
+
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<CloneEbayDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddHangfire(configuration => configuration
+    .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+    .UseSimpleAssemblyNameTypeSerializer()
+    .UseRecommendedSerializerSettings()
+    .UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection"), new SqlServerStorageOptions // Bảo Hangfire dùng SQL Server
+    {
+        CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+        SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+        QueuePollInterval = TimeSpan.Zero,
+        UseRecommendedIsolationLevel = true,
+        DisableGlobalLocks = true // Tốt cho hiệu năng
+    }));
+
+builder.Services.AddHangfireServer();
+
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+
+// Infrastructure Services
+builder.Services.AddScoped<IEmailService, EmailService>();
+
+// Business Logic Services
 builder.Services.AddScoped<IUserRepo, UserRepository>();
 builder.Services.AddScoped<AuthValidator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
@@ -46,7 +77,7 @@ app.UseStaticFiles(); // ✅ thay cho MapStaticAssets / WithStaticAssets
 app.UseRouting();
 
 app.UseAuthorization();
-
+app.UseHangfireDashboard();
 
 app.MapControllerRoute(
     name: "default",

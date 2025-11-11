@@ -12,29 +12,39 @@ namespace Presentation.Helpers {
             string viewName,
             TModel model,
             bool partial = false) {
-            if (string.IsNullOrEmpty(viewName))
-                viewName = controller.ControllerContext.ActionDescriptor.ActionName;
+            try {
+                if (string.IsNullOrEmpty(viewName) || !viewName.StartsWith("~/")) {
+                    return null!;
+                }
 
-            controller.ViewData.Model = model;
+                if (!viewName.EndsWith(".cshtml")) {
+                    viewName += ".cshtml";
+                }
 
-            using (var writer = new StringWriter()) {
-                var viewEngine = controller.HttpContext.RequestServices.GetService(typeof(ICompositeViewEngine)) as ICompositeViewEngine;
-                var viewResult = viewEngine!.FindView(controller.ControllerContext, viewName, !partial);
+                controller.ViewData.Model = model;
 
-                if (viewResult.View == null)
-                    throw new FileNotFoundException($"View '{viewName}' not found.");
+                using (var writer = new StringWriter()) {
+                    var viewEngine = controller.HttpContext.RequestServices.GetService(typeof(ICompositeViewEngine)) as ICompositeViewEngine;
 
-                var viewContext = new ViewContext(
-                    controller.ControllerContext,
-                    viewResult.View,
-                    controller.ViewData,
-                    controller.TempData,
-                    writer,
-                    new HtmlHelperOptions()
-                );
+                    var viewResult = viewEngine!.GetView(executingFilePath: null, viewPath: viewName, isMainPage: !partial);
 
-                await viewResult.View.RenderAsync(viewContext);
-                return writer.GetStringBuilder().ToString();
+                    if (viewResult.View == null)
+                        return null!;
+
+                    var viewContext = new ViewContext(
+                        controller.ControllerContext,
+                        viewResult.View,
+                        controller.ViewData,
+                        controller.TempData,
+                        writer,
+                        new HtmlHelperOptions()
+                    );
+
+                    await viewResult.View.RenderAsync(viewContext);
+                    return writer.GetStringBuilder().ToString();
+                }
+            } catch {
+                return null!;
             }
         }
     }

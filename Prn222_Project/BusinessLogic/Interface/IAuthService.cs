@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 namespace BusinessLogic.Interface {
     public interface IAuthService {
         Task<LoginResponse> LoginAsync(LoginRequest request);
+        Task<string> RequestRegistrationAsync(RegisterRequest request);
+        Task ConfirmRegistrationAsync(string email, string providedCode);
         //Task RegisterAsync(RegisterRequest request);
     }
 }
