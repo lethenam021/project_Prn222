@@ -1,0 +1,39 @@
+﻿@using Common.Enums
+@model Presentation.ViewModel.Params.Auth.RegisterParams
+
+<div class="mb-3">
+    <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+    <input type="text" class="form-control" id="name" asp-for="Name" />
+    <span class="text-danger" asp-validation-for="Name"></span>
+</div>
+<div class="mb-3">
+    <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+    <input type="email" class="form-control" id="email" asp-for="Email" />
+    <span class="text-danger" asp-validation-for="Email"></span>
+</div>
+<div class="mb-3">
+    <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+    <input type="password" class="form-control" id="password" asp-for="Password" />
+    <span class="text-danger" asp-validation-for="Password"></span>
+</div>
+<div class="mb-3">
+    <label for="confirm-password" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+    <input type="password" class="form-control" id="confirm-password" asp-for="ConfirmPassword" />
+    <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+</div>
+
+<div class="mb-3">
+    <label for="role" class="form-label">Register as <span class="text-danger">*</span></label>
+    <select id="role" class="form-select" asp-for="Role">
+        <option value="" selected disabled>-- Select your role --</option>
+        <option value="@UserRole.Buyer">Buyer</option>
+        <option value="@UserRole.Seller">Seller</option>
+    </select>
+    <span class="text-danger" asp-validation-for="Role"></span>
+</div>
+
+<button type="submit" class="btn btn-primary w-100 fs-4 rounded-2 mb-4 py-8" id="register-btn">Sign Up</button>
+<div class="d-flex align-items-center justify-content-center">
+    <p class="fs-4 fw-bold mb-0">Already have an Account?</p>
+    <a class="text-primary fw-bold ms-2" asp-controller="Auth" asp-action="Login">Sign In</a>
+</div>
