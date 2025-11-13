@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj": {}
+    "D:\\_Study material\\2025_3_fall\\prn222\\_project\\_project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj": {
+    "D:\\_Study material\\2025_3_fall\\prn222\\_project\\_project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\_Study material\\2025_3_fall\\prn222\\_project\\_project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\obj\\",
+        "projectPath": "D:\\_Study material\\2025_3_fall\\prn222\\_project\\_project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\_Study material\\2025_3_fall\\prn222\\_project\\_project_Prn222\\Prn222_Project\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
