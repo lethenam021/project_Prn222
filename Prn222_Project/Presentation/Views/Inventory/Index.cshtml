@@ -1,0 +1,25 @@
+﻿@using Presentation.ViewModel.Data.Inventory
+@using Presentation.ViewModel.Params.Inventory
+@{
+    ViewData["Title"] = "Inventory Management";
+}
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    @await Html.PartialAsync("_sidebar");
+
+    <div class="body-wrapper">
+        <form id="inventory-filter-form" action="@Url.Action("SearchInventory", "Inventory")">
+            @await Html.PartialAsync("_InventoryFilterPartial", new SearchParams())
+        </form>
+
+        <div id="inventory-table-container">
+            @await Html.PartialAsync("_InventoryTablePartial", new List<InventoryViewModel>())
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/inventory.js"></script>
+}
