@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\js\\auth\\register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\js\\auth\\register.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\register\\_registerformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\register\\_registerformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\irepo\\istorerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -166,7 +166,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -174,33 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "site.js",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\site.js",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "Presentation\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-11T06:54:39.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_SessionExpiredModalPartial.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T06:53:07.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "login.js",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\auth\\login.js",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\auth\\login.js",
@@ -213,7 +187,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "register.js",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\auth\\register.js",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\auth\\register.js",
@@ -226,7 +200,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "_VerifyCodePartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_VerifyCodePartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_VerifyCodePartial.cshtml",
@@ -239,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\Register.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\Register.cshtml",
@@ -252,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "_RegistrationSuccessModalPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_RegistrationSuccessModalPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_RegistrationSuccessModalPartial.cshtml",
@@ -269,16 +243,29 @@
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Services\\AuthService.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\AuthService.cs*",
-              "RelativeToolTip": "BusinessLogic\\Services\\AuthService.cs*",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAWwHAAAAAIAAAAAAAAAA==",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\AuthService.cs",
+              "RelativeToolTip": "BusinessLogic\\Services\\AuthService.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAFsAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T12:57:03.112Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "Presentation\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-11T06:54:39.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "_RegisterFormPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_RegisterFormPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_RegisterFormPartial.cshtml",
@@ -291,15 +278,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\AuthController.cs",
               "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Presentation\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAAAJ4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAAAHcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T12:56:44.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_SessionExpiredModalPartial.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T06:53:07.382Z",
               "EditorCaption": ""
             },
             {
