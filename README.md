@@ -1,27 +1,35 @@
 # Project PRN222 - Group 2
 
+# Setup via Docker 
+```powershell
+docker run -d -p 6379:6379 --name my-redis --restart always redis
+```
 
-# Setup Database - SQL Server
+# Setup manually
+## Database: SQL Server
 - Authentication: SQL Server Authentication
-- Server name: ```103.126.162.38,1433```
-- Login: `sa`
-- <details><summary>Password (Click to show)</summary>`doanhieu18@`</details>
+- Server name: 
+```
+103.126.162.38,1433
+```
+- Login: 
+```
+sa
+```
+- Password:
+```
+doanhieu18@
+```
 - Options: Tick "Trust server certificate"
 
-# Setup Environment 
-- Docker: `docker run -d -p 6379:6379 --name my-redis --restart always redis`
-
-# Run: Test accounts
-- 
+# Test accounts
+- Account: 
 ```
 truongvxhe187103@fpt.edu.vn
 ``` 
-<details>
-<summary>Password (Click to show)</summary>
 ```
 Linh1702@
 ```
-</details>
 
-# Run: Steps by step
+# Run step by step
 - 
