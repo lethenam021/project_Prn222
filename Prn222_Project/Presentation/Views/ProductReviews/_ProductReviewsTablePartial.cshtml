@@ -1,0 +1,111 @@
+﻿@model List<Presentation.ViewModel.Data.ProductReviews.ProductReviewsViewModel>
+
+@{
+    var count = 0;
+
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<!-- CSS nội bộ cho Rating Stars -->
+<style>
+    .rating-stars {
+        color: #f1c40f; /* Màu vàng */
+    }
+
+    /* (MỚI) CSS cho "Read More" */
+    .comment-truncate {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* <-- YÊU CẦU: Giới hạn 3 dòng */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.5; /* (Điều chỉnh nếu cần) */
+    }
+
+        /* (MỚI) Class này sẽ được JS thêm vào để gỡ bỏ giới hạn */
+        .comment-truncate.is-expanded {
+            -webkit-line-clamp: unset; /* Gỡ bỏ giới hạn */
+            overflow: visible;
+        }
+
+    /* (MỚI) Link "Read More" */
+    .read-more-link {
+        font-size: 0.875rem; /* 14px */
+        font-weight: 500;
+        cursor: pointer;
+        display: block; /* Hiển thị bên dưới */
+        margin-top: 5px;
+    }
+</style>
+
+<div class="card" id="review-table-card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table-hover table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Product</th>
+                        <th>Reviewer</th>
+                        <th>Rating</th>
+                        <th>Comment</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model == null || !Model.Any()) {
+                        <tr>
+                            <td colspan="6" class="text-center">No reviews found for these criteria!</td>
+                        </tr>
+                    }
+
+                    @foreach (var item in Model) {
+                        count++;
+                        <tr>
+                            <td>@(item.StartIndex + count)</td>
+                            <!-- Product (với ảnh) -->
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="@(item.Product.ImageUrl ?? "/images/placeholder.png")" width="50" height="50" class="me-3" alt="@item.Product.Title">
+                                    <strong>@item.Product.Title</strong>
+                                </div>
+                            </td>
+                            <!-- Reviewer -->
+                            <td>
+                                @item.Reviewer
+                            </td>
+                            <!-- Rating (Hiển thị 5 sao) -->
+                            <td class="rating-stars">
+                                @for (int i = 1; i <= 5; i++) {
+                                    <i class="@(i <= item.Rating ? "fas fa-star text-warning" : "far fa-star text-warning")"></i>
+                                }
+                            </td>
+                            <!-- Comment -->
+                            <td>
+                                <!-- 1. Bọc comment trong div này -->
+                                <div class="comment-truncate">
+                                    @item.Comment
+                                </div>
+
+                                <!--
+                                  2. Thêm link "Read More"
+                                     (Chúng ta dùng một phỏng đoán: chỉ hiển thị
+                                      link nếu comment dài hơn 150 ký tự)
+                                -->
+                                @if (item.Comment != null && item.Comment.Length > 150) {
+                                    <a class="read-more-link text-primary">Read More</a>
+                                }
+                            </td>
+                            <!-- Date -->
+                            <td>
+                                @item.ReviewDate.ToString("HH:mm dd/MM/yyyy")
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

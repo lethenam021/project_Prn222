@@ -1,0 +1,30 @@
+﻿@using Presentation.ViewModel.Params.ProductReviews
+@{
+    ViewData["Title"] = "Product Reviews";
+}
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    @await Html.PartialAsync("_sidebar");
+
+    <div class="body-wrapper">
+            <form id="review-filter-form" action="@Url.Action("SearchProductReviews", "ProductReviews")">
+                @await Html.PartialAsync("_ProductReviewsFilterPartial", new SearchParams ());
+            </form>
+
+            <div id="review-table-container">
+            </div>
+
+        <div id="review-pagination-container" class="mx-5">
+            <!-- AJAX (từ review.js) sẽ tải pagination vào đây -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <partial name="_ValidationScriptsPartial" /> 
+     <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/sidebarmenu.js"></script>
+    <script src="~/js/pagination.js"></script>
+    <script src="~/js/product-reviews.js"></script>
+}

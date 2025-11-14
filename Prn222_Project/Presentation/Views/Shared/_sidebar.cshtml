@@ -1,4 +1,6 @@
-﻿        <!-- Sidebar Start -->
+﻿<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+        <!-- Sidebar Start -->
 <aside class="left-sidebar">
     <!-- Sidebar scroll-->
     <div>
@@ -33,12 +35,12 @@
                     <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerStore" aria-expanded="false">
                         <span>
                             <i class="ti ti-building-store"></i>
-                        </span>
+                            </span>
                         <span class="hide-menu">Store</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerProduct" aria-expanded="false">
+                    <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerProduct"  aria-expanded="false">
                         <span>
                             <i class="ti ti-package"></i>
                         </span>
@@ -52,13 +54,21 @@
                         </span>
                         <span class="hide-menu">Inventory</span>
                     </a>
-                </li>                
+                </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerCoupon" aria-expanded="false">
+                    <a class="sidebar-link" href="@Url.Action("SearchProductReviews", "ProductReviews")" aria-expanded="false">
                         <span>
-                            <i class="ti ti-discount-2"></i> <!-- Icon cho coupon -->
+                            <i class="ti ti-eye-star"></i>
                         </span>
-                        <span class="hide-menu">Coupon</span>
+                        <span class="hide-menu">Product Reviews</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-cards"></i>
+                        </span>
+                        <span class="hide-menu">Card</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

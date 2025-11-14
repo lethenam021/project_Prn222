@@ -11,7 +11,6 @@ using Infrastructure.Interface;
 using Infrastructure.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using Org.BouncyCastle.Asn1.Nist;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -69,8 +68,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IInventoryRepo, InventoryRepository>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
 
-builder.Services.AddScoped<ICouponRepo, CouponRepository>();
-builder.Services.AddScoped<ICouponService, CouponService>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IReviewRepo, ReviewRepository>();
 
 var app = builder.Build();
 
