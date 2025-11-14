@@ -19,3 +19,15 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\Busin
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfo.cs
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.CoreCompileInputs.cache
 D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.sourcelink.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.deps.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\Business.CF5D6E35.Up2Date
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\refint\BusinessLogic.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.dll

@@ -84,5 +84,43 @@ namespace Presentation.Controllers {
                     return StatusCode(500, ex.Message);
             }
         }
+
+        [HttpPost("update-quantity")]
+        public async Task<IActionResult> UpdateQuantity(int productId, int quantity) {
+            try {
+                var sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+                await _invService.UpdateInventoryQuantityAsync(new UpdateQuantityRequest {
+                    ProductId = productId,
+                    Quantity = quantity
+                });
+
+                var inventories = await _invService.SearchInventoryAsync(new SearchRequest {
+                    SellerId = sellerId,
+                    SearchTerm = null!,
+                    CategoryId = null!,
+                    StockStatus = StockStatusEnum.All
+                });
+
+                string tableHtml = await this.RenderViewAsync("~/Views/Inventory/_InventoryTablePartial", inventories.Select(inv => new InventoryViewModel {
+                    Id = inv.Id,
+                    Product = new ProductViewModel {
+                        Id = inv.Product.Id,
+                        Title = inv.Product.Title,
+                        ImageUrl = inv.Product.ImageUrl,
+                        Category = new CategoryViewModel {
+                            Id = inv.Product.Category.Id,
+                            Name = inv.Product.Category.Name
+                        }
+                    },
+                    Quantity = inv.Quantity,
+                    LastUpdated = inv.LastUpdated.HasValue ? inv.LastUpdated.Value : null
+                }).ToList(), true);
+
+                return Json(new { success = true, html = tableHtml });
+            } catch (Exception ex) {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
     }
 }

@@ -8,12 +8,14 @@
     @await Html.PartialAsync("_sidebar");
 
     <div class="body-wrapper">
-        <form id="inventory-filter-form" action="@Url.Action("SearchInventory", "Inventory")">
-            @await Html.PartialAsync("_InventoryFilterPartial", new SearchParams())
-        </form>
+        <div class="container">
+            <form id="inventory-filter-form" action="@Url.Action("SearchInventory", "Inventory")">
+                @await Html.PartialAsync("_InventoryFilterPartial", new SearchParams())
+            </form>
 
-        <div id="inventory-table-container">
-            @await Html.PartialAsync("_InventoryTablePartial", new List<InventoryViewModel>())
+            <div id="inventory-table-container">
+                @await Html.PartialAsync("_InventoryTablePartial", new List<InventoryViewModel>())
+            </div>
         </div>
     </div>
 </div>

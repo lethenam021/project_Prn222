@@ -9,5 +9,7 @@ using System.Threading.Tasks;
 namespace DataAccess.IRepo {
     public interface IInventoryRepo {
         Task<IEnumerable<Inventory>> GetInventoriesAsync(int sellerId, string? productName, int? categoryId, StockStatusEnum status);
+
+        Task UpdateQuantityAsync(int productId, int quantity);
     }
 }

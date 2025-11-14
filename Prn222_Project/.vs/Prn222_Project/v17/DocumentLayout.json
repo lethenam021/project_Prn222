@@ -3,24 +3,172 @@
   "WorkspaceRootPath": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|solutionrelative:common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\inventory\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\inventory\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\inventory\\_inventorytablepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\inventory\\_inventorytablepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\inventory\\_inventoryfilterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\inventory\\_inventoryfilterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\js\\inventory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\js\\inventory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\sellercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\sellercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\interface\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\interface\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\irepo\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\irepo\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\irepo\\iinventoryrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\irepo\\iinventoryrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\validation\\inventoryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\validation\\inventoryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\request\\inventory\\updatequantityrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\request\\inventory\\updatequantityrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\repositories\\inventoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\inventoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\product\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\product\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\category\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\category\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\auth\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\auth\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\request\\inventory\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\request\\inventory\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\viewmodel\\params\\pagination\\paginationparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\viewmodel\\params\\pagination\\paginationparams.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\viewmodel\\data\\pagination\\paginationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\viewmodel\\data\\pagination\\paginationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\emailtemplates\\_verificationemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\emailtemplates\\_verificationemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\login\\_loginemailpartial.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\login\\_loginemailpartial.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\inventorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\models\\cloneebaydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\cloneebaydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\login\\_loginformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\login\\_loginformpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\login\\_loginemailpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\login\\_loginemailpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\icon-tabler.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\icon-tabler.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\ui-alerts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\ui-alerts.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\assets\\images\\backgrounds\\rocket.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\assets\\images\\backgrounds\\rocket.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|solutionrelative:common\\common.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\common\\enums\\stockstatusenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,92 +183,12 @@
       "RelativeMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|solutionrelative:common\\enums\\checkmodeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\js\\inventory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\js\\inventory.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\inventory\\_inventorytablepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\inventory\\_inventorytablepartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\inventory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\emailtemplates\\_verificationemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\emailtemplates\\_verificationemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\product\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\product\\productresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\inventory\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\inventory\\inventoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\category\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\category\\categoryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\interface\\istoresevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\interface\\istoresevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\interface\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\interface\\iinventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\auth\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\auth\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\inventory\\_inventoryfilterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\inventory\\_inventoryfilterpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\seller\\managerproduct.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -135,32 +203,12 @@
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\models\\cloneebaydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\models\\cloneebaydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\register\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\register\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\dataaccess\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\repositories\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\dtos\\request\\inventory\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\request\\inventory\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\controllers\\sellercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\sellercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -251,16 +299,8 @@
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\ui-buttons.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\icon-tabler.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\icon-tabler.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\sample-page.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\sample-page.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\modernize-1.0.0\\modernize-1.0.0\\src\\html\\authentication-register.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -293,14 +333,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\login\\_loginemailpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\login\\_loginemailpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\auth\\login\\_loginemailpartial.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\login\\_loginemailpartial.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\wwwroot\\css\\common\\_typo.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -393,7 +425,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -401,20 +433,85 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Common",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Common.csproj",
-              "RelativeDocumentMoniker": "Common\\Common.csproj",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Common.csproj",
-              "RelativeToolTip": "Common\\Common.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-13T14:12:31.647Z",
+              "DocumentIndex": 8,
+              "Title": "IInventoryService.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IInventoryService.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
+              "RelativeToolTip": "BusinessLogic\\Interface\\IInventoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T10:00:35.747Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 5,
+              "Title": "SellerController.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\SellerController.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\SellerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:25:59.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "inventory.js",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\inventory.js",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\inventory.js",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\inventory.js",
+              "RelativeToolTip": "Presentation\\wwwroot\\js\\inventory.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-11-13T09:01:23.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\Index.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\Index.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\Index.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Inventory\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T15:16:29.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_InventoryTablePartial.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAHMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T15:49:23.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_InventoryFilterPartial.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T15:37:51.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "InventoryResponse.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Inventory\\InventoryResponse.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Inventory\\InventoryResponse.cs",
@@ -422,89 +519,285 @@
               "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Inventory\\InventoryResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:44:20.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "InventoryRepository.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\InventoryRepository.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Repositories\\InventoryRepository.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\InventoryRepository.cs",
-              "RelativeToolTip": "DataAccess\\Repositories\\InventoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:54:05.457Z",
+              "WhenOpened": "2025-11-12T16:44:20.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IInventoryRepo.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IInventoryRepo.cs",
-              "RelativeDocumentMoniker": "DataAccess\\IRepo\\IInventoryRepo.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IInventoryRepo.cs",
-              "RelativeToolTip": "DataAccess\\IRepo\\IInventoryRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "InventoryService.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\InventoryService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Services\\InventoryService.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\InventoryService.cs",
+              "RelativeToolTip": "BusinessLogic\\Services\\InventoryService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAcwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:47:04.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StockStatusEnum.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\StockStatusEnum.cs",
-              "RelativeDocumentMoniker": "Common\\Enums\\StockStatusEnum.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\StockStatusEnum.cs",
-              "RelativeToolTip": "Common\\Enums\\StockStatusEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:36:55.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CheckModeEnum.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\CheckModeEnum.cs",
-              "RelativeDocumentMoniker": "Common\\Enums\\CheckModeEnum.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\CheckModeEnum.cs",
-              "RelativeToolTip": "Common\\Enums\\CheckModeEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:36:58.732Z",
+              "WhenOpened": "2025-11-12T16:45:49.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UserRoleEnum.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\UserRoleEnum.cs",
-              "RelativeDocumentMoniker": "Common\\Enums\\UserRoleEnum.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\UserRoleEnum.cs",
-              "RelativeToolTip": "Common\\Enums\\UserRoleEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:37:00.33Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "InventoryController.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\InventoryController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\InventoryController.cs",
               "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\InventoryController.cs",
               "RelativeToolTip": "Presentation\\Controllers\\InventoryController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAmwGcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T16:06:28.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T08:55:40.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUserRepo.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IUserRepo.cs",
+              "RelativeDocumentMoniker": "DataAccess\\IRepo\\IUserRepo.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IUserRepo.cs",
+              "RelativeToolTip": "DataAccess\\IRepo\\IUserRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:17:23.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "InventoryValidator.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Validation\\InventoryValidator.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Validation\\InventoryValidator.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Validation\\InventoryValidator.cs",
+              "RelativeToolTip": "BusinessLogic\\Validation\\InventoryValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:07:22.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UpdateQuantityRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\UpdateQuantityRequest.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Inventory\\UpdateQuantityRequest.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\UpdateQuantityRequest.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\Request\\Inventory\\UpdateQuantityRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:06:07.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InventoryRepository.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\InventoryRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\InventoryRepository.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\InventoryRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\InventoryRepository.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAuwEAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T16:54:05.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ProductResponse.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T16:40:52.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CategoryResponse.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T16:42:13.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T14:07:59.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SearchRequest.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T16:35:45.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IInventoryRepo.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IInventoryRepo.cs",
+              "RelativeDocumentMoniker": "DataAccess\\IRepo\\IInventoryRepo.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IInventoryRepo.cs",
+              "RelativeToolTip": "DataAccess\\IRepo\\IInventoryRepo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T16:47:04.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PaginationParams.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Params\\Pagination\\PaginationParams.cs",
+              "RelativeDocumentMoniker": "Presentation\\ViewModel\\Params\\Pagination\\PaginationParams.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Params\\Pagination\\PaginationParams.cs",
+              "RelativeToolTip": "Presentation\\ViewModel\\Params\\Pagination\\PaginationParams.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:50:39.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PaginationViewModel.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Pagination\\PaginationViewModel.cs",
+              "RelativeDocumentMoniker": "Presentation\\ViewModel\\Data\\Pagination\\PaginationViewModel.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Pagination\\PaginationViewModel.cs",
+              "RelativeToolTip": "Presentation\\ViewModel\\Data\\Pagination\\PaginationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:49:03.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T12:26:14.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T14:19:09.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T08:55:36.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "_VerificationEmail.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAgwCsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T09:07:50.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-11T10:05:23.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "_LoginEmailPartial.cshtml.css",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
+              "RelativeToolTip": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-12T13:15:31.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "_sidebar.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T09:32:46.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Services\\CategoryService.cs",
@@ -517,43 +810,149 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_InventoryTablePartial.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAAAHAAAABeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T15:49:23.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\Index.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\Index.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\Index.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Inventory\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T15:16:29.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "InventoryService.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\InventoryService.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Services\\InventoryService.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\InventoryService.cs",
-              "RelativeToolTip": "BusinessLogic\\Services\\InventoryService.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAWwCQAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 29,
+              "Title": "CloneEbayDbContext.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Models\\CloneEbayDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\CloneEbayDbContext.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Models\\CloneEbayDbContext.cs",
+              "RelativeToolTip": "DataAccess\\Models\\CloneEbayDbContext.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADQAAACwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:45:49.557Z"
+              "WhenOpened": "2025-11-12T17:39:19.934Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 31,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAEUAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T09:39:22.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "Presentation\\appsettings.json",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\appsettings.json",
+              "RelativeToolTip": "Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAClAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T13:58:43.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T14:19:18.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
+              "RelativeToolTip": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswD0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-12T15:26:07.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_LoginFormPartial.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginFormPartial.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\_LoginFormPartial.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginFormPartial.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Auth\\Login\\_LoginFormPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T14:35:25.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_LoginEmailPartial.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAYwCgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-06T14:13:15.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "icon-tabler.html",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
+              "RelativeToolTip": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAAAMUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-12T15:17:22.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ui-alerts.html",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-alerts.html",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-alerts.html",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-alerts.html",
+              "RelativeToolTip": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-alerts.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-13T14:25:36.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "rocket.png - PNG [102x109, 32 bit, PNG]",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\images\\backgrounds\\rocket.png",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\images\\backgrounds\\rocket.png",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\images\\backgrounds\\rocket.png - PNG [102x109, 32 bit, PNG]",
+              "RelativeToolTip": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\images\\backgrounds\\rocket.png - PNG [102x109, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-11-13T14:25:33.826Z",
+              "EditorCaption": " - PNG [102x109, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "DataAccess.csproj",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
+              "RelativeDocumentMoniker": "DataAccess\\DataAccess.csproj",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
+              "RelativeToolTip": "DataAccess\\DataAccess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-12T16:53:08.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
               "Title": "BusinessLogic.csproj",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\BusinessLogic.csproj",
               "RelativeDocumentMoniker": "BusinessLogic\\BusinessLogic.csproj",
@@ -566,127 +965,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "inventory.js",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\inventory.js",
-              "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\inventory.js",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\inventory.js",
-              "RelativeToolTip": "Presentation\\wwwroot\\js\\inventory.js",
-              "ViewState": "AgIAAOUAAAAAAAAAAAAqwBQBAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-11-13T09:01:23.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "DocumentIndex": 43,
+              "Title": "UserRoleEnum.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\UserRoleEnum.cs",
+              "RelativeDocumentMoniker": "Common\\Enums\\UserRoleEnum.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\UserRoleEnum.cs",
+              "RelativeToolTip": "Common\\Enums\\UserRoleEnum.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T08:55:36.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ProductResponse.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
-              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:40:52.937Z"
+              "WhenOpened": "2025-11-12T16:37:00.33Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "_VerificationEmail.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwCsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T09:07:50.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "_sidebar.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAACkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T09:32:46.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CategoryResponse.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
-              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "DocumentIndex": 42,
+              "Title": "StockStatusEnum.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\StockStatusEnum.cs",
+              "RelativeDocumentMoniker": "Common\\Enums\\StockStatusEnum.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\StockStatusEnum.cs",
+              "RelativeToolTip": "Common\\Enums\\StockStatusEnum.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:42:13.994Z"
+              "WhenOpened": "2025-11-12T16:36:55.118Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Error.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\Error.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\Error.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\Error.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Shared\\Error.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T12:26:14.364Z"
+              "DocumentIndex": 40,
+              "Title": "Common",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Common.csproj",
+              "RelativeDocumentMoniker": "Common\\Common.csproj",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Common.csproj",
+              "RelativeToolTip": "Common\\Common.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-13T14:12:31.647Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\_ViewImports.cshtml",
+              "DocumentIndex": 44,
+              "Title": "CheckModeEnum.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\CheckModeEnum.cs",
+              "RelativeDocumentMoniker": "Common\\Enums\\CheckModeEnum.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Common\\Enums\\CheckModeEnum.cs",
+              "RelativeToolTip": "Common\\Enums\\CheckModeEnum.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T14:19:18.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\_ViewStart.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-10T14:19:09.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Presentation\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T08:55:40.957Z"
+              "WhenOpened": "2025-11-12T16:36:58.732Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 45,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\AuthController.cs",
@@ -698,7 +1029,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 46,
               "Title": "IStoreSevice.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IStoreSevice.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IStoreSevice.cs",
@@ -710,67 +1041,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "LoginResponse.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
-              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T14:07:59.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "_InventoryFilterPartial.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T15:37:51.074Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "IInventoryService.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IInventoryService.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
-              "RelativeToolTip": "BusinessLogic\\Interface\\IInventoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T10:00:35.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\Program.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
-              "RelativeToolTip": "Presentation\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T09:39:22.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-11T10:05:23.029Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 47,
               "Title": "ManagerProduct.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Seller\\ManagerProduct.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Seller\\ManagerProduct.cshtml",
@@ -782,7 +1053,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 48,
               "Title": "ManagerStore.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Seller\\ManagerStore.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Seller\\ManagerStore.cshtml",
@@ -794,7 +1065,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 49,
               "Title": "site.js",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\site.js",
@@ -806,32 +1077,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "DataAccess.csproj",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
-              "RelativeDocumentMoniker": "DataAccess\\DataAccess.csproj",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\DataAccess.csproj",
-              "RelativeToolTip": "DataAccess\\DataAccess.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-12T16:53:08.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "CloneEbayDbContext.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Models\\CloneEbayDbContext.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Models\\CloneEbayDbContext.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Models\\CloneEbayDbContext.cs",
-              "RelativeToolTip": "DataAccess\\Models\\CloneEbayDbContext.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAAADgAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T17:39:19.934Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 50,
               "Title": "Register.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\Register.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\Register.cshtml",
@@ -843,43 +1089,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\appsettings.json",
-              "RelativeDocumentMoniker": "Presentation\\appsettings.json",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\appsettings.json",
-              "RelativeToolTip": "Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAClAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-10T13:58:43.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "SellerController.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controllers\\SellerController.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
-              "RelativeToolTip": "Presentation\\Controllers\\SellerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:25:59.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "SearchRequest.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
-              "RelativeToolTip": "BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:35:45.785Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 51,
               "Title": "CategoryRepository.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\CategoryRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\CategoryRepository.cs",
@@ -891,7 +1101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 52,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\Login.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\Login.cshtml",
@@ -903,7 +1113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 53,
               "Title": "ControllerExtensions.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Helpers\\ControllerExtensions.cs",
               "RelativeDocumentMoniker": "Presentation\\Helpers\\ControllerExtensions.cs",
@@ -915,7 +1125,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 54,
               "Title": "LoginParams.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Params\\Auth\\LoginParams.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Params\\Auth\\LoginParams.cs",
@@ -927,7 +1137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 55,
               "Title": "_LoginPasswordPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginPasswordPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\_LoginPasswordPartial.cshtml",
@@ -939,7 +1149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 56,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\ICategoryService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Interface\\ICategoryService.cs",
@@ -951,7 +1161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 57,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\ProductRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\ProductRepository.cs",
@@ -963,7 +1173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 58,
               "Title": "register.js",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\auth\\register.js",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\auth\\register.js",
@@ -975,7 +1185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 59,
               "Title": "ICategoryRepo.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\ICategoryRepo.cs",
               "RelativeDocumentMoniker": "DataAccess\\IRepo\\ICategoryRepo.cs",
@@ -987,7 +1197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 60,
               "Title": "StoreService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\StoreService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Services\\StoreService.cs",
@@ -999,7 +1209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 62,
               "Title": "AuthService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Services\\AuthService.cs",
@@ -1011,7 +1221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 61,
               "Title": "ProductService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\ProductService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Services\\ProductService.cs",
@@ -1023,7 +1233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 63,
               "Title": "ProductViewModel.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Product\\ProductViewModel.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Data\\Product\\ProductViewModel.cs",
@@ -1035,7 +1245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 64,
               "Title": "InventoryViewModel.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Inventory\\InventoryViewModel.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Data\\Inventory\\InventoryViewModel.cs",
@@ -1047,7 +1257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 65,
               "Title": "IProductService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IProductService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IProductService.cs",
@@ -1059,7 +1269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 66,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IAuthService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IAuthService.cs",
@@ -1071,7 +1281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 67,
               "Title": "CategoryViewModel.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Category\\CategoryViewModel.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Data\\Category\\CategoryViewModel.cs",
@@ -1083,7 +1293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 68,
               "Title": "SearchParams.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Params\\Inventory\\SearchParams.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Params\\Inventory\\SearchParams.cs",
@@ -1095,7 +1305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 69,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Auth\\LoginRequest.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Auth\\LoginRequest.cs",
@@ -1107,7 +1317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 70,
               "Title": "Login.cshtml.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\Login.cshtml.css",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\Login.cshtml.css",
@@ -1119,7 +1329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 73,
               "Title": "ui-buttons.html",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-buttons.html",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-buttons.html",
@@ -1131,7 +1341,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 72,
               "Title": "ui-card.html",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-card.html",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-card.html",
@@ -1143,7 +1353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 71,
               "Title": "ui-typography.html",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-typography.html",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\ui-typography.html",
@@ -1155,19 +1365,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "icon-tabler.html",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
-              "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
-              "RelativeToolTip": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\icon-tabler.html",
-              "ViewState": "AgIAALYAAAAAAAAAAAAAAMoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-11-12T15:17:22.456Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 74,
               "Title": "sample-page.html",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\sample-page.html",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\sample-page.html",
@@ -1179,19 +1377,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
-              "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
-              "RelativeToolTip": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-11-12T15:26:07.181Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 75,
               "Title": "authentication-register.html",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\authentication-register.html",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\html\\authentication-register.html",
@@ -1203,7 +1389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 76,
               "Title": "dashboard.js",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\js\\dashboard.js",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\js\\dashboard.js",
@@ -1215,7 +1401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 77,
               "Title": "_dashboard1.scss",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\pages\\_dashboard1.scss",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\pages\\_dashboard1.scss",
@@ -1227,7 +1413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 78,
               "Title": "_sidebar.scss",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\layouts\\_sidebar.scss",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\layouts\\_sidebar.scss",
@@ -1239,7 +1425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 79,
               "Title": "_layouts.scss",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\layouts\\_layouts.scss",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\layouts\\_layouts.scss",
@@ -1251,7 +1437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 80,
               "Title": "_header.scss",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\layouts\\_header.scss",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\scss\\layouts\\_header.scss",
@@ -1263,7 +1449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 81,
               "Title": "package.json",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\libs\\apexcharts\\package.json",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\Modernize-1.0.0\\Modernize-1.0.0\\src\\assets\\libs\\apexcharts\\package.json",
@@ -1275,7 +1461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 82,
               "Title": "_Layout.cshtml.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_Layout.cshtml.css",
@@ -1287,19 +1473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
-              "Title": "_LoginEmailPartial.cshtml.css",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
-              "RelativeToolTip": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-12T13:15:31.514Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 83,
               "Title": "_typo.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\css\\common\\_typo.css",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\css\\common\\_typo.css",
@@ -1311,19 +1485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
-              "Title": "_LoginEmailPartial.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAYwCgAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-06T14:13:15.416Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 87,
               "Title": "site.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\css\\site.css",
@@ -1335,7 +1497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 85,
               "Title": "_reboot.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\css\\common\\_reboot.css",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\css\\common\\_reboot.css",
@@ -1347,7 +1509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 84,
               "Title": "_variable.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\css\\common\\_variable.css",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\css\\common\\_variable.css",
@@ -1359,7 +1521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 86,
               "Title": "common.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\css\\common\\common.css",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\css\\common\\common.css",
@@ -1371,7 +1533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 88,
               "Title": "login.js",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\auth\\login.js",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\auth\\login.js",
@@ -1383,7 +1545,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 89,
               "Title": "VerifyCodeParams.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Params\\Auth\\VerifyCodeParams.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Params\\Auth\\VerifyCodeParams.cs",
@@ -1395,7 +1557,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 90,
               "Title": "StoreRepository.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\StoreRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\StoreRepository.cs",
@@ -1407,7 +1569,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 91,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "E:\\Visual Studio\\Product\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "E:\\Visual Studio\\Product\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -1417,7 +1579,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 95,
               "Title": "_RegisterFormPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_RegisterFormPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_RegisterFormPartial.cshtml",
@@ -1429,7 +1591,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 94,
               "Title": "_RegistrationSuccessModalPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_RegistrationSuccessModalPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_RegistrationSuccessModalPartial.cshtml",
@@ -1441,7 +1603,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 93,
               "Title": "_VerifyCodePartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_VerifyCodePartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_VerifyCodePartial.cshtml",
@@ -1453,7 +1615,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 92,
               "Title": "_SessionExpiredModalPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Register\\_SessionExpiredModalPartial.cshtml",
@@ -1465,7 +1627,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 96,
               "Title": "IStoreRepo.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IStoreRepo.cs",
               "RelativeDocumentMoniker": "DataAccess\\IRepo\\IStoreRepo.cs",
@@ -1477,7 +1639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 97,
               "Title": "EmailService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Infrastructure\\Service\\EmailService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Service\\EmailService.cs",
@@ -1489,7 +1651,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 98,
               "Title": "VerificationEmailViewModel.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Emails\\VerificationEmailViewModel.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Data\\Emails\\VerificationEmailViewModel.cs",
@@ -1501,7 +1663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 99,
               "Title": "RegisterParams.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Params\\Auth\\RegisterParams.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Params\\Auth\\RegisterParams.cs",
@@ -1513,7 +1675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 100,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Auth\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Auth\\RegisterRequest.cs",
@@ -1525,7 +1687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 101,
               "Title": "AuthValidator.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Validation\\AuthValidator.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Validation\\AuthValidator.cs",
@@ -1537,7 +1699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 102,
               "Title": "MailSettings.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Infrastructure\\Configuration\\MailSettings.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Configuration\\MailSettings.cs",
@@ -1549,7 +1711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 103,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Infrastructure\\Interface\\IEmailService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Interface\\IEmailService.cs",

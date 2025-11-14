@@ -113,9 +113,9 @@
                                 @(item.LastUpdated.HasValue? item.LastUpdated.Value.ToString("HH:mm dd/MM/yyyy") : "-")
                             </td>
 
-                            <td class="align-content-center">
+                            <td class="status-display align-content-center">
                                 @switch (item.Quantity) {
-                                    case < 5 and > 0:
+                                    case <= 5 and > 0:
                                     <span class="badge bg-warning text-white">Low</span>
                                     break;
                                     case > 5:

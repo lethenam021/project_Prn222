@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace BusinessLogic.Services {
@@ -30,10 +31,15 @@ namespace BusinessLogic.Services {
                         Id = inv.Product.Category!.Id,
                         Name = inv.Product.Category.Name!
                     },
+                    ImageUrl = inv.Product.Images ?? null!
                 },
                 Quantity = inv.Quantity.HasValue ? inv.Quantity.Value : 0,
                 LastUpdated = inv.LastUpdated.HasValue ? inv.LastUpdated.Value : null
-            });
+            }).ToList();
+        }
+
+        public async Task UpdateInventoryQuantityAsync(UpdateQuantityRequest updateQuantityRequest) {
+            await _invRepo.UpdateQuantityAsync(updateQuantityRequest.ProductId, updateQuantityRequest.Quantity);
         }
     }
 }

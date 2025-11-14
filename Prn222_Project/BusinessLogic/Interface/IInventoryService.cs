@@ -9,6 +9,6 @@ using System.Threading.Tasks;
 namespace BusinessLogic.Interface {
     public interface IInventoryService {
         Task<IEnumerable<InventoryResponse>> SearchInventoryAsync(SearchRequest searchRequest);
-
+        Task UpdateInventoryQuantityAsync(UpdateQuantityRequest updateInventoryRequest);
     }
 }

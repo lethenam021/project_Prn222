@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿
+$(document).ready(function () {
     var $tableContainer = $("#inventory-table-container");
     var $filterForm = $("#inventory-filter-form");
 
@@ -105,56 +106,29 @@
             // --- Chuyển sang chế độ "Edit" (SAU KHI AJAX) ---
             
             var newQuantity = $input.val();
-            var $lastUpdated = $row.find(".last-updated-display");
-            var $displaySpan = $row.find(".quantity-display"); // Lấy span
 
             // Hiển thị loading
             $button.prop("disabled", true);
-            $status.html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+            $button.html('Save <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
 
             // Gọi AJAX (giống code cũ)
             $.ajax({
                 type: "POST",
                 url: "/inventory/update-quantity", // (Đảm bảo URL này đúng)
                 data: {
-                    ProductId: productId, 
-                    Quantity: newQuantity
+                    productId: productId, 
+                    quantity: newQuantity
                 },
                 success: function (response) {
                     if (response.success) {
-                        $status.html('<i class="text-success">Saved!</i>');
-                        $lastUpdated.text(response.lastUpdated); 
-                        
-                        // CẬP NHẬT SỐ LƯỢNG TRÊN SPAN
-                        $displaySpan.text(newQuantity);
-
-                        // TẮT CHẾ ĐỘ EDIT
-                        setRowEditing($row, false);
-                        
-                        // Đổi nút về "Edit"
-                        $button.data("state", "edit");
-                        $button.text("Edit");
-                        $button.removeClass("btn-primary").addClass("btn-secondary");
-
+                        $("#inventory-table-container").html(response.html);
+                        toastr.success("Quantity updated successfully!");
                     } else {
-                        // Lỗi: Báo lỗi và giữ nguyên chế độ "Save"
-                        $status.html('<i class="text-danger">Failed!</i>');
-                        alert(response.message || "Failed to update.");
+                        toastr.error(response.message);
                     }
                 },
-                error: function () {
-                    // Lỗi: Báo lỗi và giữ nguyên chế độ "Save"
-                    $status.html('<i class="text-danger">Error!</i>');
-                    alert("A server error occurred.");
-                },
-                complete: function() {
-                    // Luôn luôn bật lại nút
-                    $button.prop("disabled", false);
-                    
-                    // Tự động ẩn thông báo
-                    setTimeout(function() {
-                        $status.html("");
-                    }, 3000);
+                error: function (xhr) {
+                    toastr.error(xhr.responseText);
                 }
             });
         }

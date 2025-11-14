@@ -18,3 +18,15 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAcce
 D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
 D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
 D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.sourcelink.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.runtimeconfig.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.genruntimeconfig.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll
