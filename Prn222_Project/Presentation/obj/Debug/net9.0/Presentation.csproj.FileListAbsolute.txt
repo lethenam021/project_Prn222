@@ -1881,4 +1881,6 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\refint
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\Presentation.pdb
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\Presentation.genruntimeconfig.cache
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\ref\Presentation.dll
-D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\h6lteijnfv-x6vkn1j957.gz
+D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\cttefu93ln-z5vhf6bdkf.gz
+D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\g98yj3i876-1ha6bmmee7.gz
+D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\h6lteijnfv-zmnfq43yxg.gz

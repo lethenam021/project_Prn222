@@ -18,6 +18,8 @@ namespace Common.Helpers {
         // Kích thước trang (ví dụ: 10 mục/trang)
         public int PageSize { get; set; }
 
+        public object? AdditionalData { get; set; }
+
         // --- Các thuộc tính (properties) tự tính toán ---
 
         // Tổng số trang

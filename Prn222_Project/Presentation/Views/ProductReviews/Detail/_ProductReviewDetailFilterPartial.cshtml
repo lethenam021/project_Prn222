@@ -1,0 +1,31 @@
+﻿@model Presentation.ViewModel.Params.ProductReviews.SearchDetailParams
+
+@{
+    // Lấy giá trị 'today' từ ViewData mà file cha truyền vào
+    var today = ViewData["Today"] as string;
+}
+
+<form id="review-detail-filter-form">
+    <div class="card bg-light">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label asp-for="FromDate" class="form-label">From Date</label>
+                    <input asp-for="FromDate" type="date" class="form-control" id="detail-filter-from-date" max="@today">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label asp-for="ToDate" class="form-label">To Date</label>
+                    <input asp-for="ToDate" type="date" class="form-control" id="detail-filter-to-date" max="@today">
+                </div>
+                <div class="col-md-4 d-flex align-items-end mb-3">
+                    <button type="submit" id="detail-filter-btn" class="btn btn-primary me-2">Filter</button>
+                    <button type="button" id="detail-reset-btn" class="btn btn-outline-secondary">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <input asp-for="ProductId" type="hidden" />
+    <input asp-for="Pagination.PageIndex" type="hidden" />
+    <input asp-for="Pagination.PageSize" type="hidden" />
+</form>

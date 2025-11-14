@@ -1,4 +1,5 @@
 ﻿using Common.Enums;
+using Common.Helpers;
 using DataAccess.IRepo;
 using DataAccess.Models;
 using Microsoft.EntityFrameworkCore;
@@ -17,14 +18,15 @@ namespace DataAccess.Repositories {
             _context = context;
         }
 
-        public async Task<IEnumerable<Inventory>> GetInventoriesAsync(int sellerId, string? productName, int? categoryId, StockStatusEnum status) {
+
+        public async Task<PagedResult<Inventory>> GetInventoriesAsync(int sellerId, string? productName, int? categoryId, StockStatusEnum status, int pageIndex, int pageSize) {
             var query = _context.Inventories
                .Include(i => i.Product)                // BẮT BUỘC
                    .ThenInclude(p => p.Category)   // <-- SỬA LỖI (Thêm dòng này)
                .AsNoTracking()
                .AsQueryable(); // (AsQueryable() không cần thiết sau AsNoTracking())
 
-            
+
             // 2. LỌC THEO SELLER
             // (Thêm kiểm tra 'Product != null' để phòng trường hợp
             //  dữ liệu inventory bị lỗi (không có product liên kết))
@@ -53,7 +55,18 @@ namespace DataAccess.Repositories {
                 break;
             }
 
-            return await query.OrderBy(i => i.Id).ToListAsync();
+            var totalRecord = await query.CountAsync();
+
+            var items = await query.OrderBy(i => i.Id)
+                                   .Skip((pageIndex - 1) * pageSize) // Bỏ qua trang trước
+                                   .Take(pageSize) // Lấy trang hiện tại
+                                   .ToListAsync();
+            return new PagedResult<Inventory> {
+                Items = items,
+                TotalRecord = totalRecord,
+                PageIndex = pageIndex,
+                PageSize = pageSize
+            };
         }
 
         public async Task UpdateQuantityAsync(int productId, int quantity) {
