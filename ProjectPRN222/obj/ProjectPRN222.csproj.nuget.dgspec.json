@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj": {}
+    "C:\\Users\\ADMIN\\Ki_7\\PRN222\\Project\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj": {}
   },
   "projects": {
-    "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj": {
+    "C:\\Users\\ADMIN\\Ki_7\\PRN222\\Project\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Ki_7\\PRN222\\Project\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj",
         "projectName": "ProjectPRN222",
-        "projectPath": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\ProjectPRN222.csproj",
+        "projectPath": "C:\\Users\\ADMIN\\Ki_7\\PRN222\\Project\\project_Prn222\\ProjectPRN222\\ProjectPRN222.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\VisualStudio\\ProjectPRN222\\ProjectPRN222\\obj\\",
+        "outputPath": "C:\\Users\\ADMIN\\Ki_7\\PRN222\\Project\\project_Prn222\\ProjectPRN222\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
