@@ -74,9 +74,10 @@
                     }
 
                     @foreach (var item in Model) {
+                        count++;
                         <!-- Mỗi dòng là một form nhỏ -->
                         <tr>
-                            <td class="align-content-center">@(++count)</td>
+                            <td class="align-content-center">@(item.StartIndex + count)</td>
                             <td>
                                 <div class="d-flex align-items-center">
                                     <img src="@(item.Product.ImageUrl ?? "/images/placeholder.png")" width="50" height="50" class="me-3" alt="@item.Product.Title">
@@ -98,7 +99,6 @@
                                                class="form-control form-control-sm quantity-input"
                                                value="@item.Quantity"
                                                min="0"
-                                               max="@item.Quantity"
                                                data-product-id="@item.Product.Id"
                                                disabled>
                                         <button class="btn btn-outline-secondary btn-plus" type="button"

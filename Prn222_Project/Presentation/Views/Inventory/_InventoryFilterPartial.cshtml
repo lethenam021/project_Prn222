@@ -37,6 +37,9 @@
                 <button type="submit" id="filter-btn" class="btn btn-primary me-2">Search</button>
                 <button type="button" id="reset-btn" class="btn btn-outline-secondary">Reset</button>
             </div>
+
+            <input type="hidden" asp-for="Pagination.PageIndex" />
+            <input type="hidden" asp-for="Pagination.PageSize" />
         </div>
     </div>
 </div>

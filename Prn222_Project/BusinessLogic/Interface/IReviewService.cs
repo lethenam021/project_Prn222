@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLogic.Interface {
     public interface IReviewService {
-        Task<PagedResult<ReviewResponse>> SearchReviewAsync(SearchRequest searchRequest);
+        Task<PagedResult<ReviewSummaryResponse>> SearchProductSummariesAsync(SearchSummaryRequest searchRequest);
+
+        Task<PagedResult<ReviewDetailResponse>> GetProductDetailsAsync(SearchDetailRequest searchRequest);
     }
 }

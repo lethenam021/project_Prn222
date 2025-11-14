@@ -1,0 +1,55 @@
+﻿@using Common.Helpers
+@using Presentation.ViewModel.Data.ProductReviews
+@using Presentation.ViewModel.Data.Pagination
+@using Presentation.ViewModel.Params.Pagination
+@using Presentation.ViewModel.Params.ProductReviews
+
+@model PagedResult<ProductReviewDetailViewModel>
+
+@{
+    // Lấy thông tin sản phẩm
+    var productTitle = Model.AdditionalData?.GetType().GetProperty("ProductTitle")?.GetValue(Model.AdditionalData, null)?.ToString() ?? "Product";
+    var productId = (int)(Model.AdditionalData?.GetType().GetProperty("ProductId")?.GetValue(Model.AdditionalData, null) ?? 0);
+
+    // Biến cho filter
+    var today = DateTime.Now.ToString("yyyy-MM-dd");
+
+    // (MỚI) Tạo model để truyền vào partial filter
+    var detailParams = new SearchDetailParams {
+        ProductId = productId,
+        Pagination = new PaginationParams {
+            PageIndex = Model.PageIndex, // Dùng giá trị Paging hiện tại
+            PageSize = Model.PageSize
+        }
+    };
+}
+
+<div class="card">
+    <div class="card-body">
+
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <button id="back-to-summary-btn" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-1"></i> Back to Summary
+            </button>
+            <h4 class="mb-0">Reviews for: @productTitle</h4>
+        </div>
+
+        @await Html.PartialAsync("~/Views/ProductReviews/Detail/_ProductReviewDetailFilterPartial.cshtml",
+        detailParams,
+                new ViewDataDictionary(ViewData) { { "Today", today } })
+
+
+        <div id="detail-table-container">
+            @await Html.PartialAsync("~/Views/ProductReviews/Detail/_ProductReviewDetailTablePartial.cshtml", Model.Items)
+        </div>
+
+        <div id="detail-pagination-container">
+            @await Html.PartialAsync("~/Views/Shared/_PaginationPartial.cshtml", new PaginationViewModel {
+                        PageIndex = Model.PageIndex,
+                        PageSize = Model.PageSize,
+                        TotalRecords = Model.TotalRecord
+                        })
+        </div>
+
+    </div>
+</div>
