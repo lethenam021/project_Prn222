@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\services\\inventoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -111,10 +119,6 @@
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\auth\\login\\_loginemailpartial.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\businesslogic\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\services\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -125,10 +129,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\fpt\\prn222\\project_prn222\\prn222_project\\presentation\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -425,7 +425,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -433,31 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "IInventoryService.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IInventoryService.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
-              "RelativeToolTip": "BusinessLogic\\Interface\\IInventoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T10:00:35.747Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SellerController.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controllers\\SellerController.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
-              "RelativeToolTip": "Presentation\\Controllers\\SellerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T12:25:59.276Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "inventory.js",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\wwwroot\\js\\inventory.js",
               "RelativeDocumentMoniker": "Presentation\\wwwroot\\js\\inventory.js",
@@ -469,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\Index.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\Index.cshtml",
@@ -481,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "_InventoryTablePartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\_InventoryTablePartial.cshtml",
@@ -493,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "_InventoryFilterPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Inventory\\_InventoryFilterPartial.cshtml",
@@ -505,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "InventoryResponse.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Inventory\\InventoryResponse.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Inventory\\InventoryResponse.cs",
@@ -517,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "InventoryService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\InventoryService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Services\\InventoryService.cs",
@@ -530,7 +506,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "InventoryController.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\InventoryController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\InventoryController.cs",
@@ -542,7 +518,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
+              "Title": "_sidebar.cshtml",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Shared\\_sidebar.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T09:32:46.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAEcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T09:39:22.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SellerController.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\SellerController.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\SellerController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\SellerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T12:25:59.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IInventoryService.cs",
+              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IInventoryService.cs",
+              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IInventoryService.cs",
+              "RelativeToolTip": "BusinessLogic\\Interface\\IInventoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T10:00:35.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\HomeController.cs",
@@ -554,7 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "IUserRepo.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IUserRepo.cs",
               "RelativeDocumentMoniker": "DataAccess\\IRepo\\IUserRepo.cs",
@@ -566,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "InventoryValidator.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Validation\\InventoryValidator.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Validation\\InventoryValidator.cs",
@@ -578,7 +604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "UpdateQuantityRequest.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\UpdateQuantityRequest.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Inventory\\UpdateQuantityRequest.cs",
@@ -590,7 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "InventoryRepository.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\InventoryRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\InventoryRepository.cs",
@@ -602,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "ProductResponse.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Product\\ProductResponse.cs",
@@ -614,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CategoryResponse.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Category\\CategoryResponse.cs",
@@ -626,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "LoginResponse.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Auth\\LoginResponse.cs",
@@ -638,7 +664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "SearchRequest.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Inventory\\SearchRequest.cs",
@@ -650,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "IInventoryRepo.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IInventoryRepo.cs",
               "RelativeDocumentMoniker": "DataAccess\\IRepo\\IInventoryRepo.cs",
@@ -662,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "PaginationParams.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Params\\Pagination\\PaginationParams.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Params\\Pagination\\PaginationParams.cs",
@@ -674,7 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "PaginationViewModel.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Pagination\\PaginationViewModel.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Data\\Pagination\\PaginationViewModel.cs",
@@ -686,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "Error.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\Error.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\Error.cshtml",
@@ -698,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\_ViewStart.cshtml",
@@ -710,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -722,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "_VerificationEmail.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\EmailTemplates\\_VerificationEmail.cshtml",
@@ -734,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_Layout.cshtml",
@@ -746,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "_LoginEmailPartial.cshtml.css",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
               "RelativeDocumentMoniker": "Presentation\\Views\\Auth\\Login\\_LoginEmailPartial.cshtml.css",
@@ -758,19 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "_sidebar.cshtml",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Shared\\_sidebar.cshtml",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADQAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T09:32:46.792Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\CategoryService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Services\\CategoryService.cs",
@@ -782,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "CloneEbayDbContext.cs",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\DataAccess\\Models\\CloneEbayDbContext.cs",
               "RelativeDocumentMoniker": "DataAccess\\Models\\CloneEbayDbContext.cs",
@@ -795,18 +809,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\Program.cs",
-              "ToolTip": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\Program.cs",
-              "RelativeToolTip": "Presentation\\Program.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAAEUAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-10T09:39:22.543Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FPT\\PRN222\\project_Prn222\\Prn222_Project\\Presentation\\appsettings.json",
               "RelativeDocumentMoniker": "Presentation\\appsettings.json",
