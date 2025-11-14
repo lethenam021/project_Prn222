@@ -12,7 +12,11 @@
 - Docker: `docker run -d -p 6379:6379 --name my-redis --restart always redis`
 
 # Run: Test accounts
-- `truongvxhe187103@fpt.edu.vn` <details><summary>Password (Click to show)</summary>`Linh1702@`</details>
+- 
+```
+truongvxhe187103@fpt.edu.vn
+``` 
+<details><summary>Password (Click to show)</summary>`Linh1702@`</details>
 
 # Run: Steps by step
 - 
