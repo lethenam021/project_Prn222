@@ -3,7 +3,7 @@
 
 # Setup Database - SQL Server
 - Authentication: SQL Server Authentication
-- Server name: `103.126.162.38,1433`
+- Server name: ```103.126.162.38,1433```
 - Login: `sa`
 - <details><summary>Password (Click to show)</summary>`doanhieu18@`</details>
 - Options: Tick "Trust server certificate"
