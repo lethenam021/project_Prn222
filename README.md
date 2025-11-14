@@ -16,7 +16,12 @@
 ```
 truongvxhe187103@fpt.edu.vn
 ``` 
-<details><summary>Password (Click to show)</summary>`Linh1702@`</details>
+<details>
+<summary>Password (Click to show)</summary>
+```
+Linh1702@
+```
+</details>
 
 # Run: Steps by step
 - 
