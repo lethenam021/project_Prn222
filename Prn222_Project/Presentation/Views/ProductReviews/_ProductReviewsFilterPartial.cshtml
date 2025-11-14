@@ -1,0 +1,46 @@
+﻿@model Presentation.ViewModel.Params.ProductReviews.SearchParams
+
+@{
+    var categories = ViewData["Categories"] as List<SelectListItem>;
+    var today = DateTime.Now.ToString("yyyy-MM-dd");
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <!-- Filter 1: Search Term (Product Name) -->
+            <div class="col-md-4 mb-3">
+                <label asp-for="SearchTerm" class="form-label">Product Name</label>
+                <input asp-for="SearchTerm" class="form-control" placeholder="Enter product name...">
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <label asp-for="CategoryId" class="form-label">Category</label>
+                <select asp-for="CategoryId" asp-items="@categories" class="form-select"></select>
+            </div>
+
+            <!-- Filter 2: From Date (Created At) -->
+            <div class="col-md-3 mb-3">
+                <label asp-for="FromDate" class="form-label">From Date</label>
+                <input asp-for="FromDate" type="date" class="form-control" id="filter-from-date"
+                       max="@today">
+            </div>
+
+            <!-- Filter 3: To Date (Created At) -->
+            <div class="col-md-3 mb-3">
+                <label asp-for="ToDate" class="form-label">To Date</label>
+                <input asp-for="ToDate" type="date" class="form-control" id="filter-to-date"
+                       max="@today">
+            </div>
+
+            <!-- Buttons -->
+            <div class="col-md-2 d-flex align-items-end mb-3">
+                <button type="submit" id="filter-btn" class="btn btn-primary me-2">Search</button>
+                <button type="button" id="reset-btn" class="btn btn-outline-secondary">Reset</button>
+            </div>
+
+            <input type="hidden" asp-for="Pagination.PageIndex" id="filter-page-index" />
+            <input type="hidden" asp-for="Pagination.PageSize" id="filter-page-size" />
+        </div>
+    </div>
+</div>
