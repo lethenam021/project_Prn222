@@ -1,0 +1,152 @@
+﻿@model List<Presentation.ViewModel.Data.Inventory.InventoryViewModel>
+
+@{
+    var count = 0;
+}
+<style>
+    /* Ẩn mũi tên lên/xuống mặc định của trình duyệt */
+    .quantity-input::-webkit-outer-spin-button,
+    .quantity-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .quantity-input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    /* Tùy chỉnh input-group cho nhỏ gọn */
+    .quantity-stepper {
+        display: flex;
+        max-width: 150px;
+    }
+
+        .quantity-stepper .btn {
+            flex-grow: 0;
+            flex-shrink: 0;
+            padding: 0.25rem 0.75rem; /* Thu nhỏ nút */
+        }
+
+        .quantity-stepper .quantity-input {
+            text-align: center;
+            flex-grow: 1;
+            /* Giúp nó không bị nhảy khi disable/enable */
+            pointer-events: none;
+        }
+
+        /* Khi ở chế độ edit, cho phép trỏ chuột vào input */
+        .quantity-stepper.is-editing .quantity-input {
+            pointer-events: auto;
+        }
+
+    /* Căn chỉnh text số lượng (khi không edit) */
+    .quantity-display {
+        display: block; /* Đảm bảo nó là block */
+        padding: 0.25rem 0.75rem; /* Giả lập padding giống input */
+        min-height: 31px; /* Giữ chiều cao (tùy theo font) */
+    }
+
+    .badge {
+        border-radius: 16px;
+    }
+</style>
+
+
+<div class="card" id="inventory-table-card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table-hover table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Product</th>
+                        <th class="text-center">Quantity in Stock</th>
+                        <th style="width: 20%;">Last Updated</th>
+                        <th>Stock Status</th>
+                        <th style="width: 15%;" class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model == null || !Model.Any()) {
+                        <tr>
+                            <td colspan="6" class="text-center">No products found!</td>
+                        </tr>
+                    }
+
+                    @foreach (var item in Model) {
+                        <!-- Mỗi dòng là một form nhỏ -->
+                        <tr>
+                            <td class="align-content-center">@(++count)</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="@(item.Product.ImageUrl ?? "/images/placeholder.png")" width="50" height="50" class="me-3" alt="@item.Product.Title">
+                                    <strong>@item.Product.Title</strong>
+                                </div>
+                            </td>
+
+                            <td class="align-content-center">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <span class="quantity-display">@item.Quantity</span>
+
+                                    <!-- 2. Stepper (Bị giấu - d-none) -->
+                                    <div class="input-group quantity-stepper d-none">
+                                        <button class="btn btn-outline-secondary btn-minus" type="button"
+                                                data-product-id="@item.Product.Id" disabled>
+                                            -
+                                        </button>
+                                        <input type="number"
+                                               class="form-control form-control-sm quantity-input"
+                                               value="@item.Quantity"
+                                               min="0"
+                                               max="@item.Quantity"
+                                               data-product-id="@item.Product.Id"
+                                               disabled>
+                                        <button class="btn btn-outline-secondary btn-plus" type="button"
+                                                data-product-id="@item.Product.Id" disabled>
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td class="last-updated-display align-content-center">
+                                @(item.LastUpdated.HasValue? item.LastUpdated.Value.ToString("HH:mm dd/MM/yyyy") : "-")
+                            </td>
+
+                            <td class="status-display align-content-center">
+                                @switch (item.Quantity) {
+                                    case <= 5 and > 0:
+                                    <span class="badge bg-warning text-white">Low</span>
+                                    break;
+                                    case > 5:
+                                    <span class="badge bg-success text-white">In Stock</span>
+                                    break;
+                                    case <= 0:
+                                    default:
+                                    <span class="badge bg-danger text-white">Out of Stock</span>
+                                    break;
+                                }
+                            </td>
+
+                            <td class="align-content-center">
+                                <div class="d-flex justify-content-center align-item-center gap-2">
+                                    <button class="btn btn-secondary btn-sm btn-edit-quantity"
+                                            data-product-id="@item.Product.Id"
+                                            data-state="edit">
+                                        Update Quantity
+                                    </button>
+
+                                    <button class="btn btn-outline-danger btn-sm btn-cancel-quantity d-none"
+                                            data-product-id="@item.Product.Id">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
