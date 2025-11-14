@@ -63,6 +63,11 @@ builder.Services.AddScoped<IStoreRepo, StoreRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
 
+builder.Services.AddScoped<ICouponRepo, CouponRepository>();
+builder.Services.AddScoped<ICouponService, CouponService>();
+
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

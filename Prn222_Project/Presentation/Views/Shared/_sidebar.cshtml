@@ -33,24 +33,32 @@
                     <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerStore" aria-expanded="false">
                         <span>
                             <i class="ti ti-building-store"></i>
-                            </span>
+                        </span>
                         <span class="hide-menu">Store</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerProduct"  aria-expanded="false">
+                    <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerProduct" aria-expanded="false">
                         <span>
                             <i class="ti ti-package"></i>
                         </span>
                         <span class="hide-menu">Product</span>
                     </a>
                 </li>
-                <li class="sidebar-item">
+                @* <li class="sidebar-item">
                     <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
                         <span>
                             <i class="ti ti-cards"></i>
                         </span>
                         <span class="hide-menu">Card</span>
+                    </a>
+                </li> *@
+                <li class="sidebar-item">
+                    <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerCoupon" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-discount-2"></i> <!-- Icon cho coupon -->
+                        </span>
+                        <span class="hide-menu">Coupon</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
