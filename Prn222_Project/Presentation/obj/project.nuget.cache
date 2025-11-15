@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "c5+eg2JZHWw=",
+  "dgSpecHash": "EwKeLQiHY/U=",
   "success": true,
   "projectFilePath": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
@@ -104,12 +104,5 @@
     "C:\\Users\\ACER\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

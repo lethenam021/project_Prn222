@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using BusinessLogic.Interface;
 using Hangfire;
 using Infrastructure.Interface;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.Helpers;
 using Presentation.ViewModel.Data.Emails; // nếu email model ở Presentation
@@ -10,6 +11,7 @@ using Presentation.ViewModel.Data.Emails; // nếu email model ở Presentation
 
 namespace Presentation.Controllers
 {
+    [Authorize(Roles = "Seller")]
     public class DisputeController : Controller
     {
         private readonly IDisputeService _disputeService;

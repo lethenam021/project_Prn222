@@ -174,7 +174,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Common\\Common.csproj": {
+                "projectPath": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Common\\Common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

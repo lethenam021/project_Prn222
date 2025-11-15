@@ -141,7 +141,7 @@ namespace Presentation.Controllers {
 
                 var emailModel = new ReviewReplyEmailViewModel {
                     BuyerName = review.Reviewer, // (Hoặc FullName)
-                    ProductName = review.Product.Title,
+                    ProductName = review.Product!.Title,
                     ProductImageUrl = review.Product.ImageUrl,
                     ReviewDate = review.ReviewDate,
                     SellerReplyMessage = replyRequest.ReplyMessage
@@ -153,7 +153,7 @@ namespace Presentation.Controllers {
                     true);
 
                 _jobClient.Enqueue<IEmailService>(
-                   service => service.SendEmailAsync(review.ReviewerEmail, "Product Review Reply", emailBody)
+                   service => service.SendEmailAsync(review.ReviewerEmail!, "Product Review Reply", emailBody)
                );
 
                 var sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);

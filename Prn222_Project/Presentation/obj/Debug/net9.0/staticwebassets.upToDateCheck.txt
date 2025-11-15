@@ -213,6 +213,7 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\var\class2type.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\css\common\common.css
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\dist\locales\hi.json
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\dist\js\bootstrap.bundle.js.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\src\charts\Radial.js
@@ -221,6 +222,7 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\scss\css\bootstrap-reboot.css.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\dist\carousel.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\tests\unit\base-component.spec.js
+D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\js\pagination.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\dist\css\bootstrap-utilities.css.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\dist\css\bootstrap.rtl.min.css.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\simplebar\src\scrollbar-width.js
@@ -229,6 +231,8 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\dist\locales\el.json
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\dist\dom\event-handler.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\deferred.js
+D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\css\common\_variable.css
+D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\css\common\_reboot.css
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\src\alert.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\js\auth\register.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\src\modal.js
@@ -270,6 +274,7 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\src\modules\Core.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\tests\unit\toast.spec.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\tests\unit\util\template-factory.spec.js
+D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\js\product-reviews.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\tests\unit\util\config.spec.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\effects.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\html\icon-tabler.html
@@ -287,6 +292,7 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\src\modules\tooltip\Utils.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\dist\locales\fi.json
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\serialize.js
+D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\js\inventory.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\dist\toast.js.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\src\modules\settings\Options.js
@@ -387,6 +393,7 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\src\locales\hr.json
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\css\icons\tabler-icons\tabler-icons.css
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\tests\unit\button.spec.js
+D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\css\common\_typo.css
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\apexcharts\src\modules\Events.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\css\var\rboxStyle.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\jquery\src\var\documentElement.js
@@ -596,10 +603,17 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\dist\util\config.js.map
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\dist\base-component.js
 D:\ProjectPRN\project_Prn222\Prn222_Project\Presentation\wwwroot\Modernize-1.0.0\Modernize-1.0.0\src\assets\libs\bootstrap\js\tests\unit\util\sanitizer.spec.js
+wwwroot\css\common\_reboot.css
+wwwroot\css\common\_typo.css
+wwwroot\css\common\_variable.css
+wwwroot\css\common\common.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\auth\login.js
 wwwroot\js\auth\register.js
+wwwroot\js\inventory.js
+wwwroot\js\pagination.js
+wwwroot\js\product-reviews.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

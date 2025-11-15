@@ -63,12 +63,21 @@ builder.Services.AddScoped<IStoreRepo, StoreRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepo, ProductRepository>();
 
+builder.Services.AddScoped<ICategoryRepo, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IInventoryRepo, InventoryRepository>();
+builder.Services.AddScoped<IInventoryService, InventoryService>();
+
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IReviewRepo, ReviewRepository>();
+
 
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IOrderRepo, OrderRepository>();
 
 builder.Services.AddScoped<IDisputeRepo, DisputeRepository>();
 builder.Services.AddScoped<IDisputeService, DisputeService>();
+
 
 var app = builder.Build();
 
@@ -88,6 +97,6 @@ app.UseHangfireDashboard();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Report}/{action=ManageReport}/{id?}");
 
 app.Run();

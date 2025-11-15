@@ -31,12 +31,15 @@ D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAcce
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.runtimeconfig.json
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.dll
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.dll
+D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.pdb
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.sourcelink.json
+D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.dll
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
 D:\ProjectPRN\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.pdb

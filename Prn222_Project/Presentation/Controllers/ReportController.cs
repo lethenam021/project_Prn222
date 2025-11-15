@@ -3,8 +3,10 @@ using System.Text.Json;
 using BusinessLogic.DTOs.Request.Report;
 using BusinessLogic.Interface;
 using Common.Enums;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
+[Authorize(Roles = "Seller")]
 public class ReportController : Controller
 {
     private readonly IReportService _reportService;
