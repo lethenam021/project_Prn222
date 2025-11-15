@@ -1,0 +1,49 @@
+C:\VisualStudio\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+C:\VisualStudio\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.dll
+C:\VisualStudio\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.dll
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll
+C:\VisualStudio\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.runtimeconfig.json
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+C:\VisualStudio\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.genruntimeconfig.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.sourcelink.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.runtimeconfig.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.genruntimeconfig.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.runtimeconfig.json
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\bin\Debug\net9.0\Common.pdb
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\DataAccess.genruntimeconfig.cache
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll

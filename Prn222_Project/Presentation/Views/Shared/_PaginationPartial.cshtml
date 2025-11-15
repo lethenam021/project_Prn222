@@ -1,0 +1,110 @@
+﻿@model Presentation.ViewModel.Data.Pagination.PaginationViewModel
+
+<!--
+  Model này là PaginationViewModel, chứa:
+  - PageIndex, TotalPages, TotalCount, PageSize
+  - HasPreviousPage, HasNextPage
+-->
+
+<div class="d-flex justify-content-between align-items-center mt-3">
+
+    <!-- (MỚI) Nhóm bên trái: Gồm PageSize và Text "Showing..." -->
+    <div class="d-flex align-items-center">
+
+        <!-- (MỚI) Dropdown chọn Page Size -->
+        <select class="page-size-select form-select form-select-sm me-2" style="width: 75px;">
+            <!-- SỬA LỖI: Thêm 'selected' cho cả 3 -->
+            <option value="6">6</option>
+            <option value="12" selected="@(Model.PageSize == 12)">12</option>
+            <option value="25" selected="@(Model.PageSize == 25)">25</option>
+        </select>
+
+        <span class="text-muted me-3" style="white-space: nowrap;">Records per page</span>
+
+        <!-- Hiển thị "Showing X to Y of Z results" -->
+        <div style="white-space: nowrap;">
+            @{
+                var firstItem = ((Model.PageIndex - 1) * Model.PageSize) + 1;
+                // SỬA LỖI: Dùng TotalCount
+                var lastItem = Math.Min(Model.PageIndex * Model.PageSize, Model.TotalRecords);
+            }
+            @if (Model.TotalRecords > 0) {
+                <span class="text-muted">
+                    <!-- SỬA LỖI: Dùng TotalCount -->
+                    (Showing @firstItem - @lastItem of @Model.TotalRecords results)
+                </span>
+            } else {
+                <span class="text-muted">(No results found)</span>
+            }
+        </div>
+    </div>
+
+    <!-- (CŨ) Nhóm bên phải: Các nút Phân trang (Pagination) -->
+    <nav aria-label="Page Pagination">
+        <!-- Chỉ hiển thị pagination nếu có nhiều hơn 1 trang -->
+        @if (Model.TotalPages >= 1) {
+            <ul class="pagination mb-0">
+
+                <!-- Nút 1: Begin (<<) -->
+                <li class="page-item @(Model.PageIndex == 1 ? "disabled" : "")">
+                    <a class="page-link pagination-link" href="#" data-page="1" aria-label="First">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                <!-- Nút 2: Previous (<) -->
+                <li class="page-item @(!Model.HasPreviousPage ? "disabled" : "")">
+                    <a class="page-link pagination-link" href="#" data-page="@(Model.PageIndex - 1)" aria-label="Previous">
+                        <span aria-hidden="true">&lt;</span>
+                    </a>
+                </li>
+
+                <!-- Nút 3: Trang Trước (Current - 1) -->
+                <!-- (Chỉ hiển thị nếu trang hiện tại > 1) -->
+                @if (Model.PageIndex > 1) {
+                    <li class="page-item">
+                        <a class="page-link pagination-link" href="#" data-page="@(Model.PageIndex - 1)">
+                            @(Model.PageIndex - 1)
+                        </a>
+                    </li>
+                }
+
+                <!-- Nút 4: Trang Hiện tại (Active) -->
+                <li class="page-item active" aria-current="page">
+                    <span class="page-link">
+                        @Model.PageIndex
+                        <span class="visually-hidden">(current)</span>
+                    </span>
+                </li>
+
+                <!-- Nút 5: Trang Sau (Current + 1) -->
+                <!-- (Chỉ hiển thị nếu trang hiện tại < trang cuối) -->
+                @if (Model.PageIndex < Model.TotalPages) {
+                    <li class="page-item">
+                        <a class="page-link pagination-link" href="#" data-page="@(Model.PageIndex + 1)">
+                            @(Model.PageIndex + 1)
+                        </a>
+                    </li>
+                }
+
+                <!-- Nút 6: Next (>) -->
+                <li class="page-item @(!Model.HasNextPage ? "disabled" : "")">
+                    <a class="page-link pagination-link" href="#" data-page="@(Model.PageIndex + 1)" aria-label="Next">
+                        <span aria-hidden="true">&gt;</span>
+                    </a>
+                </li>
+
+                <!-- Nút 7: End (>>) -->
+                <li class="page-item @(Model.PageIndex == Model.TotalPages ? "disabled" : "")">
+                    <a class="page-link pagination-link" href="#" data-page="@Model.TotalPages" aria-label="Last">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        }
+    </nav>
+</div>
+
+@section Script {
+    <script src="~/js/pagination.js"></script>
+}

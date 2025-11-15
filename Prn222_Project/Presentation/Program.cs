@@ -11,7 +11,6 @@ using Infrastructure.Interface;
 using Infrastructure.Service;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using Org.BouncyCastle.Asn1.Nist;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
@@ -22,6 +21,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
         options.Cookie.HttpOnly = true;
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+        options.AccessDeniedPath = "/Auth/AccessDenied";
     });
 
 builder.Services.AddStackExchangeRedisCache(options => {
@@ -78,6 +78,17 @@ builder.Services.AddScoped<ICouponService, CouponService>();
 
 builder.Services.AddScoped<IOrderRepo, OrderRepository>();
 builder.Services.AddScoped<IShippingInfoRepo, ShippingInfoRepository>();
+builder.Services.AddScoped<IReviewService, ReviewService>();
+builder.Services.AddScoped<IReviewRepo, ReviewRepository>();
+
+
+builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<IOrderRepo, OrderRepository>();
+
+builder.Services.AddScoped<IDisputeRepo, DisputeRepository>();
+builder.Services.AddScoped<IDisputeService, DisputeService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -96,6 +107,6 @@ app.UseHangfireDashboard();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Report}/{action=ManageReport}/{id?}");
 
 app.Run();

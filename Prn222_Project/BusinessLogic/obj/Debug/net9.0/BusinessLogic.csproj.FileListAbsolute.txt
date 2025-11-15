@@ -1,0 +1,50 @@
+C:\VisualStudio\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.deps.json
+C:\VisualStudio\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.dll
+C:\VisualStudio\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.pdb
+C:\VisualStudio\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.dll
+C:\VisualStudio\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.pdb
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.AssemblyReference.cache
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfoInputs.cache
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfo.cs
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\Business.CF5D6E35.Up2Date
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.dll
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\refint\BusinessLogic.dll
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.pdb
+C:\VisualStudio\Prn222_Project\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfo.cs
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.sourcelink.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.deps.json
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\Business.CF5D6E35.Up2Date
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\refint\BusinessLogic.dll
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.pdb
+D:\FPT\PRN222\project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.deps.json
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\BusinessLogic.pdb
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\Common.pdb
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\bin\Debug\net9.0\DataAccess.pdb
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.AssemblyInfo.cs
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\Business.CF5D6E35.Up2Date
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\refint\BusinessLogic.dll
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\BusinessLogic.pdb
+D:\_Study material\2025_3_fall\prn222\_project\_project_Prn222\Prn222_Project\BusinessLogic\obj\Debug\net9.0\ref\BusinessLogic.dll

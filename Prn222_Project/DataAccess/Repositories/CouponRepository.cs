@@ -15,13 +15,15 @@ namespace DataAccess.Repositories {
 
         public async Task<List<Coupon>> GetAllCouponsBySellerAsync(int sellerId) {
             return await _context.Coupons
-                .Include(c => c.Product)
-                .Where(c => c.Product.SellerId == sellerId)
-                .ToListAsync();
+                                .Include(c => c.Product)
+                                .Where(c => c.Product.SellerId == sellerId)
+                                .ToListAsync();
         }
 
         public async Task<Coupon?> GetByIdAsync(int id) {
-            return await _context.Coupons.FindAsync(id);
+            return await _context.Coupons
+                                .Include(c => c.Product)
+                                .FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public async Task AddAsync(Coupon coupon) {
@@ -30,7 +32,7 @@ namespace DataAccess.Repositories {
         }
 
         public async Task UpdateAsync(Coupon coupon) {
-            _context.Coupons.Update(coupon);
+            _context.Entry(coupon).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
 

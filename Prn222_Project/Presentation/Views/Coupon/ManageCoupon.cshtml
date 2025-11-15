@@ -1,6 +1,7 @@
 ﻿@model Presentation.ViewModel.CouponVM
 @using DataAccess.Models
 @using Presentation.ViewModel
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,7 +15,6 @@
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
         @await Html.PartialAsync("_sidebar");
         <div class="body-wrapper">
-            <!-- CHANGE: Full Header (copied from ManagerProduct.cshtml sample; adjust if different) -->
             <header class="app-header">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <ul class="navbar-nav">
@@ -23,6 +23,7 @@
                                 <i class="ti ti-menu-2"></i>
                             </a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link nav-icon-hover" href="javascript:void(0)">
                                 <i class="ti ti-bell-ringing"></i>
@@ -30,22 +31,26 @@
                             </a>
                         </li>
                     </ul>
+
                     <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown" aria-expanded="false">
                                     <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
                                 </a>
+
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
                                     <div class="message-body">
                                         <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                                             <i class="ti ti-user fs-6"></i>
                                             <p class="mb-0 fs-3">My Profile</p>
                                         </a>
+
                                         <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                                             <i class="ti ti-mail fs-6"></i>
                                             <p class="mb-0 fs-3">My Account</p>
                                         </a>
+
                                         <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
                                             <i class="ti ti-list-check fs-6"></i>
                                             <p class="mb-0 fs-3">My Task</p>
@@ -58,9 +63,17 @@
                     </div>
                 </nav>
             </header>
+
             <div class="container-fluid py-3">
                 <h3 class="mb-3">Manage Coupons</h3>
-                <!-- CHANGE: KPI Cards (adjusted metrics to English; FIXED CS1501 by handling nullable MaxUsage with ?? 0 before Sum and ToString("N0")) -->
+                @if (ViewBag.Success != null) {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">@ViewBag.Success <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                }
+                @if (ViewBag.Error != null) {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">@ViewBag.Error <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                }
+
+                @* kpi cards *@
                 <div class="row g-3 mb-4">
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0 text-center p-3">
@@ -82,40 +95,68 @@
                     </div>
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0 text-center p-3">
-                            <div class="fs-4 fw-bold text-info">@(Model.Coupons.Sum(c => c.MaxUsage ?? 0).ToString("N0"))</div> <!-- CHANGE: Fixed CS1501 - Handle nullable int? with ?? 0 before Sum, now Sum returns non-nullable int for ToString("N0") -->
+                            <div class="fs-4 fw-bold text-info">@(Model.Coupons.Sum(c => c.MaxUsage ?? 0).ToString("N0"))</div>
                             <div class="text-muted small">Total Max Usage</div>
                         </div>
                     </div>
                 </div>
-                <!-- CHANGE: Search & Sort Form (to English) -->
-                <form asp-action="ManagerCoupon" method="get" class="row g-2 mb-3 align-items-end">
+
+                @* filter form *@
+                <form asp-action="ManageCoupon" method="get" class="row g-2 mb-3 align-items-end">
                     <div class="col-md-3">
                         <label class="form-label">Search Code</label>
-                        <input name="Search" class="form-control" placeholder="Enter code..." />
+                        <input name="search" class="form-control" placeholder="Enter code..." value="@ViewBag.Search" />
                     </div>
-                    <div class="col-md-3">
-                        <label class="form-label">Sort By</label>
-                        <select name="Sort" class="form-select">
-                            <option value="">Default</option>
-                            <option value="code">By Code</option>
-                            <option value="discount">By Discount %</option>
-                            <option value="endDate">By End Date</option>
+                    <div class="col-md-2">
+                        <label class="form-label">Max Usage (Exact)</label>
+                        <input name="maxUsageSearch" type="number" min="0" class="form-control" value="@ViewBag.MaxUsageSearch" placeholder="e.g., 50" /> <!-- CHANGE: Thêm search Max Usage exact -->
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Product ID</label>
+                        <select name="productIdSearch" class="form-select">
+                            <option value="">All Products</option>
+                            @foreach (var p in ViewBag.Products ?? new List<Product>()) {
+                                <option value="@p.Id" selected="@(p.Id == ViewBag.ProductIdSearch)">@p.Title (ID: @p.Id)</option>
+                            }
                         </select>
                     </div>
                     <div class="col-md-2">
-                        <label class="form-label">&nbsp;</label>
-                        <button type="submit" class="btn btn-primary w-100">Filter</button>
+                        <label class="form-label">Sort By</label>
+                        <select name="sort" class="form-select">
+                            <option value="">Default</option>
+                            <option value="code" selected="@(ViewBag.Sort == "code")">Code</option>
+                            <option value="discount" selected="@(ViewBag.Sort == "discount")">Discount %</option>
+                            <option value="startDate" selected="@(ViewBag.Sort == "startDate")">Start Date</option> <!-- CHANGE: Thêm sort Start Date -->
+                            <option value="endDate" selected="@(ViewBag.Sort == "endDate")">End Date</option>
+                            <option value="maxUsage" selected="@(ViewBag.Sort == "maxUsage")">Max Usage</option> <!-- CHANGE: Thêm sort Max Usage -->
+                            <option value="productId" selected="@(ViewBag.Sort == "productId")">Product ID</option> <!-- CHANGE: Thêm sort Product ID -->
+                        </select>
                     </div>
                     <div class="col-md-2">
-                        <label class="form-label">&nbsp;</label>
-                        <a asp-action="ManagerCoupon" class="btn btn-outline-secondary w-100">Clear</a>
+                        <label class="form-label">Sort Direction</label>
+                        <select name="direction" class="form-select">
+                            <option value="asc" selected="@(ViewBag.Direction == "asc")">ASC</option>
+                            <option value="desc" selected="@(ViewBag.Direction == "desc")">DESC</option>
+                        </select>
                     </div>
-                    <div class="col-md-2">
-                        <label class="form-label">&nbsp;</label>
-                        <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#createModal">Create New</button>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="submit" class="btn btn-primary w-100">Filter</button>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="form-label">&nbsp;</label>
+                            <a asp-action="ManageCoupon" class="btn btn-outline-secondary w-100">Clear</a>
+                        </div>
+
+                        <div class="col-md-2 **ms-auto**">
+                            <label class="form-label">&nbsp;</label>
+                            <button type="button" class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#createModal">Create New</button>
+                        </div>
                     </div>
+                    
                 </form>
-                <!-- CHANGE: Table (English headers; fixed date ToString to "MM/dd/yyyy" for English format; handle nullable DiscountPercent with ?? 0) -->
+
                 <div class="card">
                     <div class="card-body">
                         <div class="table-responsive">
@@ -133,31 +174,38 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach (var c in Model.CouponsPage) {
+                                    @if (Model.CouponsPage.Any()) {
+                                        @foreach (var c in Model.CouponsPage) {
+                                            <tr>
+                                                <td>@c.Id</td>
+                                                <td>@(c.Code ?? "")</td>
+                                                <td>@(c.DiscountPercent ?? 0) %</td>
+                                                <td>@(c.StartDate?.ToString("MM/dd/yyyy") ?? "")</td>
+                                                <td>@(c.EndDate?.ToString("MM/dd/yyyy") ?? "")</td>
+                                                <td>@(c.MaxUsage ?? 0)</td>
+                                                <td>@(c.ProductId ?? 0)</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-info me-1" data-bs-toggle="modal" data-bs-target="#detailModal-@c.Id">Detail</button>
+                                                    <button class="btn btn-sm btn-warning me-1" data-bs-toggle="modal" data-bs-target="#editModal-@c.Id">Edit</button>
+                                                    <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@c.Id">Delete</button>
+                                                </td>
+                                            </tr>
+                                        }
+                                    } else {
                                         <tr>
-                                            <td>@c.Id</td>
-                                            <td>@(c.Code ?? "")</td> <!-- CHANGE: Handle nullable string -->
-                                            <td>@(c.DiscountPercent ?? 0) %</td> <!-- CHANGE: Handle nullable decimal with ?? 0 to avoid runtime error -->
-                                            <td>@(c.StartDate?.ToString("MM/dd/yyyy") ?? "")</td> <!-- CHANGE: Fixed ToString format for English -->
-                                            <td>@(c.EndDate?.ToString("MM/dd/yyyy") ?? "")</td> <!-- CHANGE: Fixed ToString format for English -->
-                                            <td>@(c.MaxUsage ?? 0)</td> <!-- CHANGE: Handle nullable int -->
-                                            <td>@(c.ProductId ?? 0)</td> <!-- CHANGE: Handle nullable int -->
-                                            <td>
-                                                <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailModal-@c.Id">Detail</button>
-                                                <button class="btn btn-sm btn-warning" data-bs-toggle="modal" data-bs-target="#editModal-@c.Id">Edit</button>
-                                                <button class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@c.Id">Delete</button>
-                                            </td>
+                                            <td colspan="8" class="text-center text-muted">No coupons found. Create one to get started!</td>
                                         </tr>
                                     }
                                 </tbody>
                             </table>
                         </div>
-                        <!-- CHANGE: Pagination (assume ViewBag.CurrentPage set in Controller) -->
+
+                        @* pagination *@
                         <nav aria-label="Page navigation">
                             <ul class="pagination justify-content-center">
                                 @for (int i = 1; i <= Model.TotalPages; i++) {
                                     <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
-                                        <a class="page-link" asp-action="ManagerCoupon" asp-route-page="@i">@i</a>
+                                        <a class="page-link" asp-action="ManageCoupon" asp-route-page="@i">@i</a>
                                     </li>
                                 }
                             </ul>
@@ -165,45 +213,53 @@
                     </div>
                 </div>
 
-                <!-- CHANGE: CREATE Modal (English text; handle nullable in select/value if needed) -->
-                <div class="modal fade" id="createModal" tabindex="-1">
-                    <div class="modal-dialog modal-dialog-centered">
+                @* modal create *@
+                <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
-                            <form asp-action="Create" method="post">
+                            <form asp-action="Create" method="post" novalidate>
                                 @Html.AntiForgeryToken()
                                 <div class="modal-header bg-success text-white">
-                                    <h5 class="modal-title">Create New Coupon</h5>
+                                    <h5 class="modal-title" id="createModalLabel">Create New Coupon</h5>
                                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label class="form-label">Code</label>
-                                        <input name="Code" class="form-control" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">% Discount (0-100)</label>
-                                        <input name="DiscountPercent" type="number" min="0" max="100" step="0.01" class="form-control" required /> <!-- CHANGE: Added step="0.01" for decimal -->
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Start Date</label>
-                                        <input name="StartDate" type="date" class="form-control" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">End Date</label>
-                                        <input name="EndDate" type="date" class="form-control" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Max Usage</label>
-                                        <input name="MaxUsage" type="number" min="1" class="form-control" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label">Product ID (Attach to)</label>
-                                        <select name="ProductId" class="form-select" required>
-                                            <option value="">Select Product</option>
-                                            @foreach (var p in ViewBag.Products ?? new List<Product>()) {
-                                                <option value="@p.Id">@p.Title</option>
-                                            }
-                                        </select>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Code <span class="text-danger">*</span></label>
+                                            <input name="Code" class="form-control" required pattern="[a-zA-Z0-9_]{4,10}" title="4-10 letters (a-zA-Z), numbers, underscores" />
+                                            <div class="invalid-feedback">Code is required and must be unique.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">% Discount <span class="text-danger">*</span></label>
+                                            <input name="DiscountPercent" type="number" min="0" max="100" step="0.01" class="form-control" required />
+                                            <div class="invalid-feedback">Between 0 and 100.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Start Date <span class="text-danger">*</span></label>
+                                            <input name="StartDate" type="date" class="form-control" required />
+                                            <div class="invalid-feedback">Start date is required.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">End Date <span class="text-danger">*</span></label>
+                                            <input name="EndDate" type="date" class="form-control" required />
+                                            <div class="invalid-feedback">End date must be after start date.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Max Usage <span class="text-danger">*</span></label>
+                                            <input name="MaxUsage" type="number" min="1" class="form-control" required />
+                                            <div class="invalid-feedback">Positive integer.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Product ID <span class="text-danger">*</span></label>
+                                            <select name="ProductId" class="form-select" required>
+                                                <option value="">Select Product</option>
+                                                @foreach (var p in ViewBag.Products ?? new List<Product>()) {
+                                                    <option value="@p.Id">@p.Title (ID: @p.Id)</option>
+                                                }
+                                            </select>
+                                            <div class="invalid-feedback">Select a product.</div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="modal-footer">
@@ -216,20 +272,31 @@
                 </div>
 
                 @foreach (var c in Model.Coupons) {
-                    <!-- CHANGE: Detail Modal (English; handle nullable in display) -->
+                    @* modal detail *@
                     <div class="modal fade" id="detailModal-@c.Id" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header bg-info text-white">
-                                    <h5 class="modal-title">Detail: @(c.Code ?? "N/A")</h5>
+                                    <h5 class="modal-title">Detail Coupon: @(c.Code ?? "N/A")</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <p><strong>% Discount:</strong> @(c.DiscountPercent ?? 0)</p>
-                                    <p><strong>Start:</strong> @(c.StartDate?.ToString("MM/dd/yyyy") ?? "")</p>
-                                    <p><strong>End:</strong> @(c.EndDate?.ToString("MM/dd/yyyy") ?? "")</p>
-                                    <p><strong>Max Usage:</strong> @(c.MaxUsage ?? 0)</p>
-                                    <p><strong>Product ID:</strong> @(c.ProductId ?? 0)</p>
+                                    <dl class="row">
+                                        <dt class="col-sm-4">ID</dt>
+                                        <dd class="col-sm-8">@c.Id</dd>
+                                        <dt class="col-sm-4">Code</dt>
+                                        <dd class="col-sm-8">@(c.Code ?? "N/A")</dd>
+                                        <dt class="col-sm-4">% Discount</dt>
+                                        <dd class="col-sm-8">@(c.DiscountPercent ?? 0) %</dd>
+                                        <dt class="col-sm-4">Start Date</dt>
+                                        <dd class="col-sm-8">@(c.StartDate?.ToString("MM/dd/yyyy") ?? "N/A")</dd>
+                                        <dt class="col-sm-4">End Date</dt>
+                                        <dd class="col-sm-8">@(c.EndDate?.ToString("MM/dd/yyyy") ?? "N/A")</dd>
+                                        <dt class="col-sm-4">Max Usage</dt>
+                                        <dd class="col-sm-8">@(c.MaxUsage ?? 0)</dd>
+                                        <dt class="col-sm-4">Product ID</dt>
+                                        <dd class="col-sm-8">@(c.ProductId ?? 0)</dd>
+                                    </dl>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
@@ -238,46 +305,54 @@
                         </div>
                     </div>
 
-                    <!-- CHANGE: Edit Modal (full fields, fixed 'Field' error by using actual properties; English; handle nullable value with ?? 0 or empty) -->
-                    <div class="modal fade" id="editModal-@c.Id" tabindex="-1">
-                        <div class="modal-dialog modal-dialog-centered">
+                    @* modal edit *@
+                    <div class="modal fade" id="editModal-@c.Id" tabindex="-1" aria-labelledby="editModalLabel-@c.Id" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-                                <form asp-action="Edit" method="post">
+                                <form asp-action="Update" method="post">
                                     @Html.AntiForgeryToken()
                                     <input type="hidden" name="Id" value="@c.Id" />
                                     <div class="modal-header">
-                                        <h5 class="modal-title">Edit: @(c.Code ?? "N/A")</h5>
+                                        <h5 class="modal-title" id="editModalLabel-@c.Id">Edit Coupon: @(c.Code ?? "N/A")</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <div class="mb-3">
-                                            <label class="form-label">Code</label>
-                                            <input name="Code" class="form-control" value="@(c.Code ?? "")" required />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">% Discount (0-100)</label>
-                                            <input name="DiscountPercent" type="number" min="0" max="100" step="0.01" class="form-control" value="@(c.DiscountPercent?.ToString("F2") ?? "")" required /> <!-- CHANGE: Handle nullable decimal with ?.ToString("F2") for input -->
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Start Date</label>
-                                            <input name="StartDate" type="date" class="form-control" value="@(c.StartDate?.ToString("yyyy-MM-dd") ?? "")" required />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">End Date</label>
-                                            <input name="EndDate" type="date" class="form-control" value="@(c.EndDate?.ToString("yyyy-MM-dd") ?? "")" required />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Max Usage</label>
-                                            <input name="MaxUsage" type="number" min="1" class="form-control" value="@(c.MaxUsage ?? 0)" required />
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="form-label">Product ID (Attach to)</label>
-                                            <select name="ProductId" class="form-select" required>
-                                                <option value="">Select Product</option>
-                                                @foreach (var p in ViewBag.Products ?? new List<Product>()) {
-                                                    <option value="@p.Id" selected="@(p.Id == c.ProductId)">@p.Title</option>
-                                                }
-                                            </select>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Code <span class="text-danger">*</span></label>
+                                                <input name="Code" class="form-control" value="@(c.Code ?? "")" required pattern="[a-zA-Z0-9_]{4,10}" title="4-10 letters (a-zA-Z), numbers, underscores" />
+                                                <div class="invalid-feedback">Code is required and must be unique.</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">% Discount <span class="text-danger">*</span></label>
+                                                <input name="DiscountPercent" type="number" min="0" max="100" step="0.01" class="form-control" value="@(c.DiscountPercent?.ToString("F2") ?? "")" required />
+                                                <div class="invalid-feedback">Between 0 and 100.</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Start Date <span class="text-danger">*</span></label>
+                                                <input name="StartDate" type="date" class="form-control" value="@(c.StartDate?.ToString("yyyy-MM-dd") ?? "")" required />
+                                                <div class="invalid-feedback">Start date is required.</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">End Date <span class="text-danger">*</span></label>
+                                                <input name="EndDate" type="date" class="form-control" value="@(c.EndDate?.ToString("yyyy-MM-dd") ?? "")" required />
+                                                <div class="invalid-feedback">End date must be after start date.</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Max Usage <span class="text-danger">*</span></label>
+                                                <input name="MaxUsage" type="number" min="1" class="form-control" value="@(c.MaxUsage ?? 0)" required />
+                                                <div class="invalid-feedback">Positive integer.</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Product ID <span class="text-danger">*</span></label>
+                                                <select name="ProductId" class="form-select" required>
+                                                    <option value="">Select Product</option>
+                                                    @foreach (var p in ViewBag.Products ?? new List<Product>()) {
+                                                        <option value="@p.Id" selected="@(p.Id == c.ProductId)">@p.Title (ID: @p.Id)</option>
+                                                    }
+                                                </select>
+                                                <div class="invalid-feedback">Select a product.</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -289,7 +364,7 @@
                         </div>
                     </div>
 
-                    <!-- CHANGE: Delete Modal (English; handle nullable Code) -->
+                    @* modal delete *@
                     <div class="modal fade" id="deleteModal-@c.Id" tabindex="-1">
                         <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
@@ -313,12 +388,29 @@
                     </div>
                 }
 
-                <!-- CHANGE: Full Scripts (as in ManagerProduct) -->
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/jquery/dist/jquery.min.js"></script>
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/sidebarmenu.js"></script>
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/app.min.js"></script>
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/simplebar/dist/simplebar.js"></script>
+                <script>
+                    // validation bootstrap
+                    (function () {
+                        'use strict';
+                        window.addEventListener('load', function () {
+                            var forms = document.getElementsByClassName('needs-validation');
+                            var validation = Array.prototype.filter.call(forms, function (form) {
+                                form.addEventListener('submit', function (event) {
+                                    if (form.checkValidity() === false) {
+                                        event.preventDefault();
+                                        event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                }, false);
+                            });
+                        }, false);
+                    })();
+                </script>
             </div>
         </div>
     </div>
