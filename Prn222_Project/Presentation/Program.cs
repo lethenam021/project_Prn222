@@ -69,6 +69,9 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IInventoryRepo, InventoryRepository>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
 
+builder.Services.AddScoped<ICouponRepo, CouponRepository>();
+builder.Services.AddScoped<ICouponService, CouponService>();
+
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepository>();
 

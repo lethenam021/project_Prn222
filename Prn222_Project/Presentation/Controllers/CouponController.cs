@@ -1,10 +1,11 @@
-﻿using BusinessLogic.Interface;
-using DataAccess.Models;
+﻿using System.Security.Claims;
+using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using BusinessLogic.Interface;
+using DataAccess.Models;
 using Presentation.ViewModel;
-using System.Security.Claims;
 
 namespace Presentation.Controllers {
     [Authorize(Roles = "seller")]
@@ -21,9 +22,9 @@ namespace Presentation.Controllers {
             _productService = productService;
         }
 
-        // CHANGE: Sửa tên action từ ManagerCoupon sang ManageCoupon (GET), và các redirect tương ứng
         [HttpGet]
-        public async Task<IActionResult> ManageCoupon(int page = 1, string? search = null, string? sort = null) {
+        public async Task<IActionResult> ManageCoupon(int page = 1, string? search = null, string? sort = null, string? direction = "asc",
+            DateTime? startDateFrom = null, DateTime? startDateTo = null, int? maxUsageSearch = null, int? productIdSearch = null) {
             var sellerIdClaim = User.FindFirst("SellerId");
             if (sellerIdClaim == null)
                 return Unauthorized();
@@ -35,13 +36,28 @@ namespace Presentation.Controllers {
             int pageSize = 6;
             var coupons = await _couponService.GetAllCouponsBySellerAsync(sellerId);
 
+            // search filters
             if (!string.IsNullOrEmpty(search))
                 coupons = coupons.Where(c => (c.Code ?? "").Contains(search, StringComparison.OrdinalIgnoreCase)).ToList();
+            if (startDateFrom.HasValue)
+                coupons = coupons.Where(c => c.StartDate >= startDateFrom.Value).ToList();
+            if (startDateTo.HasValue)
+                coupons = coupons.Where(c => c.StartDate <= startDateTo.Value).ToList();
+            if (maxUsageSearch.HasValue)
+                coupons = coupons.Where(c => c.MaxUsage == maxUsageSearch.Value).ToList();
+            if (productIdSearch.HasValue && productIdSearch.Value > 0)
+                coupons = coupons.Where(c => c.ProductId == productIdSearch.Value).ToList();
+
+            // sort filters
             if (!string.IsNullOrEmpty(sort)) {
+                bool isDesc = direction?.ToLower() == "desc";
                 coupons = sort switch {
-                    "code" => coupons.OrderBy(c => c.Code).ToList(),
-                    "discount" => coupons.OrderByDescending(c => c.DiscountPercent).ToList(),
-                    "endDate" => coupons.OrderByDescending(c => c.EndDate).ToList(),
+                    "code" => isDesc ? coupons.OrderByDescending(c => c.Code).ToList() : coupons.OrderBy(c => c.Code).ToList(),
+                    "discount" => isDesc ? coupons.OrderByDescending(c => c.DiscountPercent).ToList() : coupons.OrderBy(c => c.DiscountPercent).ToList(),
+                    "startDate" => isDesc ? coupons.OrderByDescending(c => c.StartDate).ToList() : coupons.OrderBy(c => c.StartDate).ToList(),
+                    "endDate" => isDesc ? coupons.OrderByDescending(c => c.EndDate).ToList() : coupons.OrderBy(c => c.EndDate).ToList(),
+                    "maxUsage" => isDesc ? coupons.OrderByDescending(c => c.MaxUsage).ToList() : coupons.OrderBy(c => c.MaxUsage).ToList(),
+                    "productId" => isDesc ? coupons.OrderByDescending(c => c.ProductId).ToList() : coupons.OrderBy(c => c.ProductId).ToList(),
                     _ => coupons
                 };
             }
@@ -52,6 +68,13 @@ namespace Presentation.Controllers {
             var products = await _productService.GetAllProductsAsync();
             ViewBag.Products = products.Where(p => p.SellerId == sellerId).ToList();
             ViewBag.CurrentPage = page;
+            ViewBag.Sort = sort;
+            ViewBag.Direction = direction;
+
+            ViewBag.StartDateFrom = startDateFrom;
+            ViewBag.StartDateTo = startDateTo;
+            ViewBag.MaxUsageSearch = maxUsageSearch;
+            ViewBag.ProductIdSearch = productIdSearch;
 
             var model = new CouponVM {
                 Coupons = coupons,
@@ -70,45 +93,73 @@ namespace Presentation.Controllers {
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Coupon coupon) {
-            if (!ModelState.IsValid) {
-                TempData["Error"] = "Invalid coupon data.";
-                return RedirectToAction(nameof(ManageCoupon)); // CHANGE: Sửa redirect sang ManageCoupon
+            try {
+                var sellerIdClaim = User.FindFirst("SellerId");
+                int sellerId = int.Parse(sellerIdClaim?.Value ?? "0");
+                if (sellerId == 0)
+                    return Unauthorized();
+
+                var product = await _productService.GetByIdAsync(coupon.ProductId ?? 0);
+                if (product == null || product.SellerId != sellerId)
+                    return BadRequest("Invalid product. It must belong to your store.");
+
+                await _couponService.AddAsync(coupon, sellerId);
+                TempData["Success"] = "Coupon created successfully.";
+            }
+            catch (ArgumentException ex) {
+                TempData["Error"] = ex.Message;
+            }
+            catch (Exception ex) {
+                TempData["Error"] = "An error occurred while creating coupon.";
+                _logger.LogError(ex, "Create Coupon error");
             }
 
-            var sellerIdClaim = User.FindFirst("SellerId");
-            int sellerId = int.Parse(sellerIdClaim?.Value ?? "0");
-            if (sellerId == 0)
-                return Unauthorized();
-
-            if (coupon.ProductId == null || coupon.ProductId == 0) {
-                TempData["Error"] = "Product is required.";
-                return RedirectToAction(nameof(ManageCoupon)); // CHANGE: Sửa redirect sang ManageCoupon
-            }
-
-            await _couponService.AddAsync(coupon);
-            TempData["Success"] = "Coupon created successfully.";
-            return RedirectToAction(nameof(ManageCoupon)); // CHANGE: Sửa redirect sang ManageCoupon
+            return RedirectToAction(nameof(ManageCoupon));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Coupon coupon) {
-            if (!ModelState.IsValid) {
-                TempData["Error"] = "Invalid coupon data.";
-                return RedirectToAction(nameof(ManageCoupon)); // CHANGE: Sửa redirect sang ManageCoupon
+        public async Task<IActionResult> Update(Coupon coupon) {
+            try {
+                var sellerIdClaim = User.FindFirst("SellerId");
+                int sellerId = int.Parse(sellerIdClaim?.Value ?? "0");
+                if (sellerId == 0)
+                    return Unauthorized();
+
+                var product = await _productService.GetByIdAsync(coupon.ProductId ?? 0);
+                if (product == null || product.SellerId != sellerId)
+                    return BadRequest("Invalid product. It must belong to your store.");
+
+                await _couponService.UpdateAsync(coupon, sellerId);
+                TempData["Success"] = "Coupon updated successfully.";
+            }
+            catch (ArgumentException ex) {
+                TempData["Error"] = ex.Message;
+            }
+            catch (Exception ex) {
+                TempData["Error"] = "An error occurred while updating coupon.";
+                _logger.LogError(ex, "Update Coupon error");
             }
 
-            await _couponService.UpdateAsync(coupon);
-            TempData["Success"] = "Coupon updated successfully.";
-            return RedirectToAction(nameof(ManageCoupon)); // CHANGE: Sửa redirect sang ManageCoupon
+            return RedirectToAction(nameof(ManageCoupon));
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id) {
-            await _couponService.DeleteAsync(id);
-            TempData["Success"] = "Coupon deleted successfully.";
-            return RedirectToAction(nameof(ManageCoupon)); // CHANGE: Sửa redirect sang ManageCoupon
+            try {
+                await _couponService.DeleteAsync(id);
+                TempData["Success"] = "Coupon deleted successfully.";
+            }
+            catch (ArgumentException ex) {
+                TempData["Error"] = ex.Message;
+            }
+            catch (Exception ex) {
+                TempData["Error"] = "An error occurred while deleting coupon.";
+                _logger.LogError(ex, "Delete Coupon error");
+            }
+
+            return RedirectToAction(nameof(ManageCoupon));
         }
     }
 }
