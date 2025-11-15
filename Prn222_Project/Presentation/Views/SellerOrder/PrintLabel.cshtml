@@ -1,0 +1,118 @@
+﻿@model BusinessLogic.DTOs.Response.Order.ShippingLabelDto
+
+@{
+    // Thiết kế của bạn là không dùng Layout
+    Layout = null; 
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>In Phiếu Vận Chuyển</title>
+    <link rel="shortcut icon" type="image/png" href="/Modernize-1.0.0/Modernize-1.0.0/src/assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="/Modernize-1.0.0/Modernize-1.0.0/src/assets/css/styles.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+</head>
+
+<body>
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+        
+        @await Html.PartialAsync("_sidebar")
+        
+        <div class="body-wrapper">
+            
+            <header class="app-header">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-block d-xl-none">
+                            <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                                <i class="ti ti-menu-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                                <i class="ti ti-bell-ringing"></i>
+                                <div class="notification bg-primary rounded-circle"></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                        <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                                    <div class="message-body">
+                                        <a asp-controller="Auth" asp-action="Logout" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <div class="container-fluid">
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title fw-semibold mb-3">In Phiếu Vận Chuyển (Giả Lập)</h5>
+
+                        <div class="alert alert-info">
+                            Đơn hàng <strong>#@Model.OrderId</strong> đã được xác nhận.
+                            API đã được gọi để đăng ký mã <strong>@Model.TrackingNumber</strong> với 17track.
+                            Hệ thống sẽ tự động lắng nghe Webhook từ 17track để cập nhật trạng thái.
+                        </div>
+
+                        <div class="container mt-4" style="border: 3px dashed #000; padding: 20px; max-width: 700px; background-color: #f9f9f9; margin: 0 auto;">
+
+                            <h3 style="text-align: center;">PHIẾU GỬI HÀNG (DEMO)</h3>
+                            <hr />
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>
+                                        <strong>Đơn vị vận chuyển:</strong> @Model.Carrier <br />
+                                        <strong>Mã vận đơn (Tracking):</strong> <br />
+                                        <strong style="font-size: 1.3em; color: #000;">@Model.TrackingNumber</strong>
+                                    </p>
+                                    <p><strong>Dự kiến giao:</strong> @Model.EstimatedArrival?.ToString("dd/MM/yyyy")</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h4>Gửi đến:</h4>
+                                    <p>
+                                        <strong>Người nhận:</strong> @Model.BuyerName <br />
+                                        <strong>Địa chỉ:</strong> @Model.FullAddress <br />
+                                        <strong>SĐT:</strong> @Model.Phone
+                                    </p>
+                                </div>
+                            </div>
+                            <hr />
+                            <p style="text-align:center; margin-bottom: 0;">--- Cảm ơn bạn đã sử dụng Ebay Clone ---</p>
+                        </div>
+                        <a asp-action="Index" asp-controller="SellerOrder" class="btn btn-secondary mt-4">
+                            &laquo; Quay về danh sách đơn hàng
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+    </div>
+
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/sidebarmenu.js"></script>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/app.min.js"></script>
+    
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/simplebar/dist/simplebar.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+</body>
+
+</html>
+```eof

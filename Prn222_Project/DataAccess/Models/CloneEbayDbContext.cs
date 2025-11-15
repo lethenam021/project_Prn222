@@ -462,9 +462,10 @@ public partial class CloneEbayDbContext : DbContext
                 .HasConstraintName("FK__Product__sellerI__403A8C7D");
         });
 
-        modelBuilder.Entity<ReturnRequest>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__ReturnRe__3213E83F36D62D04");
+
+
+        modelBuilder.Entity<ReturnRequest>(entity => {
+            entity.HasKey(e => e.Id).HasName("PK__ReturnRe__3213E83F0B7A6742");
 
             entity.ToTable("ReturnRequest");
 
