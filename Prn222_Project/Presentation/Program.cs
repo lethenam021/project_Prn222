@@ -49,12 +49,16 @@ builder.Services.AddHangfire(configuration => configuration
 
 builder.Services.AddHangfireServer();
 
+builder.Services.AddHttpClient();
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 
 // Infrastructure Services
 builder.Services.AddScoped<IEmailService, EmailService>();
 
 // Business Logic Services
+
+
+builder.Services.AddScoped<ISellerOrderService, SellerOrderService>();
 builder.Services.AddScoped<IUserRepo, UserRepository>();
 builder.Services.AddScoped<AuthValidator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
@@ -72,6 +76,8 @@ builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<ICouponRepo, CouponRepository>();
 builder.Services.AddScoped<ICouponService, CouponService>();
 
+builder.Services.AddScoped<IOrderRepo, OrderRepository>();
+builder.Services.AddScoped<IShippingInfoRepo, ShippingInfoRepository>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepository>();
 
