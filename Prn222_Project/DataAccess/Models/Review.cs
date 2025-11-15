@@ -19,5 +19,7 @@ public partial class Review
 
     public virtual Product? Product { get; set; }
 
+    public virtual ReviewReply? ReviewReply { get; set; }
+
     public virtual User? Reviewer { get; set; }
 }

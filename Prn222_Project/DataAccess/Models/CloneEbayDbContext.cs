@@ -1,22 +1,29 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Models;
 
-public partial class CloneEbayDbContext : DbContext {
-    public CloneEbayDbContext() {
+public partial class CloneEbayDbContext : DbContext
+{
+    public CloneEbayDbContext()
+    {
     }
 
     public CloneEbayDbContext(DbContextOptions<CloneEbayDbContext> options)
-        : base(options) {
+        : base(options)
+    {
     }
 
     public virtual DbSet<Address> Addresses { get; set; }
 
+    public virtual DbSet<AggregatedCounter> AggregatedCounters { get; set; }
+
     public virtual DbSet<Bid> Bids { get; set; }
 
     public virtual DbSet<Category> Categories { get; set; }
+
+    public virtual DbSet<Counter> Counters { get; set; }
 
     public virtual DbSet<Coupon> Coupons { get; set; }
 
@@ -24,7 +31,17 @@ public partial class CloneEbayDbContext : DbContext {
 
     public virtual DbSet<Feedback> Feedbacks { get; set; }
 
+    public virtual DbSet<Hash> Hashes { get; set; }
+
     public virtual DbSet<Inventory> Inventories { get; set; }
+
+    public virtual DbSet<Job> Jobs { get; set; }
+
+    public virtual DbSet<JobParameter> JobParameters { get; set; }
+
+    public virtual DbSet<JobQueue> JobQueues { get; set; }
+
+    public virtual DbSet<List> Lists { get; set; }
 
     public virtual DbSet<Message> Messages { get; set; }
 
@@ -36,13 +53,21 @@ public partial class CloneEbayDbContext : DbContext {
 
     public virtual DbSet<Product> Products { get; set; }
 
-    public virtual DbSet<RefreshToken> RefreshTokens { get; set; }
-
     public virtual DbSet<ReturnRequest> ReturnRequests { get; set; }
 
     public virtual DbSet<Review> Reviews { get; set; }
 
+    public virtual DbSet<ReviewReply> ReviewReplies { get; set; }
+
+    public virtual DbSet<Schema> Schemas { get; set; }
+
+    public virtual DbSet<Server> Servers { get; set; }
+
+    public virtual DbSet<Set> Sets { get; set; }
+
     public virtual DbSet<ShippingInfo> ShippingInfos { get; set; }
+
+    public virtual DbSet<State> States { get; set; }
 
     public virtual DbSet<Store> Stores { get; set; }
 
@@ -52,9 +77,11 @@ public partial class CloneEbayDbContext : DbContext {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=103.126.162.38,1433;Database=CloneEbayDB;User Id=sa;Password=Doanhieu18@;TrustServerCertificate=True;Integrated Security=False;");
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder) {
-        modelBuilder.Entity<Address>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Address__3213E83F27608D32");
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Address>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Address__3213E83FFE4C29E2");
 
             entity.ToTable("Address");
 
@@ -82,11 +109,24 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.User).WithMany(p => p.Addresses)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Address__userId__276EDEB3");
+                .HasConstraintName("FK__Address__userId__3A81B327");
         });
 
-        modelBuilder.Entity<Bid>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Bid__3213E83FC9D08D72");
+        modelBuilder.Entity<AggregatedCounter>(entity =>
+        {
+            entity.HasKey(e => e.Key).HasName("PK_HangFire_CounterAggregated");
+
+            entity.ToTable("AggregatedCounter", "HangFire");
+
+            entity.HasIndex(e => e.ExpireAt, "IX_HangFire_AggregatedCounter_ExpireAt").HasFilter("([ExpireAt] IS NOT NULL)");
+
+            entity.Property(e => e.Key).HasMaxLength(100);
+            entity.Property(e => e.ExpireAt).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<Bid>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Bid__3213E83F42F9F581");
 
             entity.ToTable("Bid");
 
@@ -102,15 +142,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Bidder).WithMany(p => p.Bids)
                 .HasForeignKey(d => d.BidderId)
-                .HasConstraintName("FK__Bid__bidderId__4316F928");
+                .HasConstraintName("FK__Bid__bidderId__5629CD9C");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Bids)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Bid__productId__4222D4EF");
+                .HasConstraintName("FK__Bid__productId__5535A963");
         });
 
-        modelBuilder.Entity<Category>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Category__3213E83F0B4739BA");
+        modelBuilder.Entity<Category>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Category__3213E83F5737BD82");
 
             entity.ToTable("Category");
 
@@ -120,8 +161,20 @@ public partial class CloneEbayDbContext : DbContext {
                 .HasColumnName("name");
         });
 
-        modelBuilder.Entity<Coupon>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Coupon__3213E83F0BE8F004");
+        modelBuilder.Entity<Counter>(entity =>
+        {
+            entity.HasKey(e => new { e.Key, e.Id }).HasName("PK_HangFire_Counter");
+
+            entity.ToTable("Counter", "HangFire");
+
+            entity.Property(e => e.Key).HasMaxLength(100);
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.Property(e => e.ExpireAt).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<Coupon>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Coupon__3213E83FE1CA2E73");
 
             entity.ToTable("Coupon");
 
@@ -143,11 +196,12 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Product).WithMany(p => p.Coupons)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Coupon__productI__4D94879B");
+                .HasConstraintName("FK__Coupon__productI__60A75C0F");
         });
 
-        modelBuilder.Entity<Dispute>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Dispute__3213E83FF4900E19");
+        modelBuilder.Entity<Dispute>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Dispute__3213E83FDE04A417");
 
             entity.ToTable("Dispute");
 
@@ -162,15 +216,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Order).WithMany(p => p.Disputes)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__Dispute__orderId__5629CD9C");
+                .HasConstraintName("FK__Dispute__orderId__693CA210");
 
             entity.HasOne(d => d.RaisedByNavigation).WithMany(p => p.Disputes)
                 .HasForeignKey(d => d.RaisedBy)
-                .HasConstraintName("FK__Dispute__raisedB__571DF1D5");
+                .HasConstraintName("FK__Dispute__raisedB__6A30C649");
         });
 
-        modelBuilder.Entity<Feedback>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Feedback__3213E83FF8760A3D");
+        modelBuilder.Entity<Feedback>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Feedback__3213E83FDBACE5EA");
 
             entity.ToTable("Feedback");
 
@@ -186,11 +241,24 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Seller).WithMany(p => p.Feedbacks)
                 .HasForeignKey(d => d.SellerId)
-                .HasConstraintName("FK__Feedback__seller__534D60F1");
+                .HasConstraintName("FK__Feedback__seller__66603565");
         });
 
-        modelBuilder.Entity<Inventory>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Inventor__3213E83F6F0E9151");
+        modelBuilder.Entity<Hash>(entity =>
+        {
+            entity.HasKey(e => new { e.Key, e.Field }).HasName("PK_HangFire_Hash");
+
+            entity.ToTable("Hash", "HangFire");
+
+            entity.HasIndex(e => e.ExpireAt, "IX_HangFire_Hash_ExpireAt").HasFilter("([ExpireAt] IS NOT NULL)");
+
+            entity.Property(e => e.Key).HasMaxLength(100);
+            entity.Property(e => e.Field).HasMaxLength(100);
+        });
+
+        modelBuilder.Entity<Inventory>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Inventor__3213E83FCF852A45");
 
             entity.ToTable("Inventory");
 
@@ -203,11 +271,64 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Product).WithMany(p => p.Inventories)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Inventory__produ__5070F446");
+                .HasConstraintName("FK__Inventory__produ__6383C8BA");
         });
 
-        modelBuilder.Entity<Message>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Message__3213E83F0726D512");
+        modelBuilder.Entity<Job>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_HangFire_Job");
+
+            entity.ToTable("Job", "HangFire");
+
+            entity.HasIndex(e => e.ExpireAt, "IX_HangFire_Job_ExpireAt").HasFilter("([ExpireAt] IS NOT NULL)");
+
+            entity.HasIndex(e => e.StateName, "IX_HangFire_Job_StateName").HasFilter("([StateName] IS NOT NULL)");
+
+            entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+            entity.Property(e => e.ExpireAt).HasColumnType("datetime");
+            entity.Property(e => e.StateName).HasMaxLength(20);
+        });
+
+        modelBuilder.Entity<JobParameter>(entity =>
+        {
+            entity.HasKey(e => new { e.JobId, e.Name }).HasName("PK_HangFire_JobParameter");
+
+            entity.ToTable("JobParameter", "HangFire");
+
+            entity.Property(e => e.Name).HasMaxLength(40);
+
+            entity.HasOne(d => d.Job).WithMany(p => p.JobParameters)
+                .HasForeignKey(d => d.JobId)
+                .HasConstraintName("FK_HangFire_JobParameter_Job");
+        });
+
+        modelBuilder.Entity<JobQueue>(entity =>
+        {
+            entity.HasKey(e => new { e.Queue, e.Id }).HasName("PK_HangFire_JobQueue");
+
+            entity.ToTable("JobQueue", "HangFire");
+
+            entity.Property(e => e.Queue).HasMaxLength(50);
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.Property(e => e.FetchedAt).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<List>(entity =>
+        {
+            entity.HasKey(e => new { e.Key, e.Id }).HasName("PK_HangFire_List");
+
+            entity.ToTable("List", "HangFire");
+
+            entity.HasIndex(e => e.ExpireAt, "IX_HangFire_List_ExpireAt").HasFilter("([ExpireAt] IS NOT NULL)");
+
+            entity.Property(e => e.Key).HasMaxLength(100);
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.Property(e => e.ExpireAt).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<Message>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Message__3213E83F31E8801E");
 
             entity.ToTable("Message");
 
@@ -221,15 +342,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Receiver).WithMany(p => p.MessageReceivers)
                 .HasForeignKey(d => d.ReceiverId)
-                .HasConstraintName("FK__Message__receive__4AB81AF0");
+                .HasConstraintName("FK__Message__receive__5DCAEF64");
 
             entity.HasOne(d => d.Sender).WithMany(p => p.MessageSenders)
                 .HasForeignKey(d => d.SenderId)
-                .HasConstraintName("FK__Message__senderI__49C3F6B7");
+                .HasConstraintName("FK__Message__senderI__5CD6CB2B");
         });
 
-        modelBuilder.Entity<OrderItem>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__OrderIte__3213E83FBE7C2212");
+        modelBuilder.Entity<OrderItem>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__OrderIte__3213E83FB73AE7A0");
 
             entity.ToTable("OrderItem");
 
@@ -243,15 +365,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__OrderItem__order__33D4B598");
+                .HasConstraintName("FK__OrderItem__order__46E78A0C");
 
             entity.HasOne(d => d.Product).WithMany(p => p.OrderItems)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__OrderItem__produ__34C8D9D1");
+                .HasConstraintName("FK__OrderItem__produ__47DBAE45");
         });
 
-        modelBuilder.Entity<OrderTable>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__OrderTab__3213E83F734776CC");
+        modelBuilder.Entity<OrderTable>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__OrderTab__3213E83F08F175F7");
 
             entity.ToTable("OrderTable");
 
@@ -270,15 +393,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Address).WithMany(p => p.OrderTables)
                 .HasForeignKey(d => d.AddressId)
-                .HasConstraintName("FK__OrderTabl__addre__30F848ED");
+                .HasConstraintName("FK__OrderTabl__addre__440B1D61");
 
             entity.HasOne(d => d.Buyer).WithMany(p => p.OrderTables)
                 .HasForeignKey(d => d.BuyerId)
-                .HasConstraintName("FK__OrderTabl__buyer__300424B4");
+                .HasConstraintName("FK__OrderTabl__buyer__4316F928");
         });
 
-        modelBuilder.Entity<Payment>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Payment__3213E83F8FC8E39C");
+        modelBuilder.Entity<Payment>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Payment__3213E83FD4BD7443");
 
             entity.ToTable("Payment");
 
@@ -300,15 +424,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Order).WithMany(p => p.Payments)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__Payment__orderId__37A5467C");
+                .HasConstraintName("FK__Payment__orderId__4AB81AF0");
 
             entity.HasOne(d => d.User).WithMany(p => p.Payments)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__Payment__userId__38996AB5");
+                .HasConstraintName("FK__Payment__userId__4BAC3F29");
         });
 
-        modelBuilder.Entity<Product>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Product__3213E83F7CE3A399");
+        modelBuilder.Entity<Product>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Product__3213E83F068869F7");
 
             entity.ToTable("Product");
 
@@ -330,27 +455,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.CategoryId)
-                .HasConstraintName("FK__Product__categor__2C3393D0");
+                .HasConstraintName("FK__Product__categor__3F466844");
 
             entity.HasOne(d => d.Seller).WithMany(p => p.Products)
                 .HasForeignKey(d => d.SellerId)
-                .HasConstraintName("FK__Product__sellerI__2D27B809");
+                .HasConstraintName("FK__Product__sellerI__403A8C7D");
         });
 
-
-        modelBuilder.Entity<RefreshToken>(entity => {
-            entity.HasKey(x => x.Id);
-
-            entity.HasOne(x => x.User)
-                .WithMany()
-                .HasForeignKey(x => x.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            entity.Property(x => x.Token).IsRequired();
-        });
-
-        modelBuilder.Entity<ReturnRequest>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__ReturnRe__3213E83F0B7A6742");
+        modelBuilder.Entity<ReturnRequest>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__ReturnRe__3213E83F36D62D04");
 
             entity.ToTable("ReturnRequest");
 
@@ -367,15 +481,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Order).WithMany(p => p.ReturnRequests)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__ReturnReq__order__3E52440B");
+                .HasConstraintName("FK__ReturnReq__order__5165187F");
 
             entity.HasOne(d => d.User).WithMany(p => p.ReturnRequests)
                 .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK__ReturnReq__userI__3F466844");
+                .HasConstraintName("FK__ReturnReq__userI__52593CB8");
         });
 
-        modelBuilder.Entity<Review>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Review__3213E83F3E1C00E4");
+        modelBuilder.Entity<Review>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Review__3213E83F2F7D5614");
 
             entity.ToTable("Review");
 
@@ -390,15 +505,80 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Product).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__Review__productI__45F365D3");
+                .HasConstraintName("FK__Review__productI__59063A47");
 
             entity.HasOne(d => d.Reviewer).WithMany(p => p.Reviews)
                 .HasForeignKey(d => d.ReviewerId)
-                .HasConstraintName("FK__Review__reviewer__46E78A0C");
+                .HasConstraintName("FK__Review__reviewer__59FA5E80");
         });
 
-        modelBuilder.Entity<ShippingInfo>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Shipping__3213E83F7687C746");
+        modelBuilder.Entity<ReviewReply>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__ReviewRe__3213E83F72BAB156");
+
+            entity.ToTable("ReviewReply");
+
+            entity.HasIndex(e => e.ReviewId, "UQ__ReviewRe__2ECD6E05474B8895").IsUnique();
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("createdAt");
+            entity.Property(e => e.ReplyMessage).HasColumnName("replyMessage");
+            entity.Property(e => e.ReviewId).HasColumnName("reviewId");
+            entity.Property(e => e.SellerId).HasColumnName("sellerId");
+
+            entity.HasOne(d => d.Review).WithOne(p => p.ReviewReply)
+                .HasForeignKey<ReviewReply>(d => d.ReviewId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ReviewReply_Review");
+
+            entity.HasOne(d => d.Seller).WithMany(p => p.ReviewReplies)
+                .HasForeignKey(d => d.SellerId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_ReviewReply_Seller");
+        });
+
+        modelBuilder.Entity<Schema>(entity =>
+        {
+            entity.HasKey(e => e.Version).HasName("PK_HangFire_Schema");
+
+            entity.ToTable("Schema", "HangFire");
+
+            entity.Property(e => e.Version).ValueGeneratedNever();
+        });
+
+        modelBuilder.Entity<Server>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_HangFire_Server");
+
+            entity.ToTable("Server", "HangFire");
+
+            entity.HasIndex(e => e.LastHeartbeat, "IX_HangFire_Server_LastHeartbeat");
+
+            entity.Property(e => e.Id).HasMaxLength(200);
+            entity.Property(e => e.LastHeartbeat).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<Set>(entity =>
+        {
+            entity.HasKey(e => new { e.Key, e.Value }).HasName("PK_HangFire_Set");
+
+            entity.ToTable("Set", "HangFire");
+
+            entity.HasIndex(e => e.ExpireAt, "IX_HangFire_Set_ExpireAt").HasFilter("([ExpireAt] IS NOT NULL)");
+
+            entity.HasIndex(e => new { e.Key, e.Score }, "IX_HangFire_Set_Score");
+
+            entity.Property(e => e.Key).HasMaxLength(100);
+            entity.Property(e => e.Value).HasMaxLength(256);
+            entity.Property(e => e.ExpireAt).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<ShippingInfo>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Shipping__3213E83FA3FC4D48");
 
             entity.ToTable("ShippingInfo");
 
@@ -419,11 +599,30 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Order).WithMany(p => p.ShippingInfos)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__ShippingI__order__3B75D760");
+                .HasConstraintName("FK__ShippingI__order__4E88ABD4");
         });
 
-        modelBuilder.Entity<Store>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__Store__3213E83F8C8E2F03");
+        modelBuilder.Entity<State>(entity =>
+        {
+            entity.HasKey(e => new { e.JobId, e.Id }).HasName("PK_HangFire_State");
+
+            entity.ToTable("State", "HangFire");
+
+            entity.HasIndex(e => e.CreatedAt, "IX_HangFire_State_CreatedAt");
+
+            entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            entity.Property(e => e.CreatedAt).HasColumnType("datetime");
+            entity.Property(e => e.Name).HasMaxLength(20);
+            entity.Property(e => e.Reason).HasMaxLength(100);
+
+            entity.HasOne(d => d.Job).WithMany(p => p.States)
+                .HasForeignKey(d => d.JobId)
+                .HasConstraintName("FK_HangFire_State_Job");
+        });
+
+        modelBuilder.Entity<Store>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Store__3213E83FFBDC795E");
 
             entity.ToTable("Store");
 
@@ -437,15 +636,16 @@ public partial class CloneEbayDbContext : DbContext {
 
             entity.HasOne(d => d.Seller).WithMany(p => p.Stores)
                 .HasForeignKey(d => d.SellerId)
-                .HasConstraintName("FK__Store__sellerId__59FA5E80");
+                .HasConstraintName("FK__Store__sellerId__6D0D32F4");
         });
 
-        modelBuilder.Entity<User>(entity => {
-            entity.HasKey(e => e.Id).HasName("PK__User__3213E83FEFB16BFF");
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__User__3213E83F774043FF");
 
             entity.ToTable("User");
 
-            entity.HasIndex(e => e.Email, "UQ__User__AB6E616433C661D8").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__User__AB6E6164746424C8").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.AvatarUrl).HasColumnName("avatarURL");

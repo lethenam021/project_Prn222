@@ -1874,7 +1874,6 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\static
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\staticwebassets.build.json.cache
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\staticwebassets.development.json
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\Presenta.BC777DBE.Up2Date
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\Presentation.dll
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\refint\Presentation.dll
@@ -1882,5 +1881,6 @@ D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\Presen
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\Presentation.genruntimeconfig.cache
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\ref\Presentation.dll
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\cttefu93ln-z5vhf6bdkf.gz
-D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\g98yj3i876-1ha6bmmee7.gz
 D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\h6lteijnfv-zmnfq43yxg.gz
+D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+D:\FPT\PRN222\project_Prn222\Prn222_Project\Presentation\obj\Debug\net9.0\compressed\g98yj3i876-g2m3km3hjg.gz

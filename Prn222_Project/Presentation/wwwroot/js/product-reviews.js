@@ -119,6 +119,9 @@ $(document).ready(function () {
     var $detailView = $("#detail-view");
     var $summaryView = $("#summary-view");
 
+    var quill = null;
+    var $currentFeedbackButton = null;
+
     // ==========================================
     // (MỚI) HELPER: ĐỌC URL KHI TẢI TRANG (F5)
     // ==========================================
@@ -279,8 +282,33 @@ $(document).ready(function () {
     // --- 9. XỬ LÝ CLICK "SEND FEEDBACK" (TRONG CẤP 2) ---
     $(document).on("click", ".send-feedback-btn", function (e) {
         e.preventDefault();
-        var reviewId = $(this).data("review-id"); // (Cần đảm bảo Id có trong VM)
-        alert("Chức năng 'Send Feedback' cho Review ID: " + reviewId);
+        // (MỚI) Lưu lại nút đã click
+        $currentFeedbackButton = $(this);
+
+        var reviewId = $currentFeedbackButton.data("review-id");
+        var reviewerName = $currentFeedbackButton.data("reviewer-name");
+
+        // 1. Gán dữ liệu cho Modal
+        $("#feedbackModalTitle").text("Send Feedback to: " + reviewerName);
+        $("#feedback-review-id").val(reviewId);
+
+        // 2. Khởi tạo Quill (chỉ 1 lần)
+        if (!quill) {
+            quill = new Quill('#quill-editor', {
+                theme: 'snow', // Giao diện 'snow' phổ biến
+                modules: {
+                    toolbar: [
+                        ['bold', 'italic', 'underline'],
+                        [{ 'list': 'ordered' }, { 'list': 'bullet' }]
+                    ]
+                }
+            });
+        }
+        // Xóa nội dung cũ
+        quill.root.innerHTML = '';
+
+        // 3. Hiển thị Modal
+        $('#feedbackModal').modal('show');
     });
 
     // --- 10. XỬ LÝ "READ MORE" (VẪN GIỮ) ---
@@ -301,5 +329,63 @@ $(document).ready(function () {
         } else {
             $link.text("Read More");
         }
+    });
+
+    $(document).on("click", "#send-reply-btn", function () {
+        var $button = $(this);
+        var reviewId = $("#feedback-review-id").val();
+
+        // Lấy nội dung HTML từ Quill
+        var replyMessage = quill.root.innerHTML;
+
+        // Validate
+        if (replyMessage === '<p><br></p>' || replyMessage.trim().length === 0) {
+            toastr.error("Reply message cannot be empty.");
+            return;
+        }
+
+        var filterData = $("#review-detail-filter-form").serialize();
+
+        // Hiển thị loading
+        $button.prop("disabled", true);
+        $button.html('Sending <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+
+        $.ajax({
+            type: "POST",
+            url: "/product-reviews/add-reply?" + filterData, // Action mới trong Controller
+            contentType: "application/json",   // Gửi đi dưới dạng JSON
+            data: JSON.stringify({         // Chuyển object JS sang chuỗi JSON
+                ReviewId: reviewId,
+                ReplyMessage: replyMessage
+            }),
+            dataType: "json",
+            success: function (response) {
+                if (response.success) {
+                    toastr.success("Feedback sent successfully!");
+                    $('#feedbackModal').modal('hide');
+                    $("#detail-view").html(response.html);
+                } else {
+                    toastr.error(response.message || "Failed to send reply.");
+                }
+            },
+            error: function () {
+                toastr.error("An unknown error occurred.");
+            },
+            complete: function () {
+                // Reset nút
+                $button.prop("disabled", false).text("Send Reply");
+            }
+        });
+    });
+
+    $(document).on("click", ".view-reply-btn", function () {
+        // Lấy nội dung HTML từ data attribute
+        var replyMessage = $(this).data("reply-message");
+
+        // Gán nội dung vào body của modal MỚI
+        // Dùng .html() để nó render đúng HTML (từ Quill)
+        $("#view-reply-body").html(replyMessage);
+
+        // Modal tự hiển thị vì đã có data-bs-toggle
     });
 });
