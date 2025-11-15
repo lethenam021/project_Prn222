@@ -71,6 +71,14 @@ builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepository>();
 
+
+builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<IOrderRepo, OrderRepository>();
+
+builder.Services.AddScoped<IDisputeRepo, DisputeRepository>();
+builder.Services.AddScoped<IDisputeService, DisputeService>();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -89,6 +97,6 @@ app.UseHangfireDashboard();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Report}/{action=ManageReport}/{id?}");
 
 app.Run();

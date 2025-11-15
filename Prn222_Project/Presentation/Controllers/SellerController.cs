@@ -1,11 +1,13 @@
 ﻿using BusinessLogic.Interface;
 using DataAccess.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Presentation.ViewModel;
 
 namespace Presentation.Controllers
 {
+    [Authorize(Roles = "Seller")]
     public class SellerController : Controller
     {
         private readonly ILogger<SellerController> _logger; 
