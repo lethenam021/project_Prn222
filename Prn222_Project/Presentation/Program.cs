@@ -21,6 +21,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
         options.Cookie.HttpOnly = true;
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+        options.AccessDeniedPath = "/Auth/AccessDenied";
     });
 
 builder.Services.AddStackExchangeRedisCache(options => {
@@ -67,6 +68,9 @@ builder.Services.AddScoped<ICategoryRepo, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IInventoryRepo, InventoryRepository>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
+
+builder.Services.AddScoped<ICouponRepo, CouponRepository>();
+builder.Services.AddScoped<ICouponService, CouponService>();
 
 builder.Services.AddScoped<IReviewService, ReviewService>();
 builder.Services.AddScoped<IReviewRepo, ReviewRepository>();

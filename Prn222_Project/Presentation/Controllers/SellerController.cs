@@ -16,8 +16,8 @@ namespace Presentation.Controllers
 
         public SellerController(ILogger<SellerController> logger,
              IStoreSevice storeService,
-             IProductService productService)
-        {
+             IProductService productService,
+             ICouponService couponService) {
             _logger = logger;
             _storeService = storeService;
             _productService = productService;
