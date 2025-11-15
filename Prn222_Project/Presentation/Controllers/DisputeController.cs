@@ -1,13 +1,14 @@
 ﻿using System.Security.Claims;
 using System.Threading.Tasks;
+using System;
+using System.Linq;
 using BusinessLogic.Interface;
 using Hangfire;
 using Infrastructure.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Presentation.Helpers;
-using Presentation.ViewModel.Data.Emails; // nếu email model ở Presentation
-
+using Presentation.ViewModel.Data.Emails;
 
 namespace Presentation.Controllers
 {
@@ -15,24 +16,49 @@ namespace Presentation.Controllers
     public class DisputeController : Controller
     {
         private readonly IDisputeService _disputeService;
-        private readonly IEmailService _emailService; // email service của bạn
+        private readonly IEmailService _emailService;
         private readonly IBackgroundJobClient _jobClient;
 
-        public DisputeController(IDisputeService disputeService, IEmailService emailService, IBackgroundJobClient jobClient)
+        public DisputeController(
+            IDisputeService disputeService,
+            IEmailService emailService,
+            IBackgroundJobClient jobClient)
         {
             _disputeService = disputeService;
             _emailService = emailService;
             _jobClient = jobClient;
         }
 
-
-        // GET: list
+        // GET: list + search
         [HttpGet]
-        public async Task<IActionResult> ManageDispute()
+        public async Task<IActionResult> ManageDispute(string? disputer, string? product)
         {
-            int sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!); 
-            var model = await _disputeService.GetDisputesForSellerAsync(sellerId);
-            return View(model);
+            int sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+
+            // Lấy tất cả dispute của seller
+            var disputes = await _disputeService.GetDisputesForSellerAsync(sellerId);
+
+            // Filter theo Disputer
+            if (!string.IsNullOrWhiteSpace(disputer))
+            {
+                disputes = disputes.Where(d =>
+                    !string.IsNullOrEmpty(d.DisputerName) &&
+                    d.DisputerName.Contains(disputer, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Filter theo Product
+            if (!string.IsNullOrWhiteSpace(product))
+            {
+                disputes = disputes.Where(d =>
+                    !string.IsNullOrEmpty(d.ProductTitles) &&
+                    d.ProductTitles.Contains(product, StringComparison.OrdinalIgnoreCase));
+            }
+
+            // Để giữ lại giá trị trên view
+            ViewBag.Disputer = disputer;
+            ViewBag.Product = product;
+
+            return View(disputes.ToList());
         }
 
         // GET: detail
@@ -49,10 +75,8 @@ namespace Presentation.Controllers
         [HttpPost]
         public async Task<IActionResult> Accept(int id, string refundType, string emailBody)
         {
-            // 1. Update DB
             await _disputeService.AcceptAsync(id, refundType);
 
-            // 2. Lấy lại detail để có email buyer
             int sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
             var dispute = await _disputeService.GetDisputeDetailAsync(id, sellerId);
             if (dispute != null && !string.IsNullOrEmpty(dispute.DisputerEmail))
@@ -61,18 +85,18 @@ namespace Presentation.Controllers
                 {
                     BuyerName = dispute.DisputerName ?? "",
                     OrderId = dispute.OrderId,
-                    Reason = emailBody      // nội dung bạn nhập ở popup
+                    Reason = emailBody
                 };
 
                 string htmlBody = await this.RenderViewAsync(
-            "~/Views/Shared/EmailTemplates/Dispute/_AcceptEmail",
-            emailModel,
-            true
-        );
+                    "~/Views/Shared/EmailTemplates/Dispute/_AcceptEmail",
+                    emailModel,
+                    true
+                );
 
                 _jobClient.Enqueue<IEmailService>(
-                   service => service.SendEmailAsync(dispute.DisputerEmail!, "Respond to disputes", htmlBody)
-               );
+                    service => service.SendEmailAsync(dispute.DisputerEmail!, "Respond to disputes", htmlBody)
+                );
             }
 
             return RedirectToAction(nameof(ManageDispute));
@@ -82,10 +106,8 @@ namespace Presentation.Controllers
         [HttpPost]
         public async Task<IActionResult> Reject(int id, string reason, string emailBody)
         {
-            // 1. Update DB
             await _disputeService.RejectAsync(id, reason);
 
-            // 2. Gửi email
             int sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
             var dispute = await _disputeService.GetDisputeDetailAsync(id, sellerId);
             if (dispute != null && !string.IsNullOrEmpty(dispute.DisputerEmail))
@@ -94,18 +116,18 @@ namespace Presentation.Controllers
                 {
                     BuyerName = dispute.DisputerName ?? "",
                     OrderId = dispute.OrderId,
-                    Reason = emailBody     
+                    Reason = emailBody
                 };
 
                 string htmlBody = await this.RenderViewAsync(
-"~/Views/Shared/EmailTemplates/Dispute/_RejectEmail",
-emailModel,
-true
-);
+                    "~/Views/Shared/EmailTemplates/Dispute/_RejectEmail",
+                    emailModel,
+                    true
+                );
 
                 _jobClient.Enqueue<IEmailService>(
-                   service => service.SendEmailAsync(dispute.DisputerEmail!, "Respond to disputes", htmlBody)
-               );
+                    service => service.SendEmailAsync(dispute.DisputerEmail!, "Respond to disputes", htmlBody)
+                );
             }
 
             return RedirectToAction(nameof(ManageDispute));
