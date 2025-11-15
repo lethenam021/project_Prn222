@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic.DTOs.Response.Product;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,8 @@ namespace BusinessLogic.DTOs.Response.Review {
         public int? Rating { get; set; }
         public string? Comment { get; set; }
         public DateTime ReviewDate { get; set; }
+        public ProductResponse? Product { get; set; }
+        public string? ReviewerEmail { get; set; }
+        public ReviewReplyResponse? Reply { get; set; }
     }
 }

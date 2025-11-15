@@ -21,5 +21,9 @@ namespace DataAccess.IRepo {
         // (Thêm phương thức mới)
         // Phương thức Cấp 1: Lấy tóm tắt (group by) các sản phẩm
         Task<PagedResult<RepoReviewSummary>> GetReviewSummariesAsync(int sellerId, string? productName, int? categoryId, int pageIndex, int pageSize);
+
+        Task AddReplyAsync(ReviewReply reply);
+
+        Task<Review?> GetReviewByIdAsync(int reviewId);
     }
 }
