@@ -111,6 +111,8 @@ namespace Presentation.Controllers
                     newLocalStatus = "Failed";      // Giao thất bại
                 else if (newApiStatus == "intransit" || newApiStatus == "outfordelivery" || newApiStatus == "pickup")
                     newLocalStatus = "Shipping";
+                else if (newApiStatus == "notfound") 
+                    newLocalStatus = "Pendingggg"; // Hoặc "Pending" tuỳ bạn muốn
 
                 if (newLocalStatus != null && !string.Equals(order.Status, newLocalStatus, StringComparison.OrdinalIgnoreCase))
                 {

@@ -60,16 +60,27 @@ namespace BusinessLogic.Services
             if (!await IsOrderOfSeller(orderId, sellerId)) return null;
 
             order.Status = "Shipped";
-            await _orderRepo.UpdateAsync(order); 
+            await _orderRepo.UpdateAsync(order);
+
+            
+            var randomDigits = new Random().Next(100000000, 999999999).ToString();
 
             var shippingInfo = new ShippingInfo
             {
-                OrderId = orderId,
-                Carrier = "USPS",
-                TrackingNumber = "RR123456789CN",
+                
+                Carrier = "ChinaPost",
+
+                
+                TrackingNumber = "RR" + randomDigits + "CN",
+
                 Status = "Submitted",
-                EstimatedArrival = DateTime.Now.AddDays(5)
+                
             };
+
+           
+            Console.WriteLine($"DEBUG: Sending Reg Request - Number: {shippingInfo.TrackingNumber}");
+            // ...
+
             await _shippingInfoRepo.AddAsync(shippingInfo); // Giả sử hàm này tự SaveChanges
 
             try
@@ -90,7 +101,7 @@ namespace BusinessLogic.Services
                 // --- SỬA LẠI TỪ ĐÂY ---
 
                 // 1. Gửi request và nhận về response
-                var response = await client.PostAsync("https://api.17track.net/track/v2/register", content);
+                var response = await client.PostAsync("https://api.17track.net/track/v2.4/register", content);
 
                 // 2. Kiểm tra xem response có thành công không (code 2xx)
                 if (response.IsSuccessStatusCode)
