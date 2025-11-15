@@ -1,0 +1,132 @@
+﻿@model Presentation.ViewModel.Data.Emails.VerificationEmailViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px; /* Nhiều client cũ không hỗ trợ */
+        }
+        .logo {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .heading {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 0;
+        }
+        .text {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+        .code-box {
+            background-color: #f5f5f5;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .code {
+            font-size: 36px;
+            font-weight: bold;
+            color: #000;
+            letter-spacing: 4px; /* Giãn cách chữ giống trong ảnh */
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .secondary-text {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.4;
+        }
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .footer-text {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f9f9f9; font-family: Arial, sans-serif;">
+    <center>
+        <table class="container" border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px;">
+            <tr>
+                <td class="logo" style="text-align: center; padding-bottom: 20px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1920px-EBay_logo.svg.png" alt="Ebay Logo" width="100">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="content" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; padding: 30px; border-radius: 8px;">
+                        <tr>
+                            <td>
+                                <h2 class="heading" style="font-size: 22px; font-weight: bold; color: #333; margin-top: 0;">Help us protect your account</h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="text" style="font-size: 16px; color: #555; line-height: 1.5;">
+                                    Before you sign in, we need to verify your identity. Enter the following code on the sign-in page.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="code-box" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f5f5; padding: 25px; margin: 20px 0; text-align: center; border-radius: 8px;">
+                                    <tr>
+                                        <td>
+                                            <p class="code" style="font-size: 36px; font-weight: bold; color: #000; letter-spacing: 4px; font-family: 'Courier New', Courier, monospace; margin: 0;">
+                                                @Model.Code
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="secondary-text" style="font-size: 14px; color: #777; line-height: 1.4;">
+                                    If you have not recently tried to sign into your account, we recommend changing your password.
+                                </p>
+                                <p class="secondary-text" style="font-size: 14px; color: #777; line-height: 1.4;">
+                                    Your verification code expires after 10 minutes.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="footer" style="text-align: center; padding-top: 20px;">
+                    <p class="footer-text" style="font-size: 12px; color: #999;">
+                        You're receiving this email because of your account on Ebay.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

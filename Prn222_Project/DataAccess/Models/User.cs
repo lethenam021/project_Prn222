@@ -3,8 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccess.Models;
 
-public partial class User
-{
+public partial class User {
     public int Id { get; set; }
 
     public string? Username { get; set; }
@@ -36,6 +35,8 @@ public partial class User
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 
     public virtual ICollection<ReturnRequest> ReturnRequests { get; set; } = new List<ReturnRequest>();
+
+    public virtual ICollection<RefreshToken>? RefreshTokens { get; set; } = new List<RefreshToken>();
 
     public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 

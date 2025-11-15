@@ -1,0 +1,27 @@
+﻿@model Presentation.ViewModel.Params.Auth.VerifyCodeParams
+
+<div class="modal-body">
+
+    <p>
+        A 6-digit code has been sent to the email:
+        <br>
+        <strong id="verify-email-display"></strong>
+    </p>
+
+    <input type="hidden" id="verify-email-input" asp-for="Email" />
+
+    <div class="mb-3">
+        <label for="verification-code" class="form-label">Verification code</label>
+        <input type="text" class="form-control" id="verification-code" asp-for="VerificationCode">
+        <span class="text-danger" asp-validation-for="VerificationCode"></span>
+    </div>
+
+    <div class="text-center">
+        <a href="#" id="resend-code-link">Didn't receive? Resend code</a>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="submit" id="verify-btn" class="btn btn-primary w-100">Verify</button>
+</div>
+
