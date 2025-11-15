@@ -23,48 +23,66 @@
                             <i class="ti ti-menu-2"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-icon-hover" href="javascript:void(0)">
-                            <i class="ti ti-bell-ringing"></i>
-                            <div class="notification bg-primary rounded-circle"></div>
-                        </a>
-                    </li>
                 </ul>
+
                 <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                     <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
                         <li class="nav-item dropdown">
                             <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35"
-                                     class="rounded-circle" />
+                                <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle" />
                             </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
-                                 aria-labelledby="drop2">
-                                <div class="message-body">
-                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                                        <i class="ti ti-user fs-6"></i><p class="mb-0 fs-3">My Profile</p>
-                                    </a>
-                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                                        <i class="ti ti-mail fs-6"></i><p class="mb-0 fs-3">My Account</p>
-                                    </a>
-                                    <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
-                                        <i class="ti ti-list-check fs-6"></i><p class="mb-0 fs-3">My Task</p>
-                                    </a>
-                                    <a href="./authentication-login.html"
-                                       class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
-                                </div>
-                            </div>
                         </li>
                     </ul>
                 </div>
             </nav>
         </header>
 
-        <!-- ====== CONTENT ====== -->
+
+        <!-- MAIN CONTENT -->
         <div class="container-fluid py-3">
 
-            <h3 class="mb-3 fw-bold">Disputes</h3>
+            <h3 class="fw-bold mb-3">Disputes</h3>
 
+
+            <!-- 🔍 SEARCH FILTER -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <form method="get" asp-action="ManageDispute" class="row g-3">
+
+                        <div class="col-md-4">
+                            <label class="form-label mb-1">Disputer</label>
+                            <input type="text"
+                                   name="disputer"
+                                   class="form-control"
+                                   value="@ViewBag.Disputer"
+                                   placeholder="Search by disputer name..." />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label mb-1">Product</label>
+                            <input type="text"
+                                   name="product"
+                                   class="form-control"
+                                   value="@ViewBag.Product"
+                                   placeholder="Search by product name..." />
+                        </div>
+
+                        <div class="col-md-2 d-grid align-items-end">
+                            <button type="submit" class="btn btn-primary mt-4">Search</button>
+                        </div>
+
+                        <div class="col-md-2 d-grid align-items-end">
+                            <a href="@Url.Action("ManageDispute","Dispute")"
+                               class="btn btn-outline-secondary mt-4">Clear</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- TABLE -->
             <div class="card">
                 <div class="card-body">
                     <table class="table table-striped align-middle">
@@ -81,9 +99,7 @@
                             @if (!Model.Any())
                             {
                                 <tr>
-                                    <td colspan="5" class="text-center text-muted">
-                                        No disputes found.
-                                    </td>
+                                    <td colspan="5" class="text-center text-muted">No disputes found.</td>
                                 </tr>
                             }
                             else
@@ -92,18 +108,12 @@
                                 {
                                     <tr>
                                         <td>@index</td>
-                                        <td>
-                                            @d.DisputerName
-
-                                        </td>
+                                        <td>@d.DisputerName</td>
                                         <td>@d.ProductTitles</td>
                                         <td>@d.Status</td>
                                         <td>
-                                            <a asp-action="DisputeDetail"
-                                               asp-route-id="@d.Id"
-                                               class="btn btn-sm btn-primary">
-                                                Detail
-                                            </a>
+                                            <a asp-action="DisputeDetail" asp-route-id="@d.Id"
+                                               class="btn btn-sm btn-primary">Detail</a>
                                         </td>
                                     </tr>
                                     index++;
@@ -117,6 +127,3 @@
         </div> <!-- /container-fluid -->
     </div> <!-- /body-wrapper -->
 </div> <!-- /page-wrapper -->
-
-
-
