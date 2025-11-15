@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\projectprn\\project_prn222\\prn222_project\\presentation\\controllers\\disputecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\disputecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\projectprn\\project_prn222\\prn222_project\\businesslogic\\dtos\\request\\dispute\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\request\\dispute\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\projectprn\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\dispute\\disputeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\dispute\\disputeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|d:\\projectprn\\project_prn222\\prn222_project\\dataaccess\\irepo\\idisputerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34AB834F-9931-4636-B2F2-479FC0BC9A97}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\irepo\\idisputerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\projectprn\\project_prn222\\prn222_project\\presentation\\views\\dispute\\managedispute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\dispute\\managedispute.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\projectprn\\project_prn222\\prn222_project\\presentation\\controllers\\disputecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\disputecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|d:\\projectprn\\project_prn222\\prn222_project\\common\\enums\\disputestatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,20 +71,12 @@
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\projectprn\\project_prn222\\prn222_project\\businesslogic\\dtos\\response\\dispute\\disputeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\response\\dispute\\disputeresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\projectprn\\project_prn222\\prn222_project\\presentation\\viewmodel\\data\\emails\\disputeemailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\viewmodel\\data\\emails\\disputeemailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|d:\\projectprn\\project_prn222\\prn222_project\\presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03D0115B-DE31-4D4F-B08C-91F9A1DC99AF}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|d:\\projectprn\\project_prn222\\prn222_project\\businesslogic\\dtos\\request\\dispute\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63FDA182-C04B-4E0D-8446-712512556F8B}|BusinessLogic\\BusinessLogic.csproj|solutionrelative:businesslogic\\dtos\\request\\dispute\\searchrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{99ABA011-219A-41F8-B89F-4AA2182AC7B4}|Common\\Common.csproj|d:\\projectprn\\project_prn222\\prn222_project\\common\\enums\\reporttimeenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -198,7 +198,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -206,31 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DisputeService.cs",
-              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\DisputeService.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Services\\DisputeService.cs",
-              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\DisputeService.cs",
-              "RelativeToolTip": "BusinessLogic\\Services\\DisputeService.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwEQAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-15T02:04:11.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IDisputeService.cs",
-              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IDisputeService.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IDisputeService.cs",
-              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IDisputeService.cs",
-              "RelativeToolTip": "BusinessLogic\\Interface\\IDisputeService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T19:51:16.447Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ManageDispute.cshtml",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Dispute\\ManageDispute.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Dispute\\ManageDispute.cshtml",
@@ -242,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "IDisputeRepo.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\DataAccess\\IRepo\\IDisputeRepo.cs",
               "RelativeDocumentMoniker": "DataAccess\\IRepo\\IDisputeRepo.cs",
@@ -255,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_Layout.cshtml",
@@ -267,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "DisputeStatus.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Common\\Enums\\DisputeStatus.cs",
               "RelativeDocumentMoniker": "Common\\Enums\\DisputeStatus.cs",
@@ -279,19 +255,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "DisputeController.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\DisputeController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\DisputeController.cs",
               "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\DisputeController.cs",
               "RelativeToolTip": "Presentation\\Controllers\\DisputeController.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAkwF4AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwF4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T14:46:47.525Z"
+              "WhenOpened": "2025-11-14T14:46:47.525Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "DisputeRepository.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\DataAccess\\Repositories\\DisputeRepository.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repositories\\DisputeRepository.cs",
@@ -303,7 +280,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "DisputeResponse.cs",
+              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
+              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T14:34:06.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SearchRequest.cs",
+              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
+              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
+              "RelativeToolTip": "BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T04:14:43.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IDisputeService.cs",
+              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IDisputeService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IDisputeService.cs",
+              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IDisputeService.cs",
+              "RelativeToolTip": "BusinessLogic\\Interface\\IDisputeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T19:51:16.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DisputeService.cs",
+              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\DisputeService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Services\\DisputeService.cs",
+              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Services\\DisputeService.cs",
+              "RelativeToolTip": "BusinessLogic\\Services\\DisputeService.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAQwEQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-15T02:04:11.563Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "DisputeDetail.cshtml",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Dispute\\DisputeDetail.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Dispute\\DisputeDetail.cshtml",
@@ -315,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "_sidebar.cshtml",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\_sidebar.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_sidebar.cshtml",
@@ -327,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\HomeController.cs",
@@ -339,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\Interface\\IAuthService.cs",
               "RelativeDocumentMoniker": "BusinessLogic\\Interface\\IAuthService.cs",
@@ -351,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ManageReport.cshtml",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Report\\ManageReport.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Report\\ManageReport.cshtml",
@@ -363,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\AuthController.cs",
@@ -375,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "DisputeEmailViewModel.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\ViewModel\\Data\\Emails\\DisputeEmailViewModel.cs",
               "RelativeDocumentMoniker": "Presentation\\ViewModel\\Data\\Emails\\DisputeEmailViewModel.cs",
@@ -387,7 +414,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ReportController.cs",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Controllers\\ReportController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\ReportController.cs",
@@ -399,7 +426,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "_AcceptEmail.cshtml",
               "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\Presentation\\Views\\Shared\\EmailTemplates\\Dispute\\_AcceptEmail.cshtml",
               "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\EmailTemplates\\Dispute\\_AcceptEmail.cshtml",
@@ -408,30 +435,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-11-14T16:39:55.932Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DisputeResponse.cs",
-              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
-              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
-              "RelativeToolTip": "BusinessLogic\\DTOs\\Response\\Dispute\\DisputeResponse.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAqwBIAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T14:34:06.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SearchRequest.cs",
-              "DocumentMoniker": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
-              "RelativeDocumentMoniker": "BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
-              "ToolTip": "D:\\ProjectPRN\\project_Prn222\\Prn222_Project\\BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
-              "RelativeToolTip": "BusinessLogic\\DTOs\\Request\\Dispute\\SearchRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T04:14:43.747Z"
             },
             {
               "$type": "Document",
