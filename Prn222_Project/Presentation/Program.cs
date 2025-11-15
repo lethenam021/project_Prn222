@@ -22,6 +22,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.SlidingExpiration = true;
         options.Cookie.HttpOnly = true;
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+        options.AccessDeniedPath = "/Auth/AccessDenied";
     });
 
 builder.Services.AddStackExchangeRedisCache(options => {

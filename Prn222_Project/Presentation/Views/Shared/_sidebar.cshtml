@@ -52,15 +52,18 @@
                         </span>
                         <span class="hide-menu">Inventory</span>
                     </a>
-                </li>                
-                <li class="sidebar-item">
-                    <a class="sidebar-link" asp-controller="Seller" asp-action="ManagerCoupon" aria-expanded="false">
-                        <span>
-                            <i class="ti ti-discount-2"></i> <!-- Icon cho coupon -->
-                        </span>
-                        <span class="hide-menu">Coupon</span>
-                    </a>
                 </li>
+                @if (User.IsInRole("seller")) {
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" asp-controller="Coupon" asp-action="ManageCoupon" aria-expanded="false">
+                            <!-- CHANGE: Sửa asp-action từ ManagerCoupon sang ManageCoupon -->
+                            <span>
+                                <i class="ti ti-discount-2"></i>
+                            </span>
+                            <span class="hide-menu">Coupon</span>
+                        </a>
+                    </li>
+                }
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
                         <span>

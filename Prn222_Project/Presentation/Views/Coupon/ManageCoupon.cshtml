@@ -14,7 +14,6 @@
     <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
         @await Html.PartialAsync("_sidebar");
         <div class="body-wrapper">
-            <!-- CHANGE: Full Header (copied from ManagerProduct.cshtml sample; adjust if different) -->
             <header class="app-header">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <ul class="navbar-nav">
@@ -60,7 +59,14 @@
             </header>
             <div class="container-fluid py-3">
                 <h3 class="mb-3">Manage Coupons</h3>
-                <!-- CHANGE: KPI Cards (adjusted metrics to English; FIXED CS1501 by handling nullable MaxUsage with ?? 0 before Sum and ToString("N0")) -->
+                <!-- CHANGE: Thêm hiển thị TempData cho success/error từ Controller -->
+                @if (ViewBag.Success != null) {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">@ViewBag.Success <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                }
+                @if (ViewBag.Error != null) {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">@ViewBag.Error <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
+                }
+
                 <div class="row g-3 mb-4">
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0 text-center p-3">
@@ -88,7 +94,8 @@
                     </div>
                 </div>
                 <!-- CHANGE: Search & Sort Form (to English) -->
-                <form asp-action="ManagerCoupon" method="get" class="row g-2 mb-3 align-items-end">
+                <form asp-action="ManageCoupon" method="get" class="row g-2 mb-3 align-items-end">
+                    <!-- CHANGE: Sửa asp-action -->
                     <div class="col-md-3">
                         <label class="form-label">Search Code</label>
                         <input name="Search" class="form-control" placeholder="Enter code..." />
@@ -108,7 +115,7 @@
                     </div>
                     <div class="col-md-2">
                         <label class="form-label">&nbsp;</label>
-                        <a asp-action="ManagerCoupon" class="btn btn-outline-secondary w-100">Clear</a>
+                        <a asp-action="ManageCoupon" class="btn btn-outline-secondary w-100">Clear</a> <!-- CHANGE: Sửa asp-action -->
                     </div>
                     <div class="col-md-2">
                         <label class="form-label">&nbsp;</label>
@@ -157,7 +164,7 @@
                             <ul class="pagination justify-content-center">
                                 @for (int i = 1; i <= Model.TotalPages; i++) {
                                     <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
-                                        <a class="page-link" asp-action="ManagerCoupon" asp-route-page="@i">@i</a>
+                                        <a class="page-link" asp-action="ManageCoupon" asp-route-page="@i">@i</a> <!-- CHANGE: Sửa asp-action -->
                                     </li>
                                 }
                             </ul>
@@ -313,7 +320,6 @@
                     </div>
                 }
 
-                <!-- CHANGE: Full Scripts (as in ManagerProduct) -->
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/jquery/dist/jquery.min.js"></script>
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
                 <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/sidebarmenu.js"></script>
