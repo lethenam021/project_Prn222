@@ -1,0 +1,39 @@
+﻿@using Presentation.ViewModel.Params.ProductReviews
+@{
+    ViewData["Title"] = "Product Reviews";
+    // Lấy categories từ ViewBag (Controller cần cung cấp)
+    var categories = ViewData["Categories"] as List<SelectListItem> ?? new List<SelectListItem>();
+}
+
+<div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+     data-sidebar-position="fixed" data-header-position="fixed">
+    @await Html.PartialAsync("_sidebar")
+    <div class="body-wrapper">
+
+        <div id="summary-view">
+            <form id="review-filter-form" action="@Url.Action("SearchSummaries", "ProductReviews")">
+                @await Html.PartialAsync("_ProductReviewsFilterPartial",
+                new SearchSummaryParams(), ViewData)
+                                
+            </form>
+
+            <div id="summary-table-container">
+            </div>
+
+            <div id="summary-pagination-container" class="mx-5">
+            </div>
+        </div>
+
+        <div id="detail-view" style="display:none;">
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<partial name="_ValidationScriptsPartial" />
+<script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/sidebarmenu.js"></script>
+<script src="~/js/pagination.js"></script>
+<script src="~/js/product-reviews.js"></script>
+}

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.IRepo
 {
+
+
     public interface IProductRepo
     {
         Task<List<Product>> GetAllProductsAsync();

@@ -1,9 +1,26 @@
-﻿
+﻿// ==========================================
+// HÀM XỬ LÝ PHÂN TRANG (Pagination)
+// (Hàm này được gọi bởi pagination.js)
+// ==========================================
+function handlePageChange(newIndex, newSize) {
+    var $form = $("#inventory-filter-form");
+
+    // 1. Cập nhật giá trị Paging vào form ẩn
+    $form.find("input[name='Pagination.PageIndex']").val(newIndex);
+    $form.find("input[name='Pagination.PageSize']").val(newSize);
+
+    // 2. Gửi (submit) lại form filter
+    $form.trigger("submit");
+}
+
+
+
 $(document).ready(function () {
     var $tableContainer = $("#inventory-table-container");
     var $filterForm = $("#inventory-filter-form");
+    var $paginationContainer = $("#inventory-pagination-container"); // (MỚI)
 
-    $("#inventory-filter-form").on("submit", function (e) {
+    $(document).on("submit", "#inventory-filter-form", function (e) {
         e.preventDefault(); // Ngăn form post
 
         // (Chúng ta phải tìm form bên trong 'this' vì 'this' 
@@ -20,6 +37,7 @@ $(document).ready(function () {
 
         // Hiển thị loading (dùng spinner có sẵn)
         $tableContainer.html('<div id="table-loading-spinner" class="text-center p-5"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div></div>');
+        $paginationContainer.html(""); // (MỚI) Xóa paging cũ
 
         // Gửi AJAX (GET)
         $.ajax({
@@ -33,6 +51,7 @@ $(document).ready(function () {
                     // Chúng ta phải tìm lại $filterFormContainer vì nó đã bị thay thế
                     $("#inventory-filter-form").html(response.html.filter);
                     $tableContainer.html(response.html.table);
+                    $paginationContainer.html(response.html.pagination); // (MỚI)
                 } else {
                     // Lỗi (server trả về success = false)
                     $tableContainer.html('<div class="alert alert-danger">' + (response.message || 'Failed to load list.') + '</div>');
@@ -43,6 +62,19 @@ $(document).ready(function () {
                 $tableContainer.html('<div class="alert alert-danger">An unknown error occurred while filtering.</div>');
             }
         });
+    });
+
+    // --- (MỚI) LOGIC CLICK CHO NÚT SEARCH ---
+    // (Giống hệt trang Review)
+    $(document).on("click", "#filter-btn", function (e) {
+        e.preventDefault();
+        var $form = $(this).closest("form");
+
+        // Reset Paging về 1 và 6
+        $form.find("input[name='Pagination.PageIndex']").val(1);
+        $form.find("input[name='Pagination.PageSize']").val(6);
+
+        $form.trigger("submit");
     });
 
         // ---------------------------------------------
@@ -110,18 +142,21 @@ $(document).ready(function () {
             // Hiển thị loading
             $button.prop("disabled", true);
             $button.html('Save <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+            var filterData = $("#inventory-filter-form").serialize();
 
             // Gọi AJAX (giống code cũ)
             $.ajax({
                 type: "POST",
-                url: "/inventory/update-quantity", // (Đảm bảo URL này đúng)
+                url: "/inventory/update-quantity?" + filterData, // (Đảm bảo URL này đúng)
                 data: {
                     productId: productId, 
                     quantity: newQuantity
                 },
                 success: function (response) {
                     if (response.success) {
-                        $("#inventory-table-container").html(response.html);
+                        $("#inventory-filter-form").html(response.html.filter);
+                        $("#inventory-table-container").html(response.html.table);
+                        $("#inventory-pagination-container").html(response.html.pagination);
                         toastr.success("Quantity updated successfully!");
                     } else {
                         toastr.error(response.message);
@@ -249,6 +284,9 @@ $(document).ready(function () {
         $form.find('input[type="text"], input[type="search"]').val('');
 
         $form.find('select').prop('selectedIndex', 0);
+
+        $form.find("input[name='Pagination.PageIndex']").val(1);
+        $form.find("input[name='Pagination.PageSize']").val(6);
 
         // Gửi form (đã reset)
         $form.trigger("submit");
