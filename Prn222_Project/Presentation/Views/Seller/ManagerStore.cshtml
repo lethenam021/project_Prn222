@@ -1,0 +1,281 @@
+﻿@model Presentation.ViewModel.StoreVM
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modernize Free</title>
+    <link rel="shortcut icon" type="image/png" href="/Modernize-1.0.0/Modernize-1.0.0/src/assets/images/logos/favicon.png" />
+    <link rel="stylesheet" href="/Modernize-1.0.0/Modernize-1.0.0/src/assets/css/styles.min.css" />
+
+</head>
+
+<body>
+    <!--  Body Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+         data-sidebar-position="fixed" data-header-position="fixed">
+        @await Html.PartialAsync("_sidebar");
+        <!--  Main wrapper -->
+        <div class="body-wrapper">
+            <!--  Header Start -->
+            <header class="app-header">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-block d-xl-none">
+                            <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                                <i class="ti ti-menu-2"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                                <i class="ti ti-bell-ringing"></i>
+                                <div class="notification bg-primary rounded-circle"></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
+                        <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <img src="../assets/images/profile/user-1.jpg" alt="" width="35" height="35" class="rounded-circle">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up" aria-labelledby="drop2">
+                                    <div class="message-body">
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-user fs-6"></i>
+                                            <p class="mb-0 fs-3">My Profile</p>
+                                        </a>
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-mail fs-6"></i>
+                                            <p class="mb-0 fs-3">My Account</p>
+                                        </a>
+                                        <a href="javascript:void(0)" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-list-check fs-6"></i>
+                                            <p class="mb-0 fs-3">My Task</p>
+                                        </a>
+                                        <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <br />
+          <div class="container-fluid py-3">
+                <h3 class="mb-3">Quản lý cửa hàng</h3>
+             
+                <!-- Form lọc & sắp xếp -->
+                <form asp-action="Index" method="get" class="row g-2 mb-3 align-items-end">
+                    <div class="col-md-4">
+                        <label class="form-label">Tìm kiếm</label>
+                        <input name="Search" class="form-control" placeholder="Nhập tên hoặc mô tả..." />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Sắp xếp</label>
+                        <select name="Sort" class="form-select">
+                            <option value="NameAsc">Tên (A→Z)</option>
+                            <option value="NameDesc">Tên (Z→A)</option>
+                            <option value="DescLenAsc">Mô tả ngắn → dài</option>
+                            <option value="DescLenDesc">Mô tả dài → ngắn</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 d-grid">
+                        <button type="submit" class="btn btn-outline-primary">Áp dụng</button>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                            + Thêm sản phẩm
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Danh sách cửa hàng -->
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                @if (!Model.Stores.Any())
+                                {
+                                    <div class="col-12">
+                                        <div class="alert alert-light border text-center">
+                                            Không có dữ liệu.
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    foreach (var store in Model.Stores)
+                                    {
+                                        <div class="col-md-4 mb-3">
+                                            <div class="card h-100 shadow-sm">
+                                                <img src="@store.BannerImageUrl" class="card-img-top" alt="@store.StoreName" style="aspect-ratio:16/9;object-fit:cover;">
+                                                <div class="card-body d-flex flex-column">
+                                                    <h5 class="card-title">@store.StoreName</h5>
+                                                    <p class="card-text flex-grow-1">@store.Description</p>
+                                                    <div class="d-flex gap-2">
+                                                        <button type="button" class="btn btn-outline-info btn-sm"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#detailModal-@store.Id">
+                                                            Chi tiết
+                                                        </button>
+                                                        <button type="button" class="btn btn-outline-primary btn-sm"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#editModal-@store.Id">
+                                                            Sửa
+                                                        </button>
+
+                                                        <button type="button" class="btn btn-outline-danger btn-sm"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#deleteModal-@store.Id">
+                                                            Xóa
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========== CREATE MODAL ========== -->
+            <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <form asp-action="Create" method="post">
+                            @Html.AntiForgeryToken()
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="createModalLabel">Thêm cửa hàng</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Tên cửa hàng</label>
+                                    <input name="StoreName" class="form-control" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Mô tả</label>
+                                    <textarea name="Description" class="form-control" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Banner URL</label>
+                                    <input name="BannerImageUrl" type="url" class="form-control" placeholder="https://..." required />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Hủy</button>
+                                <button type="submit" class="btn btn-primary">Lưu</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ========== EDIT & DELETE MODALS ========== -->
+            @foreach (var s in Model.Stores)
+            {
+                <!-- DETAIL -->
+                <div class="modal fade" id="detailModal-@s.Id" tabindex="-1" aria-labelledby="detailModalLabel-@s.Id" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header bg-info text-white">
+                                <h5 class="modal-title" id="detailModalLabel-@s.Id">Chi tiết: @s.StoreName</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row g-3">
+                                    <div class="col-md-5 text-center">
+                                        <img src="@s.BannerImageUrl" alt="@s.StoreName" class="img-fluid rounded shadow-sm mb-2" />
+                                    </div>
+                                    <div class="col-md-7">
+                                        <h5 class="fw-bold">@s.StoreName</h5>
+                                        <p class="text-muted mb-2"><strong>Mô tả:</strong></p>
+                                        <p>@s.Description</p>
+                                        <p><strong>Banner URL:</strong> <a href="@s.BannerImageUrl" target="_blank">@s.BannerImageUrl</a></p>
+
+                                        <!-- Nếu có thêm thông tin -->
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EDIT -->
+                <div class="modal fade" id="editModal-@s.Id" tabindex="-1" aria-labelledby="editModalLabel-@s.Id" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <form asp-action="Edit" method="post">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="Id" value="@s.Id" />
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editModalLabel-@s.Id">Sửa: @s.StoreName</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-3">
+                                        <label class="form-label">Tên cửa hàng</label>
+                                        <input name="StoreName" class="form-control" value="@s.StoreName" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Mô tả</label>
+                                        <textarea name="Description" class="form-control" rows="3" required>@s.Description</textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">Banner URL</label>
+                                        <input name="BannerImageUrl" type="url" class="form-control" value="@s.StoreName" required />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="submit" class="btn btn-primary">Cập nhật</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DELETE -->
+                <div class="modal fade" id="deleteModal-@s.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@s.Id" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <form asp-action="Delete" method="post">
+                                @Html.AntiForgeryToken()
+                                <input type="hidden" name="Id" value="@s.Id" />
+                                <div class="modal-header bg-danger text-white">
+                                    <h5 class="modal-title" id="deleteModalLabel-@s.Id">Xóa cửa hàng</h5>
+                                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Bạn có chắc muốn xóa <strong>@s.StoreName</strong> không?</p>
+                                    <small class="text-muted">Mô tả: @s.Description</small>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Hủy</button>
+                                    <button type="submit" class="btn btn-danger">Xóa</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+    
+        </div>
+    </div>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/sidebarmenu.js"></script>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/js/app.min.js"></script>
+    <script src="/Modernize-1.0.0/Modernize-1.0.0/src/assets/libs/simplebar/dist/simplebar.js"></script>
+</body>
+
+</html>

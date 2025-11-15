@@ -1,0 +1,31 @@
+﻿.wrapped-content {
+    min-width: 300px;
+}
+
+.main-content {
+    width: 350px;
+    flex: 1 0 auto;
+    align-self: center;
+    margin-bottom: 30px;
+}
+
+.sign-up-reg {
+    background-color: var(--color-neutral-200);
+    border-radius: 1rem;
+    
+}
+
+.sign-up-btn {
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+    .sign-up-btn:hover {
+        background-color: var(--color-neutral-800);
+        color: var(--color-neutral-100);
+    }
+
+    .sign-up-btn:active {
+        transform: translateY(0.5px);
+    }
+

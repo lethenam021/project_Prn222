@@ -1,0 +1,15 @@
+﻿<div class="modal fade" id="session-expired-modal" tabindex="-1" aria-labelledby="sessionExpiredModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body p-4 text-center">
+                <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size: 4rem;"></i>
+
+                <h4 class="mt-3">Registration Session Expired</h4>
+
+                <p>Your temporary data has expired (after 1 hour).<br>Please register again from the beginning.</p>
+
+                <a class="btn btn-primary mt-3" asp-controller="Auth" asp-action="Register">Register Again</a>
+            </div>
+        </div>
+    </div>
+</div>
