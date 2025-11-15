@@ -82,11 +82,24 @@
                             </td>
 
                             <td>
-                                <button class="btn btn-sm btn-outline-info send-feedback-btn"
-                                        data-review-id="@(item.Id)"
-                                        data-reviewer-name="@item.Reviewer">
-                                    Send Feedback
-                                </button>
+                                @if (item.Reply == null) {
+                                    // CHƯA CÓ REPLY: Hiển thị nút "Send Feedback"
+                                    <button class="btn btn-sm btn-outline-info send-feedback-btn"
+                                            data-review-id="@(item.Id)"
+                                            data-reviewer-name="@item.Reviewer">
+                                        Send Feedback
+                                    </button>
+                                } else {
+                                    <button class="btn btn-sm btn-success" disabled style="pointer-events: none;">
+                                        Responded! 
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary view-reply-btn ms-1"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#viewReplyModal"
+                                            data-reply-message="@item.Reply.ReplyMessage">
+                                        Xem
+                                    </button>
+                                }
                             </td>
                         </tr>
                     }

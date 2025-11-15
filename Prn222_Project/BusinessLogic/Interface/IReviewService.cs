@@ -12,5 +12,9 @@ namespace BusinessLogic.Interface {
         Task<PagedResult<ReviewSummaryResponse>> SearchProductSummariesAsync(SearchSummaryRequest searchRequest);
 
         Task<PagedResult<ReviewDetailResponse>> GetProductDetailsAsync(SearchDetailRequest searchRequest);
+
+        Task AddReplyAsync(AddReplyRequest request);
+
+        Task<ReviewDetailResponse> GetReviewAsync(int reviewId);
     }
 }

@@ -2,14 +2,20 @@
 using BusinessLogic.DTOs.Request.Review;
 using BusinessLogic.Interface;
 using Common.Helpers; // (Cần cho PagedResult)
+using DataAccess.IRepo;
+using DataAccess.Models;
+using Hangfire;
+using Infrastructure.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Presentation.Helpers;
 using Presentation.ViewModel.Data.Category; // (Cần cho CategoryViewModel)
+using Presentation.ViewModel.Data.Emails;
 using Presentation.ViewModel.Data.Pagination;
 using Presentation.ViewModel.Data.Product;
 using Presentation.ViewModel.Data.ProductReviews;
+using Presentation.ViewModel.Params.Inventory;
 using Presentation.ViewModel.Params.ProductReviews; // (Namespace params của UI)
 using System; // (Cần cho Exception)
 using System.Linq; // (Cần cho .Select)
@@ -23,10 +29,14 @@ namespace Presentation.Controllers {
     public class ProductReviewsController : Controller {
         private readonly IReviewService _reviewService;
         private readonly ICategoryService _categoryService;
+        private readonly IEmailService _emailService;
+        private readonly IBackgroundJobClient _jobClient;
 
-        public ProductReviewsController(IReviewService reviewService, ICategoryService categoryService) {
+        public ProductReviewsController(IReviewService reviewService, ICategoryService categoryService, IEmailService emailService, IBackgroundJobClient jobClient) {
             _reviewService = reviewService;
             _categoryService = categoryService;
+            _emailService = emailService;
+            _jobClient = jobClient;
         }
 
         // --- ACTION 1: Tải trang Index (chỉ tải Categories) ---
@@ -108,45 +118,7 @@ namespace Presentation.Controllers {
             try {
                 var sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
-                var request = new SearchDetailRequest {
-                    SellerId = sellerId,
-                    ProductId = searchParams.ProductId,
-                    FromDate = searchParams.FromDate,
-                    ToDate = searchParams.ToDate,
-                    Pagination = new PaginationRequest {
-                        PageIndex = searchParams.Pagination.PageIndex,
-                        PageSize = searchParams.Pagination.PageSize
-                    }
-                };
-
-                // 2. Gọi Service Cấp 2
-                var pageResult = await _reviewService.GetProductDetailsAsync(request);
-
-                // 3. Map Business DTO (ProductReviewDetailResponse) sang UI VM (ProductReviewDetailViewModel)
-                var viewModels = pageResult.Items.Select((pr, index) => new ProductReviewDetailViewModel {
-                    Id = pr.Id, // (Cần thêm Id vào ViewModel để "Send Feedback")
-                    StartIndex = (pageResult.PageIndex - 1) * pageResult.PageSize,
-                    Reviewer = pr.Reviewer,
-                    Rating = pr.Rating,
-                    Comment = pr.Comment,
-                    ReviewDate = pr.ReviewDate
-                }).ToList();
-
-                // 4. Tạo PagedResult cho UI (bao gồm AdditionalData từ Service)
-                var uiPageResult = new PagedResult<ProductReviewDetailViewModel> {
-                    Items = viewModels,
-                    PageIndex = pageResult.PageIndex,
-                    PageSize = pageResult.PageSize,
-                    TotalRecord = pageResult.TotalRecord,
-                    AdditionalData = pageResult.AdditionalData // (Pass-through)
-                };
-
-                // 5. Render *toàn bộ* Partial Cấp 2 (vỏ bọc)
-                string detailHtml = await this.RenderViewAsync(
-                    "~/Views/ProductReviews/Detail/_ProductReviewDetailPartial",
-                    uiPageResult,
-                    true);
-
+                var detailHtml = await GetRenderedDetailHtmlAsync(searchParams, sellerId);
 
                 return Json(new {
                     success = true,
@@ -155,6 +127,104 @@ namespace Presentation.Controllers {
             } catch (Exception ex) {
                 return StatusCode(500, new { success = false, message = ex.Message });
             }
+        }
+
+        [HttpPost("add-reply")]
+        public async Task<IActionResult> AddReply([FromBody] AddReplyRequest replyRequest, [FromQuery] SearchDetailParams searchParams) {
+            try {
+                var review = await _reviewService.GetReviewAsync(replyRequest.ReviewId);
+                if (review == null) {
+                    // (Ghi log lỗi)
+                    // Không thể gửi mail nếu thiếu thông tin
+                    return Json(new { success = false, message = "Review not found." });
+                }
+
+                var emailModel = new ReviewReplyEmailViewModel {
+                    BuyerName = review.Reviewer, // (Hoặc FullName)
+                    ProductName = review.Product!.Title,
+                    ProductImageUrl = review.Product.ImageUrl,
+                    ReviewDate = review.ReviewDate,
+                    SellerReplyMessage = replyRequest.ReplyMessage
+                };
+
+                string emailBody = await this.RenderViewAsync(
+                    "~/Views/Emails/ReviewReplyEmailTemplate",
+                    emailModel,
+                    true);
+
+                _jobClient.Enqueue<IEmailService>(
+                   service => service.SendEmailAsync(review.ReviewerEmail!, "Product Review Reply", emailBody)
+               );
+
+                var sellerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+                replyRequest.SellerId = sellerId;
+
+                // (Kiểm tra validation nếu cần, ví dụ: message không được rỗng)
+                if (string.IsNullOrWhiteSpace(replyRequest.ReplyMessage)) {
+                    return Json(new { success = false, message = "Reply message cannot be empty." });
+                }
+
+                await _reviewService.AddReplyAsync(replyRequest);
+
+                string detailHtml = await GetRenderedDetailHtmlAsync(searchParams, sellerId);
+
+                return Json(new { success = true, html = detailHtml });
+            } catch (Exception ex) {
+                return Json(new { success = false, message = ex.Message });
+            }
+        }
+
+        // ===========================================
+        // (THÊM MỚI) HÀM HELPER (ĐỂ DÙNG CHUNG)
+        // ===========================================
+        private async Task<string> GetRenderedDetailHtmlAsync(SearchDetailParams searchParams, int sellerId) {
+            // (Code này được copy từ action GetProductReviewDetails cũ)
+
+            // 1. Map UI Params sang Business DTO
+            var request = new SearchDetailRequest {
+                SellerId = sellerId,
+                ProductId = searchParams.ProductId,
+                FromDate = searchParams.FromDate,
+                ToDate = searchParams.ToDate,
+                Pagination = new PaginationRequest {
+                    PageIndex = searchParams.Pagination.PageIndex,
+                    PageSize = searchParams.Pagination.PageSize
+                }
+            };
+
+            // 2. Gọi Service Cấp 2 (Service này đã Include Reply)
+            var pageResult = await _reviewService.GetProductDetailsAsync(request);
+
+            // 3. Map Business DTO sang UI VM
+            var viewModels = pageResult.Items.Select((pr, index) => new ProductReviewDetailViewModel {
+                Id = pr.Id,
+                StartIndex = (pageResult.PageIndex - 1) * pageResult.PageSize,
+                Reviewer = pr.Reviewer,
+                Rating = pr.Rating,
+                Comment = pr.Comment,
+                ReviewDate = pr.ReviewDate,
+                Reply = pr.Reply != null ? new ReviewReplyViewModel {
+                    ReplyMessage = pr.Reply.ReplyMessage,
+                    CreatedAt = pr.Reply.CreatedAt
+                } : null
+            }).ToList();
+
+            // 4. Tạo PagedResult cho UI
+            var uiPageResult = new PagedResult<ProductReviewDetailViewModel> {
+                Items = viewModels,
+                PageIndex = pageResult.PageIndex,
+                PageSize = pageResult.PageSize,
+                TotalRecord = pageResult.TotalRecord,
+                AdditionalData = pageResult.AdditionalData
+            };
+
+            // 5. Render *toàn bộ* Partial Cấp 2
+            string detailHtml = await this.RenderViewAsync(
+                "~/Views/ProductReviews/Detail/_ProductReviewDetailPartial.cshtml",
+                uiPageResult,
+                true);
+
+            return detailHtml;
         }
     }
 }

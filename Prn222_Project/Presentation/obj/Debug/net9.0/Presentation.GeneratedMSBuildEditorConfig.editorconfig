@@ -60,6 +60,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cG9uXE1hbmFnZUNvdXBvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Dispute/DisputeDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcHV0ZVxEaXNwdXRlRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Dispute/ManageDispute.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcHV0ZVxNYW5hZ2VEaXNwdXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -104,12 +112,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFJldmlld3NcX1Byb2R1Y3RSZXZpZXdTdW1tYXJ5VGFibGVQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Report/ManageReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XE1hbmFnZVJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Seller/ManagerProduct.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXE1hbmFnZXJQcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Seller/ManagerStore.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VsbGVyXE1hbmFnZXJTdG9yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Shared/EmailTemplates/Dispute/_AcceptEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVtYWlsVGVtcGxhdGVzXERpc3B1dGVcX0FjY2VwdEVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Shared/EmailTemplates/Dispute/_RejectEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVtYWlsVGVtcGxhdGVzXERpc3B1dGVcX1JlamVjdEVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Shared/EmailTemplates/ReviewReply/_ReviewReplyEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVtYWlsVGVtcGxhdGVzXFJldmlld1JlcGx5XF9SZXZpZXdSZXBseUVtYWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/_Study material/2025_3_fall/prn222/_project/_project_Prn222/Prn222_Project/Presentation/Views/Shared/EmailTemplates/_VerificationEmail.cshtml]

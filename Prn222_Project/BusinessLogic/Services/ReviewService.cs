@@ -5,6 +5,8 @@ using BusinessLogic.DTOs.Response.Review;
 using BusinessLogic.Interface;
 using Common.Helpers;
 using DataAccess.IRepo;
+using DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +33,11 @@ namespace BusinessLogic.Services {
                 Reviewer = review.Reviewer!.Username!, // (Đảm bảo Reviewer được include)
                 Rating = review.Rating,
                 Comment = review.Comment,
-                ReviewDate = review.CreatedAt ?? DateTime.Now
+                ReviewDate = review.CreatedAt ?? DateTime.Now,
+                Reply = review.ReviewReply != null ? new ReviewReplyResponse {
+                    ReplyMessage = review.ReviewReply.ReplyMessage,
+                    CreatedAt = review.ReviewReply.CreatedAt
+                } : null
             }).ToList();
 
             // 3. (Quan trọng) Lấy thông tin sản phẩm để hiển thị tiêu đề
@@ -86,6 +92,32 @@ namespace BusinessLogic.Services {
                 TotalRecord = pageResult.TotalRecord,
                 PageIndex = pageResult.PageIndex,
                 PageSize = pageResult.PageSize
+            };
+        }
+
+        public async Task AddReplyAsync(AddReplyRequest request) {
+            var reply = new ReviewReply {
+                ReviewId = request.ReviewId,
+                SellerId = request.SellerId,
+                ReplyMessage = request.ReplyMessage
+                // Repo sẽ gán CreatedAt
+            };
+
+            await _reviewRepo.AddReplyAsync(reply);
+        }
+
+        public async Task<ReviewDetailResponse> GetReviewAsync(int reviewId) {
+            var reviewTask = await _reviewRepo.GetReviewByIdAsync(reviewId);
+            if (reviewTask == null) return null!;
+
+            return new ReviewDetailResponse {
+                ReviewerEmail = reviewTask.Reviewer!.Email!,
+                Product = new ProductResponse {
+                    Id = reviewTask.Product!.Id,
+                    Title = reviewTask.Product.Title
+                },
+                Reviewer = reviewTask.Reviewer.Username!,
+                ReviewDate = reviewTask.CreatedAt ?? DateTime.Now,
             };
         }
     }

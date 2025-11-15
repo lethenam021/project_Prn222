@@ -21,6 +21,7 @@ namespace DataAccess.Repositories {
             var query = _context.Reviews
                                 .Include(r => r.Reviewer)
                                 .Include(r => r.Product) // Cần để lấy ProductId
+                                .Include(r => r.ReviewReply)
                                 .AsNoTracking()
                                 .AsQueryable();
 
@@ -96,6 +97,22 @@ namespace DataAccess.Repositories {
                 PageIndex = pageIndex,
                 PageSize = pageSize
             };
+        }
+
+        public async Task AddReplyAsync(ReviewReply reply) {
+            // Gán ngày giờ tạo
+            reply.CreatedAt = DateTime.UtcNow;
+
+            await _context.ReviewReplies.AddAsync(reply);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<Review?> GetReviewByIdAsync(int reviewId) {
+            return await _context.Reviews
+                .Include(r => r.Product) // Lấy thông tin Sản phẩm
+                .Include(r => r.Reviewer) // Lấy thông tin Người mua (để lấy email)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(r => r.Id == reviewId);
         }
     }
 }
