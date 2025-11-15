@@ -1,0 +1,119 @@
+﻿h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-weight-semibold);
+}
+
+h1 {
+    font-size: var(--text-3xl);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: var(--text-2xl);
+}
+
+h3 {
+    font-size: var(--text-xl);
+}
+
+h4 {
+    font-size: var(--text-lg);
+}
+
+h5 {
+    font-size: var(--text-base);
+}
+
+h6 {
+    font-size: var(--text-sm);
+}
+
+ul,
+ol {
+    margin-bottom: calc(3 * var(--spacing));
+}
+
+li {
+    margin-left: calc(2 * var(--spacing));
+}
+
+small {
+    font-size: var(--text-sm);
+}
+
+b,
+strong {
+    font-weight: var(--font-weight-semibold);
+}
+
+a {
+    text-decoration: none;
+    transition: all 350ms;
+    color: var(--color-neutral-800);
+}
+
+input {
+    border-color: var(--border-color);
+    background-color: var(--bg-input);
+}
+
+    input:focus {
+        --border-color: var(--border-focus-color);
+    }
+
+    input:disabled {
+        --bg-input: var(--color-gray-100);
+        --border-color: var(--color-gray-200);
+    }
+
+.h-screen {
+    height: 100vh;
+}
+
+.border-dark {
+    border-color: var(--border-color);
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: calc(2 * var(--spacing)) calc(3 * var(--spacing));
+    border: 1px solid var(--color-neutral-600);
+    border-radius: calc(2 * var(--spacing));
+    margin-bottom: var(--spacing);
+    background-color: var(--color-neutral-200);
+    transition: all var(--tw-duration);
+}
+
+.form-label {
+    position: absolute;
+    left: calc(4 * var(--spacing));
+    top: 10px;
+    color: var(--color-neutral-600);
+    background-color: transparent;
+    pointer-events: none;
+    transition: var(--tw-duration) ease all;
+}
+
+.form-group:has(.form-input:focus) .form-label {
+    top: -8px;
+    left: calc(3 * var(--spacing));
+    font-size: var(--text-sm);
+    color: var(--color-neutral-800);
+    background: var(--color-neutral-100);
+    padding: 0 var(--spacing);
+    border-radius: var(--spacing);
+}
+
+/* Viền đen khi focus */
+.form-input:focus {
+    border-color: var(--color-neutral-800);
+    background-color: var(--color-neutral-100);
+}

@@ -1,4 +1,6 @@
-﻿        <!-- Sidebar Start -->
+﻿<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+        <!-- Sidebar Start -->
 <aside class="left-sidebar">
     <!-- Sidebar scroll-->
     <div>
@@ -56,12 +58,29 @@
                 @* </li> *@
                 <li class="sidebar-item">
                     <a class="sidebar-link" asp-controller="Dispute" asp-action="ManageDispute" aria-expanded="false">
-                        <span>
+                    <span>
                             <i class="bi bi-journal-x"></i>
                         </span>
                         <span class="hide-menu">Dispute</span>
                     </a>
+                    </li>
+                    <li>
+                    <a class="sidebar-link" href="@Url.Action("Index", "Inventory")" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-building-warehouse"></i>
+                        </span>
+                        <span class="hide-menu">Inventory</span>
+                    </a>
                 </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link" href="@Url.Action("Index", "ProductReviews")" aria-expanded="false">
+                        <span>
+                            <i class="ti ti-eye-star"></i>
+                        </span>
+                        <span class="hide-menu">Product Reviews</span>
+                    </a>
+                </li>
+                
                 <li class="sidebar-item">
                     <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
                         <span>

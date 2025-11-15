@@ -1,0 +1,77 @@
+﻿@* File này dùng để thay thế cho File 4 (bị sai) của bạn.
+  Model này là model Tóm tắt (Summary).
+*@
+@model List<Presentation.ViewModel.Data.ProductReviews.ProductReviewSummaryViewModel>
+
+@{
+    var count = 0;
+}
+
+<style>
+    .rating-stars {
+        color: #f1c40f; /* Màu vàng */
+    }
+</style>
+
+<div class="card" id="review-summary-table-card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table-hover table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Product</th>
+                        <th>Total Reviews</th>
+                        <th>Average Rating</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model == null || !Model.Any()) {
+                        <tr>
+                            <td colspan="5" class="text-center">No products found!</td>
+                        </tr>
+                    }
+                    @foreach (var item in Model) {
+                        count++;
+                        <tr>
+                            <td>@(item.StartIndex + count)</td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <img src="@(item.Product.ImageUrl ?? "/images/placeholder.png")" width="50" height="50" class="me-3" alt="@item.Product.Title">
+                                    <strong>@item.Product.Title</strong>
+                                </div>
+                            </td>
+                            <td>
+                                @item.TotalReviews
+                            </td>
+                            <td class="rating-stars">
+                                @{
+                                    var roundedRating = Math.Round(item.AverageRating * 2) / 2;
+                                }
+                                @for (int i = 1; i <= 5; i++) {
+                                    if (i <= roundedRating) {
+                                        <i class="fas fa-star text-warning"></i>
+                                    } else if (i - 0.5 == roundedRating) {
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    } else {
+                                        <i class="far fa-star text-warning"></i>
+                                    }
+                                }
+                                <span class="text-dark ms-2">(@item.AverageRating.ToString("F1"))</span>
+                            </td>
+                            <td>
+                                <a
+                                   class="btn btn-sm btn-outline-primary view-details-link"
+                                   data-product-id="@item.Product.Id"
+                                   data-product-title="@item.Product.Title">
+                                    View Details
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
