@@ -1,0 +1,124 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text.Json;
+using System.Threading.Tasks;
+using BusinessLogic.DTOs.Request.Report;
+using BusinessLogic.DTOs.Response.Report;
+using BusinessLogic.Interface;
+using Common.Enums;
+using DataAccess.IRepo;
+
+namespace BusinessLogic.Services
+{
+    public class ReportService : IReportService
+    {
+        private readonly IOrderRepo _orderRepo;
+        private readonly int _sellerId;
+
+        public ReportService(IOrderRepo orderRepo)
+        {
+            _orderRepo = orderRepo;
+            _sellerId = 1; // TODO: lấy sellerId từ token / context
+        }
+
+        public async Task<IEnumerable<ReportResponse>> GetReportAsync(ReportRequest request)
+        {
+            var result = new List<ReportResponse>();
+            var year = DateTime.Today.Year;
+            var month = request.Month == 0 ? DateTime.Today.Month : request.Month;
+
+            switch (request.ReportTime)
+            {
+                case ReportTimeEnum.Weekly:
+                    {
+                        // ====== FILTER THEO TUẦN: HIỂN THỊ THEO NGÀY ======
+                        var week = request.Week ?? 1; // mặc định tuần 1
+                        var firstOfMonth = new DateTime(year, month, 1);
+                        var daysInMonth = DateTime.DaysInMonth(year, month);
+
+                        var offsetDays = 7 * (week - 1);
+                        if (offsetDays >= daysInMonth)      // tuần không tồn tại
+                            return result;                  // trả list rỗng
+
+                        var startDate = firstOfMonth.AddDays(offsetDays);
+                        var totalDays = Math.Min(7, daysInMonth - offsetDays);
+
+                        for (int i = 0; i < totalDays; i++)
+                        {
+                            var date = startDate.AddDays(i);
+                            dynamic statistics;
+
+                            if (request.ReportType == ReportTypeEnum.Order)
+                                statistics = await _orderRepo.GetOrderQuantityAsync(_sellerId, date);
+                            else // Revenue
+                                statistics = await _orderRepo.GetRevenueAsync(_sellerId, date);
+
+                            result.Add(new ReportResponse
+                            {
+                                Date = date,          // mỗi điểm là 1 ngày
+                                Statistics = statistics
+                            });
+                        }
+
+                        break;
+                    }
+
+                case ReportTimeEnum.Monthly:
+                    {
+                        // ====== FILTER THEO THÁNG: HIỂN THỊ THEO TUẦN ======
+                        var firstOfMonth = new DateTime(year, month, 1);
+                        var daysInMonth = DateTime.DaysInMonth(year, month);
+                        var weeksCount = (int)Math.Ceiling(daysInMonth / 7.0); // tối đa 5 tuần
+
+                        for (int w = 0; w < weeksCount; w++)
+                        {
+                            var weekStart = firstOfMonth.AddDays(7 * w);
+                            var remainingDays = daysInMonth - 7 * w;
+                            var daysThisWeek = Math.Min(7, remainingDays);
+                            if (daysThisWeek <= 0) break;
+
+                            if (request.ReportType == ReportTypeEnum.Order)
+                            {
+                                int sum = 0;
+                                for (int i = 0; i < daysThisWeek; i++)
+                                {
+                                    var date = weekStart.AddDays(i);
+                                    sum += await _orderRepo.GetOrderQuantityAsync(_sellerId, date);
+                                }
+
+                                result.Add(new ReportResponse
+                                {
+                                    Date = weekStart,   // đại diện cho tuần
+                                    Statistics = sum    // tổng order của tuần
+                                });
+                            }
+                            else // Revenue
+                            {
+                                decimal sum = 0m;
+                                for (int i = 0; i < daysThisWeek; i++)
+                                {
+                                    var date = weekStart.AddDays(i);
+                                    sum += await _orderRepo.GetRevenueAsync(_sellerId, date);
+                                }
+
+                                result.Add(new ReportResponse
+                                {
+                                    Date = weekStart,
+                                    Statistics = sum
+                                });
+                            }
+                        }
+
+                        break;
+                    }
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(request.ReportTime));
+            }
+            Console.WriteLine(JsonSerializer.Serialize(result));
+            return result;
+        }
+
+
+    }
+}

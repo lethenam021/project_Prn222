@@ -1,0 +1,29 @@
+﻿@model Presentation.ViewModel.Params.ProductReviews.SearchSummaryParams
+
+@{
+    var categories = ViewData["Categories"] as List<SelectListItem>;
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <label asp-for="SearchTerm" class="form-label">Product Name</label>
+                <input asp-for="SearchTerm" class="form-control" placeholder="Enter product name...">
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <label asp-for="CategoryId" class="form-label">Category</label>
+                <select asp-for="CategoryId" asp-items="@categories" class="form-select"></select>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-end mb-3">
+                <button type="submit" id="filter-btn" class="btn btn-primary me-2">Search</button>
+                <button type="button" id="reset-btn" class="btn btn-outline-secondary">Reset</button>
+            </div>
+
+            <input type="hidden" asp-for="Pagination.PageIndex" id="filter-page-index" />
+            <input type="hidden" asp-for="Pagination.PageSize" id="filter-page-size" />
+        </div>
+    </div>
+</div>

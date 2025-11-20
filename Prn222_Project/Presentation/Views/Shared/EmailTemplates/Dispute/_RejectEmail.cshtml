@@ -1,0 +1,131 @@
+﻿@model Presentation.ViewModel.Data.Emails.DisputeEmailViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispute Rejected</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .logo {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .heading {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .text {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .code-box {
+            background-color: #f5f5f5;
+            padding: 25px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .code {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <table class="container">
+            <tr>
+                <td class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/EBay_logo.svg/1920px-EBay_logo.svg.png"
+                         width="100">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table class="content">
+                        <tr>
+                            <td>
+                                <h2 class="heading">Your dispute has been rejected</h2>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p class="text">
+                                    Hello <strong>@Model.BuyerName</strong>,<br><br>
+                                    We have reviewed your dispute for order <strong>#@Model.OrderId</strong>.
+                                    Unfortunately, the seller has rejected your claim for the following reason:
+                                </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="code-box">
+                                    <p class="code">@Model.Reason</p>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p class="text">
+                                    If you believe this decision is incorrect, you may open a support ticket
+                                    or contact our customer service team for further review.
+                                </p>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="footer">
+                    <p class="footer-text">You are receiving this email because of your Ebay account.</p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

@@ -1,0 +1,101 @@
+﻿#login-email-form {
+    margin-bottom: calc(5 * var(--spacing));
+}
+
+#email-continue-btn {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-semibold);
+    border-radius: calc(6 * var(--spacing));
+    transition: all var(--tw-duration);
+}
+
+    #email-continue-btn:active {
+        transform: scale(0.97);
+    }
+
+.separator {
+    padding: calc(5 * var(--spacing)) 0;
+}
+
+.separator-line {
+    height: 1px;
+    margin: calc(4 * var(--spacing)) 0 0;
+    background-color: var(--color-neutral-400);
+}
+
+    .separator-line.animate {
+        animation: fade-in 1s;
+    }
+
+.separator-content {
+    position: relative;
+    top: -9px;
+    font-size: var(--text-sm);
+    line-height: 14px;
+    vertical-align: middle;
+}
+
+.separator-content.animate {
+    animation: slide-from-left 1s;
+}
+
+.separator-content mark {
+    background-color: var(--color-neutral-100);
+    padding: 0 var(--spacing);
+}
+
+.separator-content.animate mark {
+    animation: appear 1s;
+}
+
+.btn-social {
+    border-radius: calc(6 * var(--spacing));
+    transition: all var(--tw-duration);
+}
+
+.btn-social:hover {
+    background-color: var(--color-neutral-300);
+}
+
+.btn-social:active {
+    transform: scale(0.97);
+}
+
+.btn-social span {
+    font-size: var(--text-lg);
+    color: var(--color-neutral-700);
+    font-weight: var(--font-weight-semibold);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-from-left {
+    0% {
+        left: -25%;
+        color: transparent;
+    }
+
+    100% {
+        left: 0;
+        color: #151e27;
+    }
+}
+
+@keyframes appear {
+    0% {
+        color: transparent;
+    }
+
+    100% {
+        color: #151e27;
+    }
+}
+
